@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReverseString", "ReverseStr
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SumOfNumbers", "SumOfNumbers\SumOfNumbers.csproj", "{2F181191-258C-4906-BB5C-9447792433A0}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MatchingBrackets", "MatchingBrackets\MatchingBrackets.csproj", "{D5304A76-8E10-4188-AD72-8344DA1A3125}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{2F181191-258C-4906-BB5C-9447792433A0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2F181191-258C-4906-BB5C-9447792433A0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2F181191-258C-4906-BB5C-9447792433A0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D5304A76-8E10-4188-AD72-8344DA1A3125}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D5304A76-8E10-4188-AD72-8344DA1A3125}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D5304A76-8E10-4188-AD72-8344DA1A3125}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D5304A76-8E10-4188-AD72-8344DA1A3125}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
