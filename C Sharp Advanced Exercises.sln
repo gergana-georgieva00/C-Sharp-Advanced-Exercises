@@ -3,11 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31025.194
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReverseString", "ReverseString\ReverseString.csproj", "{10E34FB2-FB01-413E-9040-900BE02A10EB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ReverseString", "ReverseString\ReverseString.csproj", "{10E34FB2-FB01-413E-9040-900BE02A10EB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SumOfNumbers", "SumOfNumbers\SumOfNumbers.csproj", "{2F181191-258C-4906-BB5C-9447792433A0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SumOfNumbers", "SumOfNumbers\SumOfNumbers.csproj", "{2F181191-258C-4906-BB5C-9447792433A0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MatchingBrackets", "MatchingBrackets\MatchingBrackets.csproj", "{D5304A76-8E10-4188-AD72-8344DA1A3125}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MatchingBrackets", "MatchingBrackets\MatchingBrackets.csproj", "{D5304A76-8E10-4188-AD72-8344DA1A3125}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HotPotato", "HotPotato\HotPotato.csproj", "{E175448A-7990-4FE2-AC4D-81290CB2AF9E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +29,10 @@ Global
 		{D5304A76-8E10-4188-AD72-8344DA1A3125}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D5304A76-8E10-4188-AD72-8344DA1A3125}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D5304A76-8E10-4188-AD72-8344DA1A3125}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E175448A-7990-4FE2-AC4D-81290CB2AF9E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E175448A-7990-4FE2-AC4D-81290CB2AF9E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E175448A-7990-4FE2-AC4D-81290CB2AF9E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E175448A-7990-4FE2-AC4D-81290CB2AF9E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
