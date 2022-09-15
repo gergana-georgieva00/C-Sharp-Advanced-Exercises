@@ -11,21 +11,22 @@ namespace MatchingBrackets
 
             Stack<int> indexes = new Stack<int>();
 
-            foreach (char ch in input)
+            for (int i = 0; i < input.Length; i++)
             {
-                if (ch == '(')
+                if (input[i] == '(')
                 {
-                    indexes.Push(input.IndexOf(ch));
+                    indexes.Push(i);
                 }
 
-                if (ch == ')')
+                if (input[i] == ')')
                 {
                     int index = indexes.Pop();
-                    string subexpression = input.Substring(index, input.IndexOf(')') - index + 1);
+                    string subexpression = input.Substring(index, i - index + 1);
 
                     Console.WriteLine(subexpression);
                 }
             }
+            
         }
     }
 }
