@@ -11,22 +11,15 @@ namespace HotPotato
             int n = int.Parse(Console.ReadLine());
 
             Queue<string> queue = new Queue<string>(input);
-            int count = 1;
 
             while (queue.Count > 1)
             {
-                string currKid = queue.Dequeue();
-
-                if (count == n)
+                for (int i = 1; i < n; i++)
                 {
-                    Console.WriteLine($"Removed {currKid}");
-                    count = 1;
-                    continue;
+                    queue.Enqueue(queue.Dequeue());
                 }
 
-                count++;
-                queue.Enqueue(currKid);
-                Console.WriteLine(string.Join(',', queue));
+                Console.WriteLine($"Removed {queue.Dequeue()}");
             }
 
             Console.WriteLine($"Last is {queue.Dequeue()}");
