@@ -7,8 +7,8 @@ namespace HotPotato
     {
         static void Main(string[] args)
         {
-            int n = int.Parse(Console.ReadLine());
             string[] input = Console.ReadLine().Split();
+            int n = int.Parse(Console.ReadLine());
 
             Queue<string> queue = new Queue<string>(input);
             int count = 1;
