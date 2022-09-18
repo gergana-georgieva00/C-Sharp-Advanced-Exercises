@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Text;
 
 namespace SimpleTextEditor
 {
@@ -9,9 +10,11 @@ namespace SimpleTextEditor
         {
             int n = int.Parse(Console.ReadLine());
 
-            Stack<char> stack = new Stack<char>();
-            List<string> allStrings = new List<string>();
+            Stack<string> stack = new Stack<string>();
+            StringBuilder sb = new StringBuilder(string.Empty);
 
+            stack.Push(sb.ToString());
+            
             for (int i = 1; i <= n; i++)
             {
                 string[] input = Console.ReadLine().Split();
@@ -22,49 +25,30 @@ namespace SimpleTextEditor
                 {
                     string argument = input[1];
 
-                    string currString = "";
-                    foreach (var ch in argument)
-                    {
-                        stack.Push(ch);
-                        currString += ch;
-                    }
-
-                    allStrings.Add(currString);
+                    sb.Append(argument);
+                    stack.Push(sb.ToString());
                 }
                 else if (command == "2")
                 {
-                    string argument = input[1];
+                    int argument = int.Parse(input[1]);
 
-                    for (int j = 0; j < int.Parse(argument); j++)
+                    for (int j = 1; j <= argument; j++)
                     {
-                        stack.Pop();
+                        sb.Remove(sb.Length - 1, 1);
                     }
 
-                    char[] charArray = string.Join("", stack).ToCharArray();
-                    Array.Reverse(charArray);
-                    allStrings.Add(new string(charArray));
+                    stack.Push(sb.ToString());
                 }
                 else if (command == "3")
                 {
-                    string argument = input[1];
+                    int argument = int.Parse(input[1]);
 
-                    string currText = allStrings[allStrings.Count - 1];
-                    char ch = currText[int.Parse(argument) - 1];
-                    Console.WriteLine(ch);
+                    Console.WriteLine(sb.ToString()[argument - 1]);
                 }
                 else
                 {
-                    if (allStrings.Count > 1)
-                    {
-                        stack = new Stack<char>(allStrings[allStrings.Count - 2]);
-                    }
-                    else
-                    {
-                        stack = new Stack<char>(allStrings[allStrings.Count - 1]);
-                    }
-                    
-                    allStrings.RemoveAt(allStrings.Count - 1);
-                    //allStrings.RemoveAt(allStrings.Count - 1);
+                    stack.Pop();
+                    sb = new StringBuilder(stack.Peek());
                 }
             }
         }
