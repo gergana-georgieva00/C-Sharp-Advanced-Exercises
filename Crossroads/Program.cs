@@ -52,7 +52,16 @@ namespace Crossroads
                         if (freeCopy < 0)
                         {
                             Console.WriteLine("A crash happened!");
-                            Console.WriteLine($"{queue.Peek()} was hit at {queue.Peek()[queue.Peek().Length - greenCopy - 1]}.");
+
+                            if (queue.Peek().Length > 2)
+                            {
+                                Console.WriteLine($"{queue.Peek()} was hit at {queue.Peek()[queue.Peek().Length - greenCopy - 1]}.");
+                            }
+                            else
+                            {
+                                Console.WriteLine($"{queue.Peek()} was hit at {queue.Peek()[queue.Peek().Length - greenCopy]}.");
+                            }
+                            
                             return;
                         }
                     }
