@@ -18,44 +18,39 @@ namespace KeyRevolver
             Queue<int> queueLocks = new Queue<int>(locks);
 
             int bulletsCount = 0;
+            int currBulletCount = 0;
 
             while (stackBullets.Count > 0 && queueLocks.Count > 0)
             {
-                for (int i = 0; i < sizeGunBarrel; i++)
+                if (stackBullets.Peek() <= queueLocks.Peek())
                 {
-                    if (stackBullets.Peek() <= queueLocks.Peek())
-                    {
-                        Console.WriteLine("Bang!");
-                        queueLocks.Dequeue();
-                        stackBullets.Pop();
-                        bulletsCount++;
-                    }
-                    else
-                    {
-                        Console.WriteLine("Ping!");
-                        stackBullets.Pop();
-                        bulletsCount++;
-                    }
-
-                    if (stackBullets.Count == 0 || queueLocks.Count == 0)
-                    {
-                        break;
-                    }
+                    Console.WriteLine("Bang!");
+                    queueLocks.Dequeue();
+                }
+                else
+                {
+                    Console.WriteLine("Ping!");
                 }
 
-                if (stackBullets.Count > 0)
+                stackBullets.Pop();
+                bulletsCount++;
+                currBulletCount++;
+
+                if (stackBullets.Count > 0 && currBulletCount == sizeGunBarrel)
                 {
                     Console.WriteLine("Reloading!");
+                    currBulletCount = 0;
                 }
             }
 
-            if (stackBullets.Count == 0 && queueLocks.Count > 0)
+            if (stackBullets.Count >= 0 && queueLocks.Count == 0)
             {
-                Console.WriteLine($"Couldn't get through. Locks left: {queueLocks.Count}");
+                Console.WriteLine($"{stackBullets.Count} bullets left. Earned ${valueIntelligence - (bulletsCount * priceBullet)}");
+                
                 return;
             }
 
-            Console.WriteLine($"{stackBullets.Count} bullets left. Earned ${valueIntelligence - (bulletsCount * priceBullet)}");
+            Console.WriteLine($"Couldn't get through. Locks left: {queueLocks.Count}");
         }
     }
 }
