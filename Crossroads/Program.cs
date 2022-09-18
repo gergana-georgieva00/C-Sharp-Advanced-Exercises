@@ -34,15 +34,18 @@ namespace Crossroads
                         }
                         else
                         {
-                            if (queue.Peek().Length - greenCopy <= freeCopy)
+                            if (greenCopy > 0)
                             {
-                                freeCopy -= queue.Dequeue().Length - greenCopy;
-                                greenCopy = 0;
-                                passedCars++;
-                            }
-                            else
-                            {
-                                freeCopy -= queue.Peek().Length - greenCopy;
+                                if (queue.Peek().Length - greenCopy <= freeCopy)
+                                {
+                                    freeCopy -= queue.Dequeue().Length - greenCopy;
+                                    greenCopy = 0;
+                                    passedCars++;
+                                }
+                                else
+                                {
+                                    freeCopy -= queue.Peek().Length - greenCopy;
+                                }
                             }
                         }
 
