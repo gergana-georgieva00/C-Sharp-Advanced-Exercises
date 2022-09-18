@@ -36,6 +36,11 @@ namespace KeyRevolver
                         stackBullets.Pop();
                         bulletsCount++;
                     }
+
+                    if (stackBullets.Count == 0 || queueLocks.Count == 0)
+                    {
+                        break;
+                    }
                 }
 
                 if (stackBullets.Count > 0)
