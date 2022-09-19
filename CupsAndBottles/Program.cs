@@ -21,28 +21,33 @@ namespace CupsAndBottles
                 }
                 else
                 {
-                    int remainderCup = cupsCapacity.Peek() - filledBottles.Peek();
+                    int remainderCup = cupsCapacity.Peek() - filledBottles.Pop();
 
                     while (remainderCup > 0)
                     {
                         remainderCup -= filledBottles.Peek();
 
-                        if (remainderCup < 0)
+                        if (remainderCup <= 0)
                         {
-                            waterWasted += Math.Abs(cupsCapacity.Dequeue() - filledBottles.Pop());
-                        }
-                        else if (remainderCup == 0)
-                        {
+                            waterWasted += Math.Abs(remainderCup);
                             cupsCapacity.Dequeue();
-                            filledBottles.Pop();
                         }
-                        else
-                        {
-                            filledBottles.Pop();
-                        }
+
+                        filledBottles.Pop();
                     }
                 }
             }
+
+            if (filledBottles.Count > 0)
+            {
+                Console.WriteLine($"Bottles: {string.Join(' ', filledBottles)}");
+            }
+            else
+            {
+                Console.WriteLine($"Cups: {string.Join(' ', cupsCapacity)}");
+            }
+
+            Console.WriteLine($"Wasted litters of water: {waterWasted}");
         }
     }
 }
