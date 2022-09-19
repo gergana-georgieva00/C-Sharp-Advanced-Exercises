@@ -53,6 +53,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SquareWithMaximumSum", "Squ
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JaggedArrayModification", "JaggedArrayModification\JaggedArrayModification.csproj", "{76399541-B8AB-4D3E-966F-234596344C8D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PascalTriangle", "PascalTriangle\PascalTriangle.csproj", "{FE258F3F-EF20-48F1-BE6D-623A39486CAD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -159,6 +161,10 @@ Global
 		{76399541-B8AB-4D3E-966F-234596344C8D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{76399541-B8AB-4D3E-966F-234596344C8D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{76399541-B8AB-4D3E-966F-234596344C8D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FE258F3F-EF20-48F1-BE6D-623A39486CAD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FE258F3F-EF20-48F1-BE6D-623A39486CAD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FE258F3F-EF20-48F1-BE6D-623A39486CAD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FE258F3F-EF20-48F1-BE6D-623A39486CAD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
