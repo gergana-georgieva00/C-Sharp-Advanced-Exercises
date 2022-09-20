@@ -29,6 +29,12 @@ namespace Bombs
                 int col = int.Parse(coordinate.Split(',', StringSplitOptions.RemoveEmptyEntries)[1]);
 
                 int numBomb = matrix[row, col];
+
+                if (numBomb <= 0)
+                {
+                    continue;
+                }
+
                 matrix[row, col] = 0;
 
                 // left
