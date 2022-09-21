@@ -73,6 +73,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bombs", "Bombs\Bombs.csproj
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Miner", "Miner\Miner.csproj", "{D2DC5E81-8301-47E9-A768-106C7205CE49}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CountSameValuesInArray", "CountSameValuesInArray\CountSameValuesInArray.csproj", "{D8B07B61-412B-430E-BAAF-D9C45DB04347}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -219,6 +221,10 @@ Global
 		{D2DC5E81-8301-47E9-A768-106C7205CE49}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D2DC5E81-8301-47E9-A768-106C7205CE49}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D2DC5E81-8301-47E9-A768-106C7205CE49}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D8B07B61-412B-430E-BAAF-D9C45DB04347}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D8B07B61-412B-430E-BAAF-D9C45DB04347}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D8B07B61-412B-430E-BAAF-D9C45DB04347}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D8B07B61-412B-430E-BAAF-D9C45DB04347}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
