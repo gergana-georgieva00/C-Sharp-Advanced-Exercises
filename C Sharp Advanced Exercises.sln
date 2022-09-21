@@ -91,6 +91,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SoftUniParty", "SoftUniPart
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UniqueUsernames", "UniqueUsernames\UniqueUsernames.csproj", "{E6CBE940-6BF9-43F2-B977-9726D2ABF12A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SetsOfElements", "SetsOfElements\SetsOfElements.csproj", "{D653C514-B192-4E56-9302-E64F93E940C6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -273,6 +275,10 @@ Global
 		{E6CBE940-6BF9-43F2-B977-9726D2ABF12A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E6CBE940-6BF9-43F2-B977-9726D2ABF12A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E6CBE940-6BF9-43F2-B977-9726D2ABF12A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D653C514-B192-4E56-9302-E64F93E940C6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D653C514-B192-4E56-9302-E64F93E940C6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D653C514-B192-4E56-9302-E64F93E940C6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D653C514-B192-4E56-9302-E64F93E940C6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
