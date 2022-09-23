@@ -53,9 +53,9 @@ namespace TheV_Logger
 
                 if (counter == 1)
                 {
-                    foreach (var follower in kvp.Value)
+                    foreach (var follower in kvp.Value.OrderBy(x => x))
                     {
-                        Console.WriteLine($"* {follower}");
+                        Console.WriteLine($"*  {follower}");
                     }
                 }
 
