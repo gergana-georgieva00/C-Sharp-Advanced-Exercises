@@ -105,6 +105,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TheV-Logger", "TheV-Logger\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ranking", "Ranking\Ranking.csproj", "{748F39D5-EEEE-4EFE-9C30-335E203F416F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SoftUniExamResults", "SoftUniExamResults\SoftUniExamResults.csproj", "{C3D14786-4AB8-4E86-AE15-18DA66BB9D98}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -315,6 +317,10 @@ Global
 		{748F39D5-EEEE-4EFE-9C30-335E203F416F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{748F39D5-EEEE-4EFE-9C30-335E203F416F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{748F39D5-EEEE-4EFE-9C30-335E203F416F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C3D14786-4AB8-4E86-AE15-18DA66BB9D98}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C3D14786-4AB8-4E86-AE15-18DA66BB9D98}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C3D14786-4AB8-4E86-AE15-18DA66BB9D98}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C3D14786-4AB8-4E86-AE15-18DA66BB9D98}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
