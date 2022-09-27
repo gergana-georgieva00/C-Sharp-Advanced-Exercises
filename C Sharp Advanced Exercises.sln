@@ -109,21 +109,23 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SoftUniExamResults", "SoftU
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ForceBook", "ForceBook\ForceBook.csproj", "{FC8E346B-6274-4ED0-B760-C4D284A1F107}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OddLInes", "OddLInes\OddLInes.csproj", "{E4DB9D84-49BD-40D7-9D66-E57F9202F04D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OddLInes", "OddLInes\OddLInes.csproj", "{E4DB9D84-49BD-40D7-9D66-E57F9202F04D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LineNumbers", "LineNumbers\LineNumbers.csproj", "{3775D5CD-9340-4D5B-8149-24679D0EA0B5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LineNumbers", "LineNumbers\LineNumbers.csproj", "{3775D5CD-9340-4D5B-8149-24679D0EA0B5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WordCount", "WordCount\WordCount.csproj", "{323274C9-4E57-4124-9E01-9D2702E8CD07}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WordCount", "WordCount\WordCount.csproj", "{323274C9-4E57-4124-9E01-9D2702E8CD07}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MergeFiles", "MergeFiles\MergeFiles.csproj", "{56CA66E3-ECF1-4C94-8C05-B3B39C0CB7DE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MergeFiles", "MergeFiles\MergeFiles.csproj", "{56CA66E3-ECF1-4C94-8C05-B3B39C0CB7DE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExtractSpecialBytes", "ExtractSpecialBytes\ExtractSpecialBytes.csproj", "{7840578E-B146-48EE-B031-C8330FA6EF3C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ExtractSpecialBytes", "ExtractSpecialBytes\ExtractSpecialBytes.csproj", "{7840578E-B146-48EE-B031-C8330FA6EF3C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MergeBinaryFiles", "SplitMergeBinaryFiles\MergeBinaryFiles.csproj", "{7D6F148F-A49B-4786-AF56-04EB367C9956}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MergeBinaryFiles", "SplitMergeBinaryFiles\MergeBinaryFiles.csproj", "{7D6F148F-A49B-4786-AF56-04EB367C9956}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EvenLines", "EvenLines\EvenLines.csproj", "{8C3133B9-7855-4680-B176-4514D1D7DF52}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EvenLines", "EvenLines\EvenLines.csproj", "{8C3133B9-7855-4680-B176-4514D1D7DF52}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CopyBinaryFile", "CopyBinaryFile\CopyBinaryFile.csproj", "{E500E1FB-8B48-4B5D-A219-8ABE12372BD4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CopyBinaryFile", "CopyBinaryFile\CopyBinaryFile.csproj", "{E500E1FB-8B48-4B5D-A219-8ABE12372BD4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DirectoryTraversal", "DirectoryTraversal\DirectoryTraversal.csproj", "{12941C7D-A378-4F39-BF53-94E749521C31}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -375,6 +377,10 @@ Global
 		{E500E1FB-8B48-4B5D-A219-8ABE12372BD4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E500E1FB-8B48-4B5D-A219-8ABE12372BD4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E500E1FB-8B48-4B5D-A219-8ABE12372BD4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{12941C7D-A378-4F39-BF53-94E749521C31}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{12941C7D-A378-4F39-BF53-94E749521C31}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{12941C7D-A378-4F39-BF53-94E749521C31}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{12941C7D-A378-4F39-BF53-94E749521C31}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
