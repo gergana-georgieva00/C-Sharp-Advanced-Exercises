@@ -1,4 +1,7 @@
-﻿using System.IO;
+﻿using System;
+using System.IO;
+using System.Linq;
+using System.Text;
 
 namespace LineNumbers
 {
@@ -6,32 +9,27 @@ namespace LineNumbers
     {
         static void Main()
         {
-            string inputPath = @"..\..\..\Files\input.txt";
-            string outputPath = @"..\..\..\Files\output.txt";
+            string inputPath = @"..\..\..\text.txt";
+            string outputPath = @"..\..\..\output.txt";
 
-            RewriteFileWithLineNumbers(inputPath, outputPath);
+            ProcessLines(inputPath, outputPath);
         }
-
-        public static void RewriteFileWithLineNumbers(string inputFilePath, string outputFilePath)
+        public static void ProcessLines(string inputFilePath, string outputFilePath)
         {
-            // TODO: write your code here…
+            string[] lines = File.ReadAllLines(inputFilePath);
 
-            using (StreamReader reader = new StreamReader(inputFilePath))
+            StringBuilder sb = new StringBuilder();
+
+            for (int i = 0; i < lines.Length; i++)
             {
-                using (StreamWriter writer = new StreamWriter(outputFilePath))
-                {
-                    int num = 1;
+                int lettersCount = lines[i].Count(c => char.IsLetter(c));
+                int puncMarksCount = lines[i].Count(p => char.IsPunctuation(p));
 
-                    while (!reader.EndOfStream)
-                    {
-                        string currLine = reader.ReadLine();
-
-                        writer.WriteLine($"{num.ToString()}. {currLine}");
-
-                        num++;
-                    }
-                }
+                sb.AppendLine($"Line {i + 1}: {lines[i]} ({lettersCount})({puncMarksCount})");
             }
+
+            File.WriteAllText(outputFilePath, sb.ToString());
         }
     }
+
 }
