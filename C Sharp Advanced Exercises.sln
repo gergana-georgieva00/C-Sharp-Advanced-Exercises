@@ -131,6 +131,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CopyDirectory", "CopyDirect
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZipAndExtract", "ZipAndExtract\ZipAndExtract.csproj", "{836E4F30-D3DD-4899-8176-04C8690EDF39}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SortEvenNumbers", "SortEvenNumbers\SortEvenNumbers.csproj", "{805B2325-2E02-4690-AF9E-72B6FCDF5F11}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -393,6 +395,10 @@ Global
 		{836E4F30-D3DD-4899-8176-04C8690EDF39}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{836E4F30-D3DD-4899-8176-04C8690EDF39}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{836E4F30-D3DD-4899-8176-04C8690EDF39}.Release|Any CPU.Build.0 = Release|Any CPU
+		{805B2325-2E02-4690-AF9E-72B6FCDF5F11}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{805B2325-2E02-4690-AF9E-72B6FCDF5F11}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{805B2325-2E02-4690-AF9E-72B6FCDF5F11}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{805B2325-2E02-4690-AF9E-72B6FCDF5F11}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
