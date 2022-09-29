@@ -35,10 +35,5 @@ namespace AppliedArithmetics
                 }
             }
         }
-
-        static int Add(int num)
-        {
-            return num + 1;
-        }
     }
 }
