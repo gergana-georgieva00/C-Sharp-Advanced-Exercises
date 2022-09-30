@@ -23,14 +23,21 @@ namespace TriFunction
                 return currSum >= n;
             };
 
-            foreach (var name in names)
+            Func<List<string>, Func<string, int, bool>, string> result = (names, filter) =>
             {
-                if (filter(name, n))
+                foreach (var name in names)
                 {
-                    Console.WriteLine(name);
-                    return;
+                    if (filter(name, n))
+                    {
+                        Console.WriteLine(name);
+                        return name;
+                    }
                 }
-            }
+
+                return "";
+            };
+
+            result(names, filter);
         }
     }
 }
