@@ -163,6 +163,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ThePartyReservationFilterMo
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TriFunction", "TriFunction\TriFunction.csproj", "{F088A050-5A9E-4CBB-B0DA-912CCBF61BFB}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarManufacturer", "CarManufacturer\CarManufacturer.csproj", "{6E18D238-390A-4F39-A282-0A1F67D56161}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -489,6 +491,10 @@ Global
 		{F088A050-5A9E-4CBB-B0DA-912CCBF61BFB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F088A050-5A9E-4CBB-B0DA-912CCBF61BFB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F088A050-5A9E-4CBB-B0DA-912CCBF61BFB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6E18D238-390A-4F39-A282-0A1F67D56161}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6E18D238-390A-4F39-A282-0A1F67D56161}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6E18D238-390A-4F39-A282-0A1F67D56161}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6E18D238-390A-4F39-A282-0A1F67D56161}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
