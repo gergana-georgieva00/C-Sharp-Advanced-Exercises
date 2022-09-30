@@ -6,14 +6,15 @@ namespace CarManufacturer
     {
         static void Main(string[] args)
         {
-            Car car = new Car()
-            {
-                Make = "WV",
-                Model = "MK3",
-                Year = 1992
-            };
+            Car car = new Car();
 
-            Console.WriteLine($"Make: {car.Make}\nModel: {car.Make}\nYear: {car.Year}");
+            car.Make = "WV";
+            car.Model = "MK3";
+            car.Year = 1992;
+            car.FuelQuantity = 200;
+            car.FuelConsumption = 200;
+            car.Drive(2000);
+            Console.WriteLine(car.WhoAmI());
         }
     }
 }
