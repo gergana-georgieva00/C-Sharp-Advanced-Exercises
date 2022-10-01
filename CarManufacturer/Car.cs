@@ -72,7 +72,7 @@ namespace CarManufacturer
             //Year: { this.Year}
             //Fuel: { this.FuelQuantity:F2}
 
-            return $"Make: {this.Make}\nModel: { this.Model}\nYear: { this.Year}\nFuel: { this.FuelQuantity:F2}";
+            return $"Make: {this.Make}\nModel: { this.Model}\nYear: { this.Year}\nHorsePowers: {this.Engine.HorsePower}\nFuelQuantity: {this.FuelQuantity}";
         }
     }
 }
