@@ -55,9 +55,9 @@ namespace CarManufacturer
 
         public void Drive(double distance)
         {
-            if (this.FuelQuantity - (distance * this.FuelConsumption) > 0)
+            if (this.FuelQuantity - ((distance * this.FuelConsumption) / 100) > 0)
             {
-                this.FuelQuantity -= distance * this.FuelConsumption;
+                this.FuelQuantity -= distance * this.FuelConsumption / 100;
             }
             else
             {
