@@ -167,6 +167,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarManufacturer", "CarManuf
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Snake", "Snake\Snake.csproj", "{48B49702-8D75-4F58-9CA1-2249060B14BE}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Parking", "Parking\Parking.csproj", "{00801752-2903-4988-9982-4E2605AAE1CC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -501,6 +503,10 @@ Global
 		{48B49702-8D75-4F58-9CA1-2249060B14BE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{48B49702-8D75-4F58-9CA1-2249060B14BE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{48B49702-8D75-4F58-9CA1-2249060B14BE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{00801752-2903-4988-9982-4E2605AAE1CC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{00801752-2903-4988-9982-4E2605AAE1CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{00801752-2903-4988-9982-4E2605AAE1CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{00801752-2903-4988-9982-4E2605AAE1CC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
