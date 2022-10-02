@@ -9,6 +9,13 @@ namespace Parking
     {
         private List<Car> cars;
 
+        public Parking(string type, int capacity)
+        {
+            this.Cars = new List<Car>();
+            this.Type = type;
+            this.Capacity = capacity;
+        }
+
         public List<Car> Cars { get; set; }
         public string Type { get; set; }
         public int Capacity { get; set; }
@@ -19,16 +26,12 @@ namespace Parking
         }
 
 
-        public Parking(string type, int capacity)
-        {
-            this.Cars = new List<Car>();
-            this.Type = type;
-            this.Capacity = capacity;
-        }
-
         public void Add(Car car)
         {
-            this.Cars.Add(car);
+            if (Cars.Count < this.Capacity)
+            {
+                this.Cars.Add(car);
+            }
         }
 
         public bool Remove(string manufacturer, string model)
