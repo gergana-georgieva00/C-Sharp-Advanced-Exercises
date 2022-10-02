@@ -59,6 +59,7 @@ namespace Snake
                     }
                     else
                     {
+                        matrix[currRow, currCol] = '.';
                         Console.WriteLine("Game over!");
                         Console.WriteLine($"Food eaten: {food}");
                         PrintMatrix(matrix);
@@ -92,6 +93,7 @@ namespace Snake
                     }
                     else
                     {
+                        matrix[currRow, currCol] = '.';
                         Console.WriteLine("Game over!");
                         Console.WriteLine($"Food eaten: {food}");
                         PrintMatrix(matrix);
@@ -125,6 +127,7 @@ namespace Snake
                     }
                     else
                     {
+                        matrix[currRow, currCol] = '.';
                         Console.WriteLine("Game over!");
                         Console.WriteLine($"Food eaten: {food}");
                         PrintMatrix(matrix);
@@ -158,6 +161,7 @@ namespace Snake
                     }
                     else
                     {
+                        matrix[currRow, currCol] = '.';
                         Console.WriteLine("Game over!");
                         Console.WriteLine($"Food eaten: {food}");
                         PrintMatrix(matrix);
