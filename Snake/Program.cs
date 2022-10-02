@@ -47,7 +47,7 @@ namespace Snake
                                 break;
                             case 'B':
                                 matrix[currRow, currCol] = '.';
-                                matrix[currRow + 1, currCol] = '.';
+                                matrix[currRow, currCol - 1] = '.';
                                 int[] coordExitBurrow = FindExitBurrow(matrix);
                                 matrix[coordExitBurrow[0], coordExitBurrow[1]] = 'S';
                                 break;
@@ -81,7 +81,7 @@ namespace Snake
                                 break;
                             case 'B':
                                 matrix[currRow, currCol] = '.';
-                                matrix[currRow + 1, currCol] = '.';
+                                matrix[currRow, currCol + 1] = '.';
                                 int[] coordExitBurrow = FindExitBurrow(matrix);
                                 matrix[coordExitBurrow[0], coordExitBurrow[1]] = 'S';
                                 break;
@@ -115,7 +115,7 @@ namespace Snake
                                 break;
                             case 'B':
                                 matrix[currRow, currCol] = '.';
-                                matrix[currRow + 1, currCol] = '.';
+                                matrix[currRow - 1, currCol] = '.';
                                 int[] coordExitBurrow = FindExitBurrow(matrix);
                                 matrix[coordExitBurrow[0], coordExitBurrow[1]] = 'S';
                                 break;
