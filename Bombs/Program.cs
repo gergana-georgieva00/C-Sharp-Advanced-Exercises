@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 
 namespace Bombs
@@ -7,105 +8,130 @@ namespace Bombs
     {
         static void Main(string[] args)
         {
-            int n = int.Parse(Console.ReadLine());
+            int[] bombEffectsArr = Console.ReadLine().Split(", ", StringSplitOptions.RemoveEmptyEntries).Select(int.Parse).ToArray();
+            int[] bombCasingsArr = Console.ReadLine().Split(", ", StringSplitOptions.RemoveEmptyEntries).Select(int.Parse).ToArray();
 
-            int[,] matrix = new int[n, n];
+            Queue<int> bombEffects = new Queue<int>(bombEffectsArr);
+            Stack<int> bombCasings = new Stack<int>(bombCasingsArr);
 
-            for (int row = 0; row < n; row++)
+            int daturaBomb = 40;
+            int cherryBomb = 60;
+            int smokeDecoyBomb = 120;
+
+            bool filledPouch = false;
+
+            Dictionary<string, int> bombPouch = new Dictionary<string, int>();
+
+            while (bombEffects.Count > 0 && bombCasings.Count > 0)
             {
-                int[] currRow = Console.ReadLine().Split(' ', StringSplitOptions.RemoveEmptyEntries).Select(int.Parse).ToArray();
-
-                for (int col = 0; col < n; col++)
+                if (bombPouch.ContainsKey("cherry bomb") && bombPouch["cherry bomb"] >= 3
+                    && bombPouch.ContainsKey("datura bomb") && bombPouch["datura bomb"] >= 3 
+                    && bombPouch.ContainsKey("smoke deco bomb") && bombPouch["smoke deco bomb"] >= 3)
                 {
-                    matrix[row, col] = currRow[col];
-                }
-            }
-
-            string[] coordinatesOfBombCells = Console.ReadLine().Split(' ', StringSplitOptions.RemoveEmptyEntries).ToArray();
-
-            foreach (var coordinate in coordinatesOfBombCells)
-            {
-                int row = int.Parse(coordinate.Split(',', StringSplitOptions.RemoveEmptyEntries)[0]);
-                int col = int.Parse(coordinate.Split(',', StringSplitOptions.RemoveEmptyEntries)[1]);
-
-                int numBomb = matrix[row, col];
-
-                if (numBomb <= 0)
-                {
-                    continue;
+                    filledPouch = true;
+                    break;
                 }
 
-                matrix[row, col] = 0;
+                int currSum = bombEffects.Peek() + bombCasings.Peek();
 
-                // left
-                if (col - 1 >= 0 && matrix[row, col - 1] > 0)
+                if (currSum == daturaBomb || currSum == cherryBomb || currSum == smokeDecoyBomb)
                 {
-                    matrix[row, col - 1] -= numBomb;
-                }
-                // right
-                if (col + 1 < n && matrix[row, col + 1] > 0)
-                {
-                    matrix[row, col + 1] -= numBomb;
-                }
-                // top
-                if (row - 1 >= 0 && matrix[row - 1, col] > 0)
-                {
-                    matrix[row - 1, col] -= numBomb;
-                }
-                // bottom
-                if (row + 1 < n && matrix[row + 1, col] > 0)
-                {
-                    matrix[row + 1, col] -= numBomb;
-                }
-                // first diagonal
-                if (row - 1 >= 0 && col - 1 >= 0 && matrix[row - 1, col - 1] > 0)
-                {
-                    matrix[row - 1, col - 1] -= numBomb;
-                }
-                // second diagonal
-                if (row - 1 >= 0 && col + 1 < n && matrix[row - 1, col + 1] > 0)
-                {
-                    matrix[row - 1, col + 1] -= numBomb;
-                }
-                // third diagonal
-                if (row + 1 < n && col - 1 >= 0 && matrix[row + 1, col - 1] > 0)
-                {
-                    matrix[row + 1, col - 1] -= numBomb;
-                }
-                // fourth diagonal
-                if (row + 1 < n && col + 1 < n && matrix[row + 1, col + 1] > 0)
-                {
-                    matrix[row + 1, col + 1] -= numBomb;
-                }
-            }
+                    bombEffects.Dequeue();
+                    bombCasings.Pop();
 
-            // find count alive cells and their sum
-            int aliveCells = 0;
-            int sum = 0;
-
-            for (int row = 0; row < n; row++)
-            {
-                for (int col = 0; col < n; col++)
-                {
-                    if (matrix[row, col] > 0)
+                    if (currSum == daturaBomb)
                     {
-                        aliveCells++;
-                        sum += matrix[row, col];
+                        if (!bombPouch.ContainsKey("datura bomb"))
+                        {
+                            bombPouch.Add("datura bomb", 1);
+                        }
+                        else
+                        {
+                            bombPouch["datura bomb"]++;
+                        }
+                    }
+                    else if (currSum == cherryBomb)
+                    {
+                        if (!bombPouch.ContainsKey("cherry bomb"))
+                        {
+                            bombPouch.Add("cherry bomb", 1);
+                        }
+                        else
+                        {
+                            bombPouch["cherry bomb"]++;
+                        }
+                    }
+                    else
+                    {
+                        if (!bombPouch.ContainsKey("smoke deco bomb"))
+                        {
+                            bombPouch.Add("smoke deco bomb", 1);
+                        }
+                        else
+                        {
+                            bombPouch["smoke deco bomb"]++;
+                        }
                     }
                 }
+                else
+                {
+                    int currValue = bombCasings.Pop() - 5;
+                    bombCasings.Push(currValue);
+                }
             }
 
-            Console.WriteLine($"Alive cells: {aliveCells}");
-            Console.WriteLine($"Sum: {sum}");
-
-            for (int row = 0; row < n; row++)
+            if (filledPouch == true)
             {
-                for (int col = 0; col < n; col++)
-                {
-                    Console.Write(matrix[row, col] + " ");
-                }
+                Console.WriteLine("Bene! You have successfully filled the bomb pouch!");
+            }
+            else
+            {
+                Console.WriteLine("You don't have enough materials to fill the bomb pouch.");
+            }
 
-                Console.WriteLine();
+            if (bombEffects.Count == 0)
+            {
+                Console.WriteLine("Bomb Effects: empty");
+            }
+            else
+            {
+                Console.WriteLine($"Bomb Effects: {string.Join(", ", bombEffects)}");
+            }
+
+            if (bombCasings.Count == 0)
+            {
+                Console.WriteLine("Bomb Casings: empty");
+            }
+            else
+            {
+                Console.WriteLine($"Bomb Casings: {string.Join(", ", bombCasings)}");
+            }
+
+            if (bombPouch.ContainsKey("cherry bomb"))
+            {
+                Console.WriteLine($"Cherry Bombs: {bombPouch["cherry bomb"]}");
+            }
+            else
+            {
+                Console.WriteLine($"Cherry Bombs: 0");
+            }
+
+            if (bombPouch.ContainsKey("datura bomb"))
+            {
+                Console.WriteLine($"Datura Bombs: {bombPouch["datura bomb"]}");
+            }
+            else
+            {
+                Console.WriteLine($"Datura Bombs: 0");
+            }
+
+            if (bombPouch.ContainsKey("smoke deco bomb"))
+            {
+                Console.WriteLine($"Smoke Decoy Bombs: {bombPouch["smoke deco bomb"]}");
+            }
+            else
+            {
+                Console.WriteLine($"Smoke Decoy Bombs: 0");
             }
         }
     }
