@@ -26,5 +26,10 @@ namespace DefiningClasses
             List<Person> sorted = this.People.OrderByDescending(p => p.Age).ToList();
             return sorted[0];
         }
+
+        internal Family Where(Func<object, bool> p)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
