@@ -23,9 +23,9 @@ namespace SoftUniParking
         {
             StringBuilder sb = new StringBuilder();
 
-            sb.AppendLine($"Make: {this.Make}");
-            sb.AppendLine($"Model: {this.Model}");
-            sb.AppendLine($"HorsePower: {this.HorsePower}");
+            sb.Append($"Make: {this.Make}\n");
+            sb.Append($"Model: {this.Model}\n");
+            sb.Append($"HorsePower: {this.HorsePower}\n");
             sb.Append($"RegistrationNumber: {this.RegistrationNumber}");
 
             return sb.ToString();

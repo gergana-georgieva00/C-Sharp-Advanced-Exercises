@@ -7,14 +7,25 @@ namespace SoftUniParking
 {
     public class Parking
     {
+        private List<Car> cars;
+        private int capacity;
         public Parking(int capacity)
         {
             this.Capacity = capacity;
             this.Cars = new List<Car>();
         }
 
-        public List<Car> Cars { get; set; }
-        public int Capacity { get; set; }
+        public List<Car> Cars
+        {
+            get { return cars; }
+            set { cars = value; }
+        }
+        public int Capacity
+        {
+            get { return capacity; }
+            set { capacity = value; }
+        }
+
         public int Count
         {
             get { return this.Cars.Count; }
