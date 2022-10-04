@@ -36,78 +36,49 @@ namespace PokemonTrainer
             string command1;
             while ((command1 = Console.ReadLine()) != "End")
             {
-                if (command1 == "Fire")
+                if (command1.Contains("Fire"))
                 {
-                    if (trainers.Any(t => t.Pokemons.Any(p => p.Element == "Fire")))
+                    foreach (var trainer in trainers)
                     {
-                        foreach (Trainer trainer in trainers)
+                        if (trainer.Pokemons.Any(p => p.Element == "Fire"))
                         {
-                            if (trainer.Pokemons.Any(p => p.Element == "Fire"))
-                            {
-                                trainer.NumberOfBadges++;
-                            }
+                            trainer.NumberOfBadges++;
                         }
-                    }
-                    else
-                    {
-                        foreach (var trainer in trainers)
+                        else
                         {
                             trainer.Pokemons.ForEach(p => p.Health -= 10);
-
-                            if (trainer.Pokemons.Any(p => p.Health <= 0))
-                            {
-                                trainer.Pokemons.RemoveAll(p => p.Health <= 0);
-                            }
+                            trainer.Pokemons.RemoveAll(p => p.Health <= 0);
                         }
                     }
+
                 }
-                else if (command1 == "Water")
+                else if (command1.Contains("Water"))
                 {
-                    if (trainers.Any(t => t.Pokemons.Any(p => p.Element == "Water")))
+                    foreach (var trainer in trainers)
                     {
-                        foreach (Trainer trainer in trainers)
+                        if (trainer.Pokemons.Any(p => p.Element == "Water"))
                         {
-                            if (trainer.Pokemons.Any(p => p.Element == "Water"))
-                            {
-                                trainer.NumberOfBadges++;
-                            }
+                            trainer.NumberOfBadges++;
                         }
-                    }
-                    else
-                    {
-                        foreach (var trainer in trainers)
+                        else
                         {
                             trainer.Pokemons.ForEach(p => p.Health -= 10);
-
-                            if (trainer.Pokemons.Any(p => p.Health <= 0))
-                            {
-                                trainer.Pokemons.RemoveAll(p => p.Health <= 0);
-                            }
+                            trainer.Pokemons.RemoveAll(p => p.Health <= 0);
                         }
                     }
                 }
                 else
                 {
-                    if (trainers.Any(t => t.Pokemons.Any(p => p.Element == "Electricity")))
+                    foreach (var trainer in trainers)
                     {
-                        foreach (Trainer trainer in trainers)
+                        if (trainer.Pokemons.Any(p => p.Element == "Electricity"))
                         {
-                            if (trainer.Pokemons.Any(p => p.Element == "Electricity"))
-                            {
-                                trainer.NumberOfBadges++;
-                            }
+                            trainer.NumberOfBadges++;
                         }
-                    }
-                    else
-                    {
-                        foreach (var trainer in trainers)
+                        else
                         {
                             trainer.Pokemons.ForEach(p => p.Health -= 10);
-
-                            if (trainer.Pokemons.Any(p => p.Health <= 0))
-                            {
-                                trainer.Pokemons.RemoveAll(p => p.Health <= 0);
-                            }
+                            trainer.Pokemons.RemoveAll(p => p.Health <= 0);
                         }
                     }
                 }
