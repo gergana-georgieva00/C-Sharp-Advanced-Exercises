@@ -26,8 +26,7 @@ namespace SoftUniParking
             sb.AppendLine($"Make: {this.Make}");
             sb.AppendLine($"Model: {this.Model}");
             sb.AppendLine($"HorsePower: {this.HorsePower}");
-            sb.AppendLine($"RegistrationNumber: {this.RegistrationNumber}");
-
+            sb.Append($"RegistrationNumber: {this.RegistrationNumber}");
 
             return sb.ToString();
         }

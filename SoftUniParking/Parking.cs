@@ -26,18 +26,15 @@ namespace SoftUniParking
             if (this.Cars.Any(c => c.RegistrationNumber == Car.RegistrationNumber))
             {
                 return "Car with that registration number, already exists!";
-                //return false;
             }
 
             if (this.Cars.Count >= this.Capacity)
             {
                 return "Parking is full!";
-                //return false;
             }
 
             this.Cars.Add(Car);
             return $"Successfully added new car {Car.Make} {Car.RegistrationNumber}";
-            //return true;
         }
 
         public string RemoveCar(string RegistrationNumber)
@@ -45,23 +42,16 @@ namespace SoftUniParking
             if (!this.Cars.Any(c => c.RegistrationNumber == RegistrationNumber))
             {
                 return "Car with that registration number, doesn't exist!";
-                //return false;
             }
 
             this.Cars = this.Cars.Where(c => c.RegistrationNumber != RegistrationNumber).ToList();
             return $"Successfully removed {RegistrationNumber}";
-            //return true;
         }
 
         public Car GetCar(string RegistrationNumber)
         {
-            if (this.Cars.Any(c => c.RegistrationNumber == RegistrationNumber))
-            {
-                Car car = this.Cars.Find(c => c.RegistrationNumber == RegistrationNumber);
-                return car;
-            }
-
-            return null;
+            Car car = this.Cars.Find(c => c.RegistrationNumber == RegistrationNumber);
+            return car;
         }
 
         public void RemoveSetOfRegistrationNumber(List<string> RegistrationNumbers)
