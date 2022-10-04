@@ -183,6 +183,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SoftUniParking", "SoftUniPa
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FlowerWreaths", "FlowerWreaths\FlowerWreaths.csproj", "{5141CA4B-CA0C-4F98-A6C8-DDC1C6B24C75}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bee", "Bee\Bee.csproj", "{97818BDF-0210-4102-8ED7-0E4D1CAD002A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -549,6 +551,10 @@ Global
 		{5141CA4B-CA0C-4F98-A6C8-DDC1C6B24C75}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5141CA4B-CA0C-4F98-A6C8-DDC1C6B24C75}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5141CA4B-CA0C-4F98-A6C8-DDC1C6B24C75}.Release|Any CPU.Build.0 = Release|Any CPU
+		{97818BDF-0210-4102-8ED7-0E4D1CAD002A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{97818BDF-0210-4102-8ED7-0E4D1CAD002A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{97818BDF-0210-4102-8ED7-0E4D1CAD002A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{97818BDF-0210-4102-8ED7-0E4D1CAD002A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
