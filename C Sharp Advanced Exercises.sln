@@ -185,6 +185,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FlowerWreaths", "FlowerWrea
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bee", "Bee\Bee.csproj", "{97818BDF-0210-4102-8ED7-0E4D1CAD002A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VetClinic", "VetClinic\VetClinic.csproj", "{F423CBA0-B4B7-4D44-BB76-6E20975B1EAE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -555,6 +557,10 @@ Global
 		{97818BDF-0210-4102-8ED7-0E4D1CAD002A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{97818BDF-0210-4102-8ED7-0E4D1CAD002A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{97818BDF-0210-4102-8ED7-0E4D1CAD002A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F423CBA0-B4B7-4D44-BB76-6E20975B1EAE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F423CBA0-B4B7-4D44-BB76-6E20975B1EAE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F423CBA0-B4B7-4D44-BB76-6E20975B1EAE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F423CBA0-B4B7-4D44-BB76-6E20975B1EAE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
