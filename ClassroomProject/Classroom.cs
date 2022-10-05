@@ -67,11 +67,6 @@ namespace ClassroomProject
                 }
             }
 
-            //foreach (var student in filtered)
-            //{
-            //    sb.AppendLine($"{student.FirstName} {student.LastName}");
-            //}
-
             return sb.ToString();
         }
 
