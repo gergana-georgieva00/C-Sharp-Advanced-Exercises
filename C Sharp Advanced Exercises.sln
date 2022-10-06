@@ -197,6 +197,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClassroomProject", "Classro
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cooking", "Cooking\Cooking.csproj", "{82B1F908-1202-4F33-BBD7-2E83B1AA1810}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Selling", "Selling\Selling.csproj", "{850B769B-4412-450B-9DB5-00E8F3F6E36B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -591,6 +593,10 @@ Global
 		{82B1F908-1202-4F33-BBD7-2E83B1AA1810}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{82B1F908-1202-4F33-BBD7-2E83B1AA1810}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{82B1F908-1202-4F33-BBD7-2E83B1AA1810}.Release|Any CPU.Build.0 = Release|Any CPU
+		{850B769B-4412-450B-9DB5-00E8F3F6E36B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{850B769B-4412-450B-9DB5-00E8F3F6E36B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{850B769B-4412-450B-9DB5-00E8F3F6E36B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{850B769B-4412-450B-9DB5-00E8F3F6E36B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
