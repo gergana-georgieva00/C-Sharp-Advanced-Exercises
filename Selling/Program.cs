@@ -48,7 +48,7 @@ namespace Selling
                             matrix[row, col] = '-';
                             matrix[row, col - 1] = 'S';
                         }
-                        else
+                        else if(Char.IsDigit(matrix[row, col - 1]))
                         {
                             collectedMoney += int.Parse(matrix[row, col - 1].ToString());
 
@@ -73,7 +73,7 @@ namespace Selling
                             matrix[row, col] = '-';
                             matrix[row, col + 1] = 'S';
                         }
-                        else
+                        else if(Char.IsDigit(matrix[row, col + 1]))
                         {
                             collectedMoney += int.Parse(matrix[row, col + 1].ToString());
 
@@ -98,7 +98,7 @@ namespace Selling
                             matrix[row, col] = '-';
                             matrix[row - 1, col] = 'S';
                         }
-                        else
+                        else if(Char.IsDigit(matrix[row - 1, col]))
                         {
                             collectedMoney += int.Parse(matrix[row - 1, col].ToString());
 
@@ -123,7 +123,7 @@ namespace Selling
                             matrix[row, col] = '-';
                             matrix[row + 1, col] = 'S';
                         }
-                        else
+                        else if(Char.IsDigit(matrix[row + 1, col]))
                         {
                             collectedMoney += int.Parse(matrix[row + 1, col].ToString());
 
@@ -229,7 +229,7 @@ namespace Selling
                     }
                     break;
                 case "down":
-                    if (currRow < matrix.GetLength(0))
+                    if (currRow + 1 < matrix.GetLength(0))
                     {
                         return true;
                     }
