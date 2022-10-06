@@ -21,17 +21,16 @@ namespace Selling
             }
 
             int collectedMoney = 0;
-            bool enoughMoney = true;
 
             while (collectedMoney < 50)
             {
                 string command = Console.ReadLine();
 
+                int row = GetCurrentPosition(matrix)[0];
+                int col = GetCurrentPosition(matrix)[1];
+
                 if (IsCommandValid(matrix, command))
                 {
-                    int row = GetCurrentPosition(matrix)[0];
-                    int col = GetCurrentPosition(matrix)[1];
-
                     if (command == "left")
                     {
                         if (matrix[row, col - 1] == 'O')
@@ -135,13 +134,13 @@ namespace Selling
                 }
                 else
                 {
+                    matrix[row, col] = '-';
                     Console.WriteLine("Bad news, you are out of the bakery.");
-                    enoughMoney = false;
                     break;
                 }
             }
 
-            if (enoughMoney)
+            if (collectedMoney >= 50)
             {
                 Console.WriteLine("Good news! You succeeded in collecting enough money!");
             }
