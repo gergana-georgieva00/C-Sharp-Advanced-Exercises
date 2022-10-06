@@ -199,6 +199,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cooking", "Cooking\Cooking.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Selling", "Selling\Selling.csproj", "{850B769B-4412-450B-9DB5-00E8F3F6E36B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BakeryOpenning", "BakeryOpenning\BakeryOpenning.csproj", "{D49CC398-9BDE-4428-85D5-69FEF00A202C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -597,6 +599,10 @@ Global
 		{850B769B-4412-450B-9DB5-00E8F3F6E36B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{850B769B-4412-450B-9DB5-00E8F3F6E36B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{850B769B-4412-450B-9DB5-00E8F3F6E36B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D49CC398-9BDE-4428-85D5-69FEF00A202C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D49CC398-9BDE-4428-85D5-69FEF00A202C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D49CC398-9BDE-4428-85D5-69FEF00A202C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D49CC398-9BDE-4428-85D5-69FEF00A202C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
