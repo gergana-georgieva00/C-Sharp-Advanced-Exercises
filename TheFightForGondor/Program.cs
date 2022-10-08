@@ -22,11 +22,11 @@ namespace TheFightForGondor
                 if (plates.Count > 0)
                 {
                     orcs = new Stack<int>(orcsInput);
-                }
-                
-                if (i % 3 == 0)
-                {
-                    plates.Enqueue(int.Parse(Console.ReadLine()));
+
+                    if (i % 3 == 0)
+                    {
+                        plates.Enqueue(int.Parse(Console.ReadLine()));
+                    }
                 }
 
                 while (orcs.Count > 0 && plates.Count > 0)
