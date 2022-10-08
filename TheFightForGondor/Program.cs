@@ -13,11 +13,21 @@ namespace TheFightForGondor
             int[] platesInput = Console.ReadLine().Split(' ', StringSplitOptions.RemoveEmptyEntries).Select(int.Parse).ToArray();
 
             Queue<int> plates = new Queue<int>(platesInput);
+            Stack<int> orcs = new Stack<int>();
 
-            for (int i = 0; i < n; i++)
+            for (int i = 1; i <= n; i++)
             {
                 int[] orcsInput = Console.ReadLine().Split(' ', StringSplitOptions.RemoveEmptyEntries).Select(int.Parse).ToArray();
-                Stack<int> orcs = new Stack<int>(orcsInput);
+
+                if (plates.Count > 0)
+                {
+                    orcs = new Stack<int>(orcsInput);
+                }
+                
+                if (i % 3 == 0)
+                {
+                    plates.Enqueue(int.Parse(Console.ReadLine()));
+                }
 
                 while (orcs.Count > 0 && plates.Count > 0)
                 {
@@ -38,6 +48,17 @@ namespace TheFightForGondor
                         plates.Dequeue();
                     }
                 }
+            }
+
+            if (plates.Count == 0)
+            {
+                Console.WriteLine("The orcs successfully destroyed the Gondor's defense.");
+                Console.WriteLine($"Orcs left: {string.Join(", ", orcs)}");
+            }
+            else
+            {
+                Console.WriteLine("The people successfully repulsed the orc's attack.");
+                Console.WriteLine($"Plates left: {string.Join(", ", plates)}");
             }
         }
     }
