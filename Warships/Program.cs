@@ -16,6 +16,7 @@ namespace Warships
             for (int row = 0; row < n; row++)
             {
                 char[] currRow = Console.ReadLine().Split(' ', StringSplitOptions.RemoveEmptyEntries).Select(char.Parse).ToArray();
+
                 for (int col = 0; col < n; col++)
                 {
                     matrix[row, col] = currRow[col];
@@ -24,8 +25,22 @@ namespace Warships
 
             int countShipsDestroyed = 0;
 
+            int currPLayer = 0;
+            int index = 1;
+
             foreach (var coordPair in attackCoordinates)
             {
+                if (index % 2 == 0)
+                {
+                    currPLayer = 2;
+                }
+                else
+                {
+                    currPLayer = 1;
+                }
+
+                index++;
+
                 int[] splitPair = coordPair.Split(' ', StringSplitOptions.RemoveEmptyEntries).Select(int.Parse).ToArray();
 
                 int rowToAttack = splitPair[0];
@@ -35,40 +50,46 @@ namespace Warships
                 {
                     if (matrix[rowToAttack, colToAttack] == '<')
                     {
-                        matrix[rowToAttack, colToAttack] = 'X';
-                        countShipsDestroyed++;
-
-                        if (IsGameOver(matrix, n))
+                        if (currPLayer == 2)
                         {
-                            int winner = WhoWins(matrix, n);
+                            matrix[rowToAttack, colToAttack] = 'X';
+                            countShipsDestroyed++;
 
-                            if (winner == 1)
+                            if (IsGameOver(matrix, n))
                             {
-                                Console.WriteLine($"Player One has won the game! {countShipsDestroyed} ships have been sunk in the battle.");
+                                int winner = WhoWins(matrix, n);
+
+                                if (winner == 1)
+                                {
+                                    Console.WriteLine($"Player One has won the game! {countShipsDestroyed} ships have been sunk in the battle.");
+                                    return;
+                                }
+
+                                Console.WriteLine($"Player Two has won the game! {countShipsDestroyed} ships have been sunk in the battle.");
                                 return;
                             }
-
-                            Console.WriteLine($"Player Two has won the game! {countShipsDestroyed} ships have been sunk in the battle.");
-                            return;
                         }
                     }
                     else if (matrix[rowToAttack, colToAttack] == '>')
                     {
-                        matrix[rowToAttack, colToAttack] = 'X';
-                        countShipsDestroyed++;
-
-                        if (IsGameOver(matrix, n))
+                        if (currPLayer == 1)
                         {
-                            int winner = WhoWins(matrix, n);
+                            matrix[rowToAttack, colToAttack] = 'X';
+                            countShipsDestroyed++;
 
-                            if (winner == 1)
+                            if (IsGameOver(matrix, n))
                             {
-                                Console.WriteLine($"Player One has won the game! {countShipsDestroyed} ships have been sunk in the battle.");
+                                int winner = WhoWins(matrix, n);
+
+                                if (winner == 1)
+                                {
+                                    Console.WriteLine($"Player One has won the game! {countShipsDestroyed} ships have been sunk in the battle.");
+                                    return;
+                                }
+
+                                Console.WriteLine($"Player Two has won the game! {countShipsDestroyed} ships have been sunk in the battle.");
                                 return;
                             }
-
-                            Console.WriteLine($"Player Two has won the game! {countShipsDestroyed} ships have been sunk in the battle.");
-                            return;
                         }
                     }
                     else if (matrix[rowToAttack, colToAttack] == '#')
@@ -76,49 +97,49 @@ namespace Warships
                         // destroy all ships in adjacent fields
 
                         // left
-                        if (IsCommandValid(rowToAttack, colToAttack - 1, n) && matrix[rowToAttack, colToAttack - 1] != '*')
+                        if (colToAttack - 1 >= 0 && matrix[rowToAttack, colToAttack - 1] != '*')
                         {
                             countShipsDestroyed++;
                             matrix[rowToAttack, colToAttack - 1] = 'X';
                         }
                         // right
-                        if (IsCommandValid(rowToAttack, colToAttack + 1, n) && matrix[rowToAttack, colToAttack + 1] != '*')
+                        if (colToAttack + 1 < n && matrix[rowToAttack, colToAttack + 1] != '*')
                         {
                             countShipsDestroyed++;
                             matrix[rowToAttack, colToAttack + 1] = 'X';
                         }
                         // up
-                        if (IsCommandValid(rowToAttack - 1, colToAttack, n) && matrix[rowToAttack - 1, colToAttack] != '*')
+                        if (rowToAttack - 1 >= 0 && matrix[rowToAttack - 1, colToAttack] != '*')
                         {
                             countShipsDestroyed++;
-                             matrix[rowToAttack - 1, colToAttack] = 'X';
+                            matrix[rowToAttack - 1, colToAttack] = 'X';
                         }
                         // down
-                        if (IsCommandValid(rowToAttack + 1, colToAttack, n) && matrix[rowToAttack + 1, colToAttack] != '*')
+                        if (rowToAttack + 1 < n && matrix[rowToAttack + 1, colToAttack] != '*')
                         {
                             countShipsDestroyed++;
                             matrix[rowToAttack + 1, colToAttack] = 'X';
                         }
                         // diagonal up-left
-                        if (IsCommandValid(rowToAttack- 1, colToAttack - 1, n) && matrix[rowToAttack - 1, colToAttack - 1] != '*')
+                        if (rowToAttack - 1 >= 0 && colToAttack - 1 >= 0 && matrix[rowToAttack - 1, colToAttack - 1] != '*')
                         {
                             countShipsDestroyed++;
                             matrix[rowToAttack - 1, colToAttack - 1] = 'X';
                         }
                         // diagonal up-right
-                        if (IsCommandValid(rowToAttack - 1, colToAttack + 1, n) && matrix[rowToAttack - 1, colToAttack + 1] != '*')
+                        if (rowToAttack - 1 >= 0 && colToAttack + 1 < n && matrix[rowToAttack - 1, colToAttack + 1] != '*')
                         {
                             countShipsDestroyed++;
                             matrix[rowToAttack - 1, colToAttack + 1] = 'X';
                         }
                         // diagonal down-left
-                        if (IsCommandValid(rowToAttack + 1, colToAttack - 1, n) && matrix[rowToAttack + 1, colToAttack - 1] != '*')
+                        if (rowToAttack + 1 < n && colToAttack - 1 >= 0 && matrix[rowToAttack + 1, colToAttack - 1] != '*')
                         {
                             countShipsDestroyed++;
                             matrix[rowToAttack + 1, colToAttack - 1] = 'X';
                         }
                         // diagonal down-right
-                        if (IsCommandValid(rowToAttack + 1, colToAttack + 1, n) && matrix[rowToAttack + 1, colToAttack + 1] != '*')
+                        if (rowToAttack + 1 < n && colToAttack + 1 < n && matrix[rowToAttack + 1, colToAttack + 1] != '*')
                         {
                             countShipsDestroyed++;
                             matrix[rowToAttack + 1, colToAttack + 1] = 'X';
