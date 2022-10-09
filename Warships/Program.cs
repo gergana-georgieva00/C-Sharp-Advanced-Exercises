@@ -15,7 +15,7 @@ namespace Warships
 
             for (int row = 0; row < n; row++)
             {
-                string currRow = Console.ReadLine();
+                char[] currRow = Console.ReadLine().Split(' ', StringSplitOptions.RemoveEmptyEntries).Select(char.Parse).ToArray();
                 for (int col = 0; col < n; col++)
                 {
                     matrix[row, col] = currRow[col];
@@ -49,6 +49,7 @@ namespace Warships
                             }
 
                             Console.WriteLine($"Player Two has won the game! {countShipsDestroyed} ships have been sunk in the battle.");
+                            return;
                         }
                     }
                     else if (matrix[rowToAttack, colToAttack] == '>')
@@ -67,14 +68,115 @@ namespace Warships
                             }
 
                             Console.WriteLine($"Player Two has won the game! {countShipsDestroyed} ships have been sunk in the battle.");
+                            return;
                         }
                     }
                     else if (matrix[rowToAttack, colToAttack] == '#')
                     {
+                        // destroy all ships in adjacent fields
 
+                        // left
+                        if (IsCommandValid(rowToAttack, colToAttack - 1, n) && matrix[rowToAttack, colToAttack - 1] != '*')
+                        {
+                            countShipsDestroyed++;
+                            matrix[rowToAttack, colToAttack - 1] = 'X';
+                        }
+                        // right
+                        if (IsCommandValid(rowToAttack, colToAttack + 1, n) && matrix[rowToAttack, colToAttack + 1] != '*')
+                        {
+                            countShipsDestroyed++;
+                            matrix[rowToAttack, colToAttack + 1] = 'X';
+                        }
+                        // up
+                        if (IsCommandValid(rowToAttack - 1, colToAttack, n) && matrix[rowToAttack - 1, colToAttack] != '*')
+                        {
+                            countShipsDestroyed++;
+                             matrix[rowToAttack - 1, colToAttack] = 'X';
+                        }
+                        // down
+                        if (IsCommandValid(rowToAttack + 1, colToAttack, n) && matrix[rowToAttack + 1, colToAttack] != '*')
+                        {
+                            countShipsDestroyed++;
+                            matrix[rowToAttack + 1, colToAttack] = 'X';
+                        }
+                        // diagonal up-left
+                        if (IsCommandValid(rowToAttack- 1, colToAttack - 1, n) && matrix[rowToAttack - 1, colToAttack - 1] != '*')
+                        {
+                            countShipsDestroyed++;
+                            matrix[rowToAttack - 1, colToAttack - 1] = 'X';
+                        }
+                        // diagonal up-right
+                        if (IsCommandValid(rowToAttack - 1, colToAttack + 1, n) && matrix[rowToAttack - 1, colToAttack + 1] != '*')
+                        {
+                            countShipsDestroyed++;
+                            matrix[rowToAttack - 1, colToAttack + 1] = 'X';
+                        }
+                        // diagonal down-left
+                        if (IsCommandValid(rowToAttack + 1, colToAttack - 1, n) && matrix[rowToAttack + 1, colToAttack - 1] != '*')
+                        {
+                            countShipsDestroyed++;
+                            matrix[rowToAttack + 1, colToAttack - 1] = 'X';
+                        }
+                        // diagonal down-right
+                        if (IsCommandValid(rowToAttack + 1, colToAttack + 1, n) && matrix[rowToAttack + 1, colToAttack + 1] != '*')
+                        {
+                            countShipsDestroyed++;
+                            matrix[rowToAttack + 1, colToAttack + 1] = 'X';
+                        }
+
+                        if (IsGameOver(matrix, n))
+                        {
+                            int winner = WhoWins(matrix, n);
+
+                            if (winner == 1)
+                            {
+                                Console.WriteLine($"Player One has won the game! {countShipsDestroyed} ships have been sunk in the battle.");
+                                return;
+                            }
+
+                            Console.WriteLine($"Player Two has won the game! {countShipsDestroyed} ships have been sunk in the battle.");
+                        }
                     }
                 }
             }
+
+            Console.WriteLine($"It's a draw! Player One has { PlayerOneShipsLeft(matrix, n)} ships left. Player Two has {PlayerTwoShipsLeft(matrix, n)} ships left.");
+        }
+
+        static int PlayerTwoShipsLeft(char[,] matrix, int n)
+        {
+            int count = 0;
+
+            for (int row = 0; row < n; row++)
+            {
+                for (int col = 0; col < n; col++)
+                {
+                    if (matrix[row, col] == '>')
+                    {
+                        count++;
+                    }
+                }
+            }
+
+            return count;
+        }
+
+        static int PlayerOneShipsLeft(char[,] matrix, int n)
+        {
+            int count = 0;
+
+            for (int row = 0; row < n; row++)
+            {
+                for (int col = 0; col < n; col++)
+                {
+                    if (matrix[row, col] == '<')
+                    {
+                        count++;
+                    }
+                }
+            }
+
+            return count;
         }
 
         static int WhoWins(char[,] matrix, int n)
