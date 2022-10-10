@@ -23,27 +23,37 @@ namespace SuperMario
             }
 
             // logic
-            while (e > 0)
+            while (true)
             {
                 string[] command = Console.ReadLine().Split(' ', StringSplitOptions.RemoveEmptyEntries);
 
                 int row = int.Parse(command[1]);
                 int col = int.Parse(command[2]);
 
+                if (row >= 0 && col >= 0 && row < n && col < n)
+                {
+                   
+                }
+                else
+                {
+                    continue;
+                }
+
                 // move enemy
                 matrix[row, col] = 'B';
 
                 // move mario
-                if (IsCommandValid(matrix, n, command[0], row, col))
-                {
-                    int rowMario = GetCurrentPositionOfMario(matrix, n)[0];
-                    int colMario = GetCurrentPositionOfMario(matrix, n)[1];
+                
+                int rowMario = GetCurrentPositionOfMario(matrix, n)[0];
+                int colMario = GetCurrentPositionOfMario(matrix, n)[1];
 
+                if (IsCommandValid(matrix, n, command[0], rowMario, colMario))
+                {
                     matrix[rowMario, colMario] = '-';
 
                     if (!IsEnemy(command[0], matrix, n, rowMario, colMario))
                     {
-                        if (!IsPrincess(command[0], matrix, n, rowMario , colMario))
+                        if (!IsPrincess(command[0], matrix, n, rowMario, colMario))
                         {
                             MoveMario(command[0], matrix, n, rowMario, colMario);
                             e--;
