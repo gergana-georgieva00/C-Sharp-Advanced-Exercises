@@ -44,13 +44,13 @@ namespace Warships
                         if (PlayerOneShipsLeft(matrix, n) <= 0)
                         {
                             Console.WriteLine($"Player Two has won the game! {countShipsDestroyed} ships have been sunk in the battle.");
-                            return;
+                            break;
                         }
 
                         if (PlayerTwoShipsLeft(matrix, n) <= 0)
                         {
                             Console.WriteLine($"Player One has won the game! {countShipsDestroyed} ships have been sunk in the battle.");
-                            return;
+                            break;
                         }
                     }
                     else if (matrix[rowToAttack, colToAttack] == '>')
@@ -61,66 +61,187 @@ namespace Warships
                         if (PlayerOneShipsLeft(matrix, n) <= 0)
                         {
                             Console.WriteLine($"Player Two has won the game! {countShipsDestroyed} ships have been sunk in the battle.");
-                            return;
+                            break;
                         }
 
                         if (PlayerTwoShipsLeft(matrix, n) <= 0)
                         {
                             Console.WriteLine($"Player One has won the game! {countShipsDestroyed} ships have been sunk in the battle.");
-                            return;
+                            break;
                         }
                     }
                     else if (matrix[rowToAttack, colToAttack] == '#')
                     {
+                        matrix[rowToAttack, colToAttack] = 'X';
                         // destroy all ships in adjacent fields
 
                         // left
                         if (colToAttack - 1 >= 0)
                         {
-                            countShipsDestroyed++;
+                            if (matrix[rowToAttack, colToAttack - 1] != '*')
+                            {
+                                countShipsDestroyed++;
+                            }
+                            
                             matrix[rowToAttack, colToAttack - 1] = 'X';
+                            if (PlayerOneShipsLeft(matrix, n) <= 0)
+                            {
+                                Console.WriteLine($"Player Two has won the game! {countShipsDestroyed} ships have been sunk in the battle.");
+                                return;
+                            }
+
+                            if (PlayerTwoShipsLeft(matrix, n) <= 0)
+                            {
+                                Console.WriteLine($"Player One has won the game! {countShipsDestroyed} ships have been sunk in the battle.");
+                                return;
+                            }
                         }
                         // right
                         if (colToAttack + 1 < n)
                         {
-                            countShipsDestroyed++;
+                            if (matrix[rowToAttack, colToAttack + 1] != '*')
+                            {
+                                countShipsDestroyed++;
+                            }
+
                             matrix[rowToAttack, colToAttack + 1] = 'X';
+                            if (PlayerOneShipsLeft(matrix, n) <= 0)
+                            {
+                                Console.WriteLine($"Player Two has won the game! {countShipsDestroyed} ships have been sunk in the battle.");
+                                return;
+                            }
+
+                            if (PlayerTwoShipsLeft(matrix, n) <= 0)
+                            {
+                                Console.WriteLine($"Player One has won the game! {countShipsDestroyed} ships have been sunk in the battle.");
+                                return;
+                            }
                         }
                         // up
                         if (rowToAttack - 1 >= 0)
                         {
-                            countShipsDestroyed++;
+                            if (matrix[rowToAttack - 1, colToAttack] != '*')
+                            {
+                                countShipsDestroyed++;
+                            }
+
                             matrix[rowToAttack - 1, colToAttack] = 'X';
+                            if (PlayerOneShipsLeft(matrix, n) <= 0)
+                            {
+                                Console.WriteLine($"Player Two has won the game! {countShipsDestroyed} ships have been sunk in the battle.");
+                                return;
+                            }
+
+                            if (PlayerTwoShipsLeft(matrix, n) <= 0)
+                            {
+                                Console.WriteLine($"Player One has won the game! {countShipsDestroyed} ships have been sunk in the battle.");
+                                return;
+                            }
                         }
                         // down
                         if (rowToAttack + 1 < n)
                         {
-                            countShipsDestroyed++;
+                            if (matrix[rowToAttack + 1, colToAttack] != '*')
+                            {
+                                countShipsDestroyed++;
+                            }
+
                             matrix[rowToAttack + 1, colToAttack] = 'X';
+                            if (PlayerOneShipsLeft(matrix, n) <= 0)
+                            {
+                                Console.WriteLine($"Player Two has won the game! {countShipsDestroyed} ships have been sunk in the battle.");
+                                return;
+                            }
+
+                            if (PlayerTwoShipsLeft(matrix, n) <= 0)
+                            {
+                                Console.WriteLine($"Player One has won the game! {countShipsDestroyed} ships have been sunk in the battle.");
+                                return;
+                            }
                         }
                         // diagonal up-left
                         if (rowToAttack - 1 >= 0 && colToAttack - 1 >= 0)
                         {
-                            countShipsDestroyed++;
+                            if (matrix[rowToAttack - 1, colToAttack - 1] != '*')
+                            {
+                                countShipsDestroyed++;
+                            }
+
                             matrix[rowToAttack - 1, colToAttack - 1] = 'X';
+                            if (PlayerOneShipsLeft(matrix, n) <= 0)
+                            {
+                                Console.WriteLine($"Player Two has won the game! {countShipsDestroyed} ships have been sunk in the battle.");
+                                return;
+                            }
+
+                            if (PlayerTwoShipsLeft(matrix, n) <= 0)
+                            {
+                                Console.WriteLine($"Player One has won the game! {countShipsDestroyed} ships have been sunk in the battle.");
+                                return;
+                            }
                         }
                         // diagonal up-right
                         if (rowToAttack - 1 >= 0 && colToAttack + 1 < n)
                         {
-                            countShipsDestroyed++;
+                            if (matrix[rowToAttack - 1, colToAttack + 1] != '*')
+                            {
+                                countShipsDestroyed++;
+                            }
+
                             matrix[rowToAttack - 1, colToAttack + 1] = 'X';
+                            if (PlayerOneShipsLeft(matrix, n) <= 0)
+                            {
+                                Console.WriteLine($"Player Two has won the game! {countShipsDestroyed} ships have been sunk in the battle.");
+                                return;
+                            }
+
+                            if (PlayerTwoShipsLeft(matrix, n) <= 0)
+                            {
+                                Console.WriteLine($"Player One has won the game! {countShipsDestroyed} ships have been sunk in the battle.");
+                                return;
+                            }
                         }
                         // diagonal down-left
                         if (rowToAttack + 1 < n && colToAttack - 1 >= 0)
                         {
-                            countShipsDestroyed++;
+                            if (matrix[rowToAttack + 1, colToAttack - 1] != '*')
+                            {
+                                countShipsDestroyed++;
+                            }
+
                             matrix[rowToAttack + 1, colToAttack - 1] = 'X';
+                            if (PlayerOneShipsLeft(matrix, n) <= 0)
+                            {
+                                Console.WriteLine($"Player Two has won the game! {countShipsDestroyed} ships have been sunk in the battle.");
+                                return;
+                            }
+
+                            if (PlayerTwoShipsLeft(matrix, n) <= 0)
+                            {
+                                Console.WriteLine($"Player One has won the game! {countShipsDestroyed} ships have been sunk in the battle.");
+                                return;
+                            }
                         }
                         // diagonal down-right
                         if (rowToAttack + 1 < n && colToAttack + 1 < n)
                         {
-                            countShipsDestroyed++;
+                            if (matrix[rowToAttack + 1, colToAttack + 1] != '*')
+                            {
+                                countShipsDestroyed++;
+                            }
+
                             matrix[rowToAttack + 1, colToAttack + 1] = 'X';
+                            if (PlayerOneShipsLeft(matrix, n) <= 0)
+                            {
+                                Console.WriteLine($"Player Two has won the game! {countShipsDestroyed} ships have been sunk in the battle.");
+                                return;
+                            }
+
+                            if (PlayerTwoShipsLeft(matrix, n) <= 0)
+                            {
+                                Console.WriteLine($"Player One has won the game! {countShipsDestroyed} ships have been sunk in the battle.");
+                                return;
+                            }
                         }
 
                         if (PlayerOneShipsLeft(matrix, n) <= 0)
