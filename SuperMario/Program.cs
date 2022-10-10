@@ -41,7 +41,7 @@ namespace SuperMario
 
                     matrix[rowMario, colMario] = '-';
 
-                    if (!IsEnemy(command[0], matrix, n))
+                    if (!IsEnemy(command[0], matrix, n, rowMario, colMario))
                     {
                         if (!IsPrincess(command[0], matrix, n, rowMario , colMario))
                         {
@@ -50,7 +50,7 @@ namespace SuperMario
 
                             if (e <= 0)
                             {
-                                Console.WriteLine($"Mario died at {FindWhereMarioDies(matrix, n, command[0])[0]};{FindWhereMarioDies(matrix, n, command[0])[1]}.");
+                                Console.WriteLine($"Mario died at {FindWhereMarioDies(matrix, n, command[0], rowMario, colMario)[0]};{FindWhereMarioDies(matrix, n, command[0], rowMario, colMario)[1]}.");
                                 PrintMatrix(matrix, n);
                                 return;
                             }
@@ -91,7 +91,7 @@ namespace SuperMario
 
                         if (e <= 0)
                         {
-                            Console.WriteLine($"Mario died at {FindWhereMarioDies(matrix, n, command[0])[0]};{FindWhereMarioDies(matrix, n, command[0])[1]}.");
+                            Console.WriteLine($"Mario died at {FindWhereMarioDies(matrix, n, command[0], rowMario, colMario)[0]};{FindWhereMarioDies(matrix, n, command[0], rowMario, colMario)[1]}.");
                             PrintMatrix(matrix, n);
                             return;
                         }
@@ -117,11 +117,8 @@ namespace SuperMario
             }
         }
 
-        static int[] FindWhereMarioDies(char[,] matrix, int n, string command)
+        static int[] FindWhereMarioDies(char[,] matrix, int n, string command, int rowMario, int colMario)
         {
-            int rowMario = GetCurrentPositionOfMario(matrix, n)[0];
-            int colMario = GetCurrentPositionOfMario(matrix, n)[1];
-
             switch (command)
             {
                 // up
@@ -190,11 +187,8 @@ namespace SuperMario
             return false;
         }
 
-        static bool IsEnemy(string command, char[,] matrix, int n)
+        static bool IsEnemy(string command, char[,] matrix, int n, int rowMario, int colMario)
         {
-            int rowMario = GetCurrentPositionOfMario(matrix, n)[0];
-            int colMario = GetCurrentPositionOfMario(matrix, n)[1];
-
             switch (command)
             {
                 // up
