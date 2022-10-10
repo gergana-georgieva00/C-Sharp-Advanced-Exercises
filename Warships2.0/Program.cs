@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Linq;
 
-namespace Warships
+namespace Warships2._0
 {
     class Program
     {
@@ -13,6 +13,7 @@ namespace Warships
 
             string[] attackCoordinates = Console.ReadLine().Split(',', StringSplitOptions.RemoveEmptyEntries);
 
+            // fill matrix
             for (int row = 0; row < n; row++)
             {
                 char[] currRow = Console.ReadLine().Split(' ', StringSplitOptions.RemoveEmptyEntries).Select(char.Parse).ToArray();
@@ -23,52 +24,21 @@ namespace Warships
                 }
             }
 
+            // logic
             int countShipsDestroyed = 0;
-
-            for (int i = 0; i < attackCoordinates.Length; i++)
+            foreach (var pair in attackCoordinates)
             {
-                string coordPair = attackCoordinates[i];
-
-                int[] splitPair = coordPair.Split(' ', StringSplitOptions.RemoveEmptyEntries).Select(int.Parse).ToArray();
+                int[] splitPair = pair.Split(' ', StringSplitOptions.RemoveEmptyEntries).Select(int.Parse).ToArray();
 
                 int rowToAttack = splitPair[0];
                 int colToAttack = splitPair[1];
 
                 if (IsCommandValid(rowToAttack, colToAttack, n))
                 {
-                    if (matrix[rowToAttack, colToAttack] == '<')
+                    if (matrix[rowToAttack, colToAttack] == '<' || matrix[rowToAttack, colToAttack] == '>')
                     {
                         matrix[rowToAttack, colToAttack] = 'X';
                         countShipsDestroyed++;
-
-                        if (PlayerOneShipsLeft(matrix, n) <= 0)
-                        {
-                            Console.WriteLine($"Player Two has won the game! {countShipsDestroyed} ships have been sunk in the battle.");
-                            return;
-                        }
-
-                        if (PlayerTwoShipsLeft(matrix, n) <= 0)
-                        {
-                            Console.WriteLine($"Player One has won the game! {countShipsDestroyed} ships have been sunk in the battle.");
-                            return;
-                        }
-                    }
-                    else if (matrix[rowToAttack, colToAttack] == '>')
-                    {
-                        matrix[rowToAttack, colToAttack] = 'X';
-                        countShipsDestroyed++;
-
-                        if (PlayerOneShipsLeft(matrix, n) <= 0)
-                        {
-                            Console.WriteLine($"Player Two has won the game! {countShipsDestroyed} ships have been sunk in the battle.");
-                            return;
-                        }
-
-                        if (PlayerTwoShipsLeft(matrix, n) <= 0)
-                        {
-                            Console.WriteLine($"Player One has won the game! {countShipsDestroyed} ships have been sunk in the battle.");
-                            return;
-                        }
                     }
                     else if (matrix[rowToAttack, colToAttack] == '#')
                     {
@@ -122,49 +92,43 @@ namespace Warships
                             countShipsDestroyed++;
                             matrix[rowToAttack + 1, colToAttack + 1] = 'X';
                         }
-
-                        if (PlayerOneShipsLeft(matrix, n) <= 0)
-                        {
-                            Console.WriteLine($"Player Two has won the game! {countShipsDestroyed} ships have been sunk in the battle.");
-                            return;
-                        }
-
-                        if (PlayerTwoShipsLeft(matrix, n) <= 0)
-                        {
-                            Console.WriteLine($"Player One has won the game! {countShipsDestroyed} ships have been sunk in the battle.");
-                            return;
-                        }
                     }
                 }
-            }
 
-            if (PlayerOneShipsLeft(matrix, n) > 0 && PlayerTwoShipsLeft(matrix, n) > 0)
-            {
-                Console.WriteLine($"It's a draw! Player One has {PlayerOneShipsLeft(matrix, n)} ships left. Player Two has {PlayerTwoShipsLeft(matrix, n)} ships left.");
-            }
-        }
+                int plOneShipsLeft = 0;
+                int pl2ShipsLeft = 0;
 
-        static int PlayerTwoShipsLeft(char[,] matrix, int n)
-        {
-            int count = 0;
-
-            for (int row = 0; row < n; row++)
-            {
-                for (int col = 0; col < n; col++)
+                for (int row = 0; row < n; row++)
                 {
-                    if (matrix[row, col] == '>')
+                    for (int col = 0; col < n; col++)
                     {
-                        count++;
+                        if (matrix[row, col] == '<')
+                        {
+                            plOneShipsLeft++;
+                        }
+
+                        if (matrix[row, col] == '>')
+                        {
+                            pl2ShipsLeft++;
+                        }
                     }
+                }
+
+                if (plOneShipsLeft <= 0)
+                {
+                    Console.WriteLine($"Player Two has won the game! {countShipsDestroyed} ships have been sunk in the battle.");
+                    return;
+                }
+
+                if (pl2ShipsLeft <= 0)
+                {
+                    Console.WriteLine($"Player One has won the game! {countShipsDestroyed} ships have been sunk in the battle.");
+                    return;
                 }
             }
 
-            return count;
-        }
-
-        static int PlayerOneShipsLeft(char[,] matrix, int n)
-        {
-            int count = 0;
+            int playerOneShipsLeft = 0;
+            int player2ShipsLeft = 0;
 
             for (int row = 0; row < n; row++)
             {
@@ -172,25 +136,29 @@ namespace Warships
                 {
                     if (matrix[row, col] == '<')
                     {
-                        count++;
+                        playerOneShipsLeft++;
+                    }
+
+                    if (matrix[row, col] == '>')
+                    {
+                        player2ShipsLeft++;
                     }
                 }
             }
 
-            return count;
-        }
-
-        static bool IsGameOver(char[,] matrix, int n)
-        {
-            int player1Count = PlayerOneShipsLeft(matrix, n);
-            int player2Count = PlayerTwoShipsLeft(matrix, n);
-
-            if (player1Count > 0 && player2Count > 0)
+            if (playerOneShipsLeft <= 0)
             {
-                return false;
+                Console.WriteLine($"Player Two has won the game! {countShipsDestroyed} ships have been sunk in the battle.");
+                return;
             }
 
-            return true;
+            if (player2ShipsLeft <= 0)
+            {
+                Console.WriteLine($"Player One has won the game! {countShipsDestroyed} ships have been sunk in the battle.");
+                return;
+            }
+
+            Console.WriteLine($"It's a draw! Player One has {playerOneShipsLeft} ships left. Player Two has {player2ShipsLeft} ships left.");
         }
 
         static bool IsCommandValid(int rowToAttack, int colToAttack, int n)
