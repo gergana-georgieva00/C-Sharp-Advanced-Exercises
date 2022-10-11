@@ -30,6 +30,9 @@ namespace Re_Volt
                 int playerRow = GetPositionOfPlayer(matrix, n)[0];
                 int playerCol = GetPositionOfPlayer(matrix, n)[1];
 
+                int rowCopy = playerRow;
+                int colCopy = playerCol;
+
                 // validate command
                 if (!IsCommandValid(command, n, playerRow, playerCol))
                 {
@@ -45,7 +48,7 @@ namespace Re_Volt
                             }
                             else if (matrix[playerRow, playerCol] == 'T')
                             {
-                                matrix[playerRow, playerCol] = 'f';
+                                matrix[rowCopy, playerCol] = 'f';
                             }
                             else if (matrix[playerRow, playerCol] == 'F')
                             {
@@ -68,7 +71,7 @@ namespace Re_Volt
                             }
                             else if (matrix[playerRow, playerCol] == 'T')
                             {
-                                matrix[playerRow, playerCol] = 'f';
+                                matrix[rowCopy, playerCol] = 'f';
                             }
                             else if (matrix[playerRow, playerCol] == 'F')
                             {
@@ -91,7 +94,7 @@ namespace Re_Volt
                             }
                             else if (matrix[playerRow, playerCol] == 'T')
                             {
-                                matrix[playerRow, playerCol] = 'f';
+                                matrix[playerRow, colCopy] = 'f';
                             }
                             else if (matrix[playerRow, playerCol] == 'F')
                             {
@@ -114,7 +117,7 @@ namespace Re_Volt
                             }
                             else if (matrix[playerRow, playerCol] == 'T')
                             {
-                                matrix[playerRow, playerCol] = 'f';
+                                matrix[playerRow, colCopy] = 'f';
                             }
                             else if (matrix[playerRow, playerCol] == 'F')
                             {
@@ -134,143 +137,143 @@ namespace Re_Volt
                 else
                 {
                     switch (command)
-                    {
-                        case "up":
-                            if (matrix[playerRow - 1, playerCol] == 'B')
-                            {
-                                if (IsCommandValid(command, n, playerRow - 1, playerCol))
-                                {
-                                    matrix[playerRow, playerCol] = '-';
-                                    matrix[playerRow - 2, playerCol] = 'f';
-                                }
-                                else
-                                {
-                                    matrix[playerRow, playerCol] = '-';
-                                    matrix[n - 1, playerCol] = 'f';
-                                }
-                            }
-                            else if (matrix[playerRow - 1, playerCol] == 'T')
-                            {
-                                // stays on the same place
-                            }
-                            else if (matrix[playerRow - 1, playerCol] == 'F')
+                {
+                    case "up":
+                        if (matrix[playerRow - 1, playerCol] == 'B')
+                        {
+                            if (IsCommandValid(command, n, playerRow - 1, playerCol))
                             {
                                 matrix[playerRow, playerCol] = '-';
-                                matrix[playerRow - 1, playerCol] = 'f';
-
-                                Console.WriteLine("Player won!");
-                                PrintMatrix(matrix, n);
-                                return;
+                                matrix[playerRow - 2, playerCol] = 'f';
                             }
                             else
                             {
                                 matrix[playerRow, playerCol] = '-';
-                                matrix[playerRow - 1, playerCol] = 'f';
+                                matrix[n - 1, playerCol] = 'f';
                             }
-                            break;
-                        case "down":
-                            if (matrix[playerRow + 1, playerCol] == 'B')
-                            {
-                                if (IsCommandValid(command, n, playerRow + 1, playerCol))
-                                {
-                                    matrix[playerRow, playerCol] = '-';
-                                    matrix[playerRow + 2, playerCol] = 'f';
-                                }
-                                else
-                                {
-                                    matrix[playerRow, playerCol] = '-';
-                                    matrix[0, playerCol] = 'f';
-                                }
-                            }
-                            else if (matrix[playerRow + 1, playerCol] == 'T')
-                            {
-                                // stays on the same place
-                            }
-                            else if (matrix[playerRow + 1, playerCol] == 'F')
+                        }
+                        else if (matrix[playerRow - 1, playerCol] == 'T')
+                        {
+                            // stays on the same place
+                        }
+                        else if (matrix[playerRow - 1, playerCol] == 'F')
+                        {
+                            matrix[playerRow, playerCol] = '-';
+                            matrix[playerRow - 1, playerCol] = 'f';
+
+                            Console.WriteLine("Player won!");
+                            PrintMatrix(matrix, n);
+                            return;
+                        }
+                        else
+                        {
+                            matrix[playerRow, playerCol] = '-';
+                            matrix[playerRow - 1, playerCol] = 'f';
+                        }
+                        break;
+                    case "down":
+                        if (matrix[playerRow + 1, playerCol] == 'B')
+                        {
+                            if (IsCommandValid(command, n, playerRow + 1, playerCol))
                             {
                                 matrix[playerRow, playerCol] = '-';
-                                matrix[playerRow + 1, playerCol] = 'f';
-
-                                Console.WriteLine("Player won!");
-                                PrintMatrix(matrix, n);
-                                return;
-
+                                matrix[playerRow + 2, playerCol] = 'f';
                             }
                             else
                             {
                                 matrix[playerRow, playerCol] = '-';
-                                matrix[playerRow + 1, playerCol] = 'f';
+                                matrix[0, playerCol] = 'f';
                             }
-                            break;
-                        case "left":
-                            if (matrix[playerRow, playerCol - 1] == 'B')
-                            {
-                                if (IsCommandValid(command, n, playerRow, playerCol - 1))
-                                {
-                                    matrix[playerRow, playerCol] = '-';
-                                    matrix[playerRow, playerCol - 2] = 'f';
-                                }
-                                else
-                                {
-                                    matrix[playerRow, playerCol] = '-';
-                                    matrix[playerRow, n - 1] = 'f';
-                                }
-                            }
-                            else if (matrix[playerRow, playerCol - 1] == 'T')
-                            {
-                                // stays on the same place
-                            }
-                            else if (matrix[playerRow, playerCol - 1] == 'F')
+                        }
+                        else if (matrix[playerRow + 1, playerCol] == 'T')
+                        {
+                            // stays on the same place
+                        }
+                        else if (matrix[playerRow + 1, playerCol] == 'F')
+                        {
+                            matrix[playerRow, playerCol] = '-';
+                            matrix[playerRow + 1, playerCol] = 'f';
+
+                            Console.WriteLine("Player won!");
+                            PrintMatrix(matrix, n);
+                            return;
+
+                        }
+                        else
+                        {
+                            matrix[playerRow, playerCol] = '-';
+                            matrix[playerRow + 1, playerCol] = 'f';
+                        }
+                        break;
+                    case "left":
+                        if (matrix[playerRow, playerCol - 1] == 'B')
+                        {
+                            if (IsCommandValid(command, n, playerRow, playerCol - 1))
                             {
                                 matrix[playerRow, playerCol] = '-';
-                                matrix[playerRow, playerCol - 1] = 'f';
-
-                                Console.WriteLine("Player won!");
-                                PrintMatrix(matrix, n);
-                                return;
-
+                                matrix[playerRow, playerCol - 2] = 'f';
                             }
                             else
                             {
                                 matrix[playerRow, playerCol] = '-';
-                                matrix[playerRow, playerCol - 1] = 'f';
+                                matrix[playerRow, n - 1] = 'f';
                             }
-                            break;
-                        case "right":
-                            if (matrix[playerRow, playerCol + 1] == 'B')
-                            {
-                                if (IsCommandValid(command, n, playerRow, playerCol + 1))
-                                {
-                                    matrix[playerRow, playerCol] = '-';
-                                    matrix[playerRow, playerCol + 1] = 'f';
-                                }
-                                else
-                                {
-                                    matrix[playerRow, playerCol] = '-';
-                                    matrix[playerRow, 0] = 'f';
-                                }
-                            }
-                            else if (matrix[playerRow, playerCol + 1] == 'T')
-                            {
-                                // stays on the same place
-                            }
-                            else if (matrix[playerRow, playerCol + 1] == 'F')
-                            {
-                                matrix[playerRow, playerCol] = '-';
-                                matrix[playerRow, playerCol + 1] = 'f';
+                        }
+                        else if (matrix[playerRow, playerCol - 1] == 'T')
+                        {
+                            // stays on the same place
+                        }
+                        else if (matrix[playerRow, playerCol - 1] == 'F')
+                        {
+                            matrix[playerRow, playerCol] = '-';
+                            matrix[playerRow, playerCol - 1] = 'f';
 
-                                Console.WriteLine("Player won!");
-                                PrintMatrix(matrix, n);
-                                return;
+                            Console.WriteLine("Player won!");
+                            PrintMatrix(matrix, n);
+                            return;
 
-                            }
-                            else
+                        }
+                        else
+                        {
+                            matrix[playerRow, playerCol] = '-';
+                            matrix[playerRow, playerCol - 1] = 'f';
+                        }
+                        break;
+                    case "right":
+                        if (matrix[playerRow, playerCol + 1] == 'B')
+                        {
+                            if (IsCommandValid(command, n, playerRow, playerCol + 1))
                             {
                                 matrix[playerRow, playerCol] = '-';
                                 matrix[playerRow, playerCol + 1] = 'f';
                             }
-                            break;
-                    }
+                            else
+                            {
+                                matrix[playerRow, playerCol] = '-';
+                                matrix[playerRow, 0] = 'f';
+                            }
+                        }
+                        else if (matrix[playerRow, playerCol + 1] == 'T')
+                        {
+                            // stays on the same place
+                        }
+                        else if (matrix[playerRow, playerCol + 1] == 'F')
+                        {
+                            matrix[playerRow, playerCol] = '-';
+                            matrix[playerRow, playerCol + 1] = 'f';
+
+                            Console.WriteLine("Player won!");
+                            PrintMatrix(matrix, n);
+                            return;
+
+                        }
+                        else
+                        {
+                            matrix[playerRow, playerCol] = '-';
+                            matrix[playerRow, playerCol + 1] = 'f';
+                        }
+                        break;
+                }
                 }
                 
             }
@@ -301,7 +304,8 @@ namespace Re_Volt
                     if (matrix[row, col] == 'f')
                     {
                         return new int[] { row, col };
-                    }                }
+                    }                
+                }
             }
 
             return new int[] { 0, 0 };
