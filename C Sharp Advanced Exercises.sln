@@ -215,6 +215,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SuperMario", "SuperMario\Su
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SuperMario2,0", "SuperMario2,0\SuperMario2,0.csproj", "{397DBAC9-4C70-438C-973F-960ED14D4A8C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CocktailParty", "CocktailParty\CocktailParty.csproj", "{103C6CC0-36C7-498E-8364-F8DF3F421D3D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -645,6 +647,10 @@ Global
 		{397DBAC9-4C70-438C-973F-960ED14D4A8C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{397DBAC9-4C70-438C-973F-960ED14D4A8C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{397DBAC9-4C70-438C-973F-960ED14D4A8C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{103C6CC0-36C7-498E-8364-F8DF3F421D3D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{103C6CC0-36C7-498E-8364-F8DF3F421D3D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{103C6CC0-36C7-498E-8364-F8DF3F421D3D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{103C6CC0-36C7-498E-8364-F8DF3F421D3D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
