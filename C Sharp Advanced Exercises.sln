@@ -213,6 +213,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WarmWinter", "WarmWinter\Wa
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SuperMario", "SuperMario\SuperMario.csproj", "{C398977A-1FED-4E1F-8A81-3B16CF584A7E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SuperMario2,0", "SuperMario2,0\SuperMario2,0.csproj", "{397DBAC9-4C70-438C-973F-960ED14D4A8C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -639,6 +641,10 @@ Global
 		{C398977A-1FED-4E1F-8A81-3B16CF584A7E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C398977A-1FED-4E1F-8A81-3B16CF584A7E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C398977A-1FED-4E1F-8A81-3B16CF584A7E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{397DBAC9-4C70-438C-973F-960ED14D4A8C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{397DBAC9-4C70-438C-973F-960ED14D4A8C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{397DBAC9-4C70-438C-973F-960ED14D4A8C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{397DBAC9-4C70-438C-973F-960ED14D4A8C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
