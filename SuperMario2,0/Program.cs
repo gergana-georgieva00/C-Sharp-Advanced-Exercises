@@ -9,16 +9,17 @@ namespace SuperMario2_0
             int e = int.Parse(Console.ReadLine());
             int n = int.Parse(Console.ReadLine());
 
-            char[,] matrix = new char[n, n];
+            char[][] matrix = new char[n][];
 
             // fill matrix
             for (int row = 0; row < n; row++)
             {
                 string currRow = Console.ReadLine();
+                matrix[row] = new char[currRow.Length];
 
-                for (int col = 0; col < n; col++)
+                for (int col = 0; col < currRow.Length; col++)
                 {
-                    matrix[row, col] = currRow[col];
+                    matrix[row][col] = currRow[col];
                 }
             }
 
@@ -34,7 +35,7 @@ namespace SuperMario2_0
                 if (rowEnemy >= 0 && colEnemy >= 0 && rowEnemy < n && colEnemy < n)
                 {
                     // move enemy
-                    matrix[rowEnemy, colEnemy] = 'B';
+                    matrix[rowEnemy][colEnemy] = 'B';
                 }
                 else
                 {
@@ -43,13 +44,7 @@ namespace SuperMario2_0
 
                 // move mario
                 e--;
-                //if (e <= 0)
-                //{
-                //    Console.WriteLine($"Mario died at {FindMarioCoordinates(matrix, n)[0]};{FindMarioCoordinates(matrix, n)[1]}.");
-                //    PrintMatrix(matrix, n);
-                //    return;
-                //}
-
+                
                 // is command for mario valid
                 int rowMario = FindMarioCoordinates(matrix, n)[0];
                 int colMario = FindMarioCoordinates(matrix, n)[1];
@@ -60,29 +55,29 @@ namespace SuperMario2_0
                         if (rowMario - 1 >= 0)
                         {
                             // check for conflict with enemy
-                            if (matrix[rowMario - 1, colMario] == 'B')
+                            if (matrix[rowMario - 1][colMario] == 'B')
                             {
                                 e -= 2;
 
                                 if (e <= 0)
                                 {
-                                    matrix[rowMario, colMario] = '-';
-                                    matrix[rowMario - 1, colMario] = 'X';
+                                    matrix[rowMario][colMario] = '-';
+                                    matrix[rowMario - 1][colMario] = 'X';
                                     Console.WriteLine($"Mario died at {rowMario - 1};{colMario}.");
                                     PrintMatrix(matrix, n);
                                     return;
                                 }
                                 else
                                 {
-                                    matrix[rowMario, colMario] = '-';
-                                    matrix[rowMario - 1, colMario] = 'M';
+                                    matrix[rowMario][colMario] = '-';
+                                    matrix[rowMario - 1][colMario] = 'M';
                                 }
                             }
                             // check for princess
-                            else if(matrix[rowMario - 1, colMario] == 'P')
+                            else if(matrix[rowMario - 1][colMario] == 'P')
                             {
-                                matrix[rowMario, colMario] = '-';
-                                matrix[rowMario - 1, colMario] = '-';
+                                matrix[rowMario][colMario] = '-';
+                                matrix[rowMario - 1][colMario] = '-';
                                 Console.WriteLine($"Mario has successfully saved the princess! Lives left: {e}");
                                 PrintMatrix(matrix, n);
                                 return;
@@ -90,8 +85,8 @@ namespace SuperMario2_0
                             // regular position
                             else
                             {
-                                matrix[rowMario, colMario] = '-';
-                                matrix[rowMario - 1, colMario] = 'M';
+                                matrix[rowMario][colMario] = '-';
+                                matrix[rowMario - 1][colMario] = 'M';
                             }
                         }
                         break;
@@ -99,29 +94,29 @@ namespace SuperMario2_0
                         if (rowMario + 1 < n)
                         {
                             // check for conflict with enemy
-                            if (matrix[rowMario + 1, colMario] == 'B')
+                            if (matrix[rowMario + 1][colMario] == 'B')
                             {
                                 e -= 2;
 
                                 if (e <= 0)
                                 {
-                                    matrix[rowMario, colMario] = '-';
-                                    matrix[rowMario + 1, colMario] = 'X';
+                                    matrix[rowMario][colMario] = '-';
+                                    matrix[rowMario + 1][colMario] = 'X';
                                     Console.WriteLine($"Mario died at {rowMario + 1};{colMario}.");
                                     PrintMatrix(matrix, n);
                                     return;
                                 }
                                 else
                                 {
-                                    matrix[rowMario, colMario] = '-';
-                                    matrix[rowMario + 1, colMario] = 'M';
+                                    matrix[rowMario][colMario] = '-';
+                                    matrix[rowMario + 1][colMario] = 'M';
                                 }
                             }
                             // check for princess
-                            else if (matrix[rowMario + 1, colMario] == 'P')
+                            else if (matrix[rowMario + 1][colMario] == 'P')
                             {
-                                matrix[rowMario, colMario] = '-';
-                                matrix[rowMario + 1, colMario] = '-';
+                                matrix[rowMario][colMario] = '-';
+                                matrix[rowMario + 1][colMario] = '-';
                                 Console.WriteLine($"Mario has successfully saved the princess! Lives left: {e}");
                                 PrintMatrix(matrix, n);
                                 return;
@@ -129,8 +124,8 @@ namespace SuperMario2_0
                             // regular position
                             else
                             {
-                                matrix[rowMario, colMario] = '-';
-                                matrix[rowMario + 1, colMario] = 'M';
+                                matrix[rowMario][colMario] = '-';
+                                matrix[rowMario + 1][colMario] = 'M';
                             }
                         }
                         break;
@@ -138,29 +133,29 @@ namespace SuperMario2_0
                         if (colMario - 1 >= 0)
                         {
                             // check for conflict with enemy
-                            if (matrix[rowMario, colMario - 1] == 'B')
+                            if (matrix[rowMario][colMario - 1] == 'B')
                             {
                                 e -= 2;
 
                                 if (e <= 0)
                                 {
-                                    matrix[rowMario, colMario] = '-';
-                                    matrix[rowMario, colMario - 1] = 'X';
+                                    matrix[rowMario][colMario] = '-';
+                                    matrix[rowMario][colMario - 1] = 'X';
                                     Console.WriteLine($"Mario died at {rowMario};{colMario - 1}.");
                                     PrintMatrix(matrix, n);
                                     return;
                                 }
                                 else
                                 {
-                                    matrix[rowMario, colMario] = '-';
-                                    matrix[rowMario, colMario - 1] = 'M';
+                                    matrix[rowMario][colMario] = '-';
+                                    matrix[rowMario][colMario - 1] = 'M';
                                 }
                             }
                             // check for princess
-                            else if (matrix[rowMario, colMario - 1] == 'P')
+                            else if (matrix[rowMario][colMario - 1] == 'P')
                             {
-                                matrix[rowMario, colMario] = '-';
-                                matrix[rowMario, colMario - 1] = '-';
+                                matrix[rowMario][colMario] = '-';
+                                matrix[rowMario][colMario - 1] = '-';
                                 Console.WriteLine($"Mario has successfully saved the princess! Lives left: {e}");
                                 PrintMatrix(matrix, n);
                                 return;
@@ -168,38 +163,38 @@ namespace SuperMario2_0
                             // regular position
                             else
                             {
-                                matrix[rowMario, colMario] = '-';
-                                matrix[rowMario, colMario - 1] = 'M';
+                                matrix[rowMario][colMario] = '-';
+                                matrix[rowMario][colMario - 1] = 'M';
                             }
                         }
                         break;
                     case "D":
-                        if (colMario + 1 < n)
+                        if (colMario + 1 < matrix[rowMario].Length)
                         {
                             // check for conflict with enemy
-                            if (matrix[rowMario, colMario + 1] == 'B')
+                            if (matrix[rowMario][colMario + 1] == 'B')
                             {
                                 e -= 2;
 
                                 if (e <= 0)
                                 {
-                                    matrix[rowMario, colMario] = '-';
-                                    matrix[rowMario, colMario + 1] = 'X';
+                                    matrix[rowMario][colMario] = '-';
+                                    matrix[rowMario][colMario + 1] = 'X';
                                     Console.WriteLine($"Mario died at {rowMario};{colMario + 1}.");
                                     PrintMatrix(matrix, n);
                                     return;
                                 }
                                 else
                                 {
-                                    matrix[rowMario, colMario] = '-';
-                                    matrix[rowMario, colMario + 1] = 'M';
+                                    matrix[rowMario][colMario] = '-';
+                                    matrix[rowMario][colMario + 1] = 'M';
                                 }
                             }
                             // check for princess
-                            else if (matrix[rowMario, colMario + 1] == 'P')
+                            else if (matrix[rowMario][colMario + 1] == 'P')
                             {
-                                matrix[rowMario, colMario] = '-';
-                                matrix[rowMario, colMario + 1] = '-';
+                                matrix[rowMario][colMario] = '-';
+                                matrix[rowMario][colMario + 1] = '-';
                                 Console.WriteLine($"Mario has successfully saved the princess! Lives left: {e}");
                                 PrintMatrix(matrix, n);
                                 return;
@@ -207,8 +202,8 @@ namespace SuperMario2_0
                             // regular position
                             else
                             {
-                                matrix[rowMario, colMario] = '-';
-                                matrix[rowMario, colMario + 1] = 'M';
+                                matrix[rowMario][colMario] = '-';
+                                matrix[rowMario][colMario + 1] = 'M';
                             }
                         }
                         break;
@@ -217,26 +212,26 @@ namespace SuperMario2_0
 
         }
 
-        static void PrintMatrix(char[,] matrix, int n)
+        static void PrintMatrix(char[][] matrix, int n)
         {
             for (int row = 0; row < n; row++)
             {
-                for (int col = 0; col < n; col++)
+                for (int col = 0; col < matrix[row].Length; col++)
                 {
-                    Console.Write(matrix[row, col]);
+                    Console.Write(matrix[row][col]);
                 }
 
                 Console.WriteLine();
             }
         }
 
-        static int[] FindMarioCoordinates(char[,] matrix, int n)
+        static int[] FindMarioCoordinates(char[][] matrix, int n)
         {
             for (int row = 0; row < n; row++)
             {
-                for (int col = 0; col < n; col++)
+                for (int col = 0; col < matrix[row].Length; col++)
                 {
-                    if (matrix[row, col] == 'M')
+                    if (matrix[row][col] == 'M')
                     {
                         return new int[] { row, col };
                     }
