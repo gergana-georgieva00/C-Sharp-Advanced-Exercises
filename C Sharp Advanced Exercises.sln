@@ -219,6 +219,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CocktailParty", "CocktailPa
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LootBox", "LootBox\LootBox.csproj", "{A3896055-B0DA-44FE-9F18-AA19786A24E6}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Re-Volt", "Re-Volt\Re-Volt.csproj", "{76316421-5552-4889-B43A-C4159133B390}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -657,6 +659,10 @@ Global
 		{A3896055-B0DA-44FE-9F18-AA19786A24E6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A3896055-B0DA-44FE-9F18-AA19786A24E6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A3896055-B0DA-44FE-9F18-AA19786A24E6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{76316421-5552-4889-B43A-C4159133B390}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{76316421-5552-4889-B43A-C4159133B390}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{76316421-5552-4889-B43A-C4159133B390}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{76316421-5552-4889-B43A-C4159133B390}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
