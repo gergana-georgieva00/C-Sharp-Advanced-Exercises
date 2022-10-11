@@ -43,12 +43,12 @@ namespace SuperMario2_0
 
                 // move mario
                 e--;
-                if (e <= 0)
-                {
-                    Console.WriteLine($"Mario died at {FindMarioCoordinates(matrix, n)[0]};{FindMarioCoordinates(matrix, n)[1]}.");
-                    PrintMatrix(matrix, n);
-                    return;
-                }
+                //if (e <= 0)
+                //{
+                //    Console.WriteLine($"Mario died at {FindMarioCoordinates(matrix, n)[0]};{FindMarioCoordinates(matrix, n)[1]}.");
+                //    PrintMatrix(matrix, n);
+                //    return;
+                //}
 
                 // is command for mario valid
                 int rowMario = FindMarioCoordinates(matrix, n)[0];
