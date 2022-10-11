@@ -32,7 +32,7 @@ namespace SuperMario2_0
                 int rowEnemy = int.Parse(command[1]);
                 int colEnemy = int.Parse(command[2]);
 
-                if (rowEnemy >= 0 && colEnemy >= 0 && rowEnemy < n && colEnemy < n)
+                if (rowEnemy >= 0 && colEnemy >= 0 && rowEnemy < n && colEnemy < matrix[rowEnemy].Length)
                 {
                     // move enemy
                     matrix[rowEnemy][colEnemy] = 'B';
@@ -87,6 +87,13 @@ namespace SuperMario2_0
                             {
                                 matrix[rowMario][colMario] = '-';
                                 matrix[rowMario - 1][colMario] = 'M';
+                                if (e <= 0)
+                                {
+                                    matrix[rowMario - 1][colMario] = 'X';
+                                    Console.WriteLine($"Mario died at {rowMario - 1};{colMario}.");
+                                    PrintMatrix(matrix, n);
+                                    return;
+                                }
                             }
                         }
                         break;
@@ -126,6 +133,13 @@ namespace SuperMario2_0
                             {
                                 matrix[rowMario][colMario] = '-';
                                 matrix[rowMario + 1][colMario] = 'M';
+                                if (e <= 0)
+                                {
+                                    matrix[rowMario + 1][colMario] = 'X';
+                                    Console.WriteLine($"Mario died at {rowMario + 1};{colMario}.");
+                                    PrintMatrix(matrix, n);
+                                    return;
+                                }
                             }
                         }
                         break;
@@ -165,6 +179,13 @@ namespace SuperMario2_0
                             {
                                 matrix[rowMario][colMario] = '-';
                                 matrix[rowMario][colMario - 1] = 'M';
+                                if (e <= 0)
+                                {
+                                    matrix[rowMario][colMario - 1] = 'X';
+                                    Console.WriteLine($"Mario died at {rowMario};{colMario - 1}.");
+                                    PrintMatrix(matrix, n);
+                                    return;
+                                }
                             }
                         }
                         break;
@@ -204,6 +225,13 @@ namespace SuperMario2_0
                             {
                                 matrix[rowMario][colMario] = '-';
                                 matrix[rowMario][colMario + 1] = 'M';
+                                if (e <= 0)
+                                {
+                                    matrix[rowMario][colMario + 1] = 'X';
+                                    Console.WriteLine($"Mario died at {rowMario};{colMario + 1}.");
+                                    PrintMatrix(matrix, n);
+                                    return;
+                                }
                             }
                         }
                         break;
