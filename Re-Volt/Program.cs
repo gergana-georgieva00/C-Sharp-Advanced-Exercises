@@ -44,6 +44,13 @@ namespace Re_Volt
                             playerRow = n - 1;
                             if (matrix[playerRow, playerCol] == 'B')
                             {
+                                if (matrix[playerRow - 1, playerCol] == 'F')
+                                {
+                                    Console.WriteLine("Player won!");
+                                    matrix[playerRow - 1, playerCol] = 'f';
+                                    PrintMatrix(matrix, n);
+                                    return;
+                                }
                                 matrix[playerRow - 1, playerCol] = 'f';
                             }
                             else if (matrix[playerRow, playerCol] == 'T')
@@ -67,6 +74,13 @@ namespace Re_Volt
                             playerRow = 0;
                             if (matrix[playerRow, playerCol] == 'B')
                             {
+                                if (matrix[playerRow + 1, playerCol] == 'F')
+                                {
+                                    Console.WriteLine("Player won!");
+                                    matrix[playerRow + 1, playerCol] = 'f';
+                                    PrintMatrix(matrix, n);
+                                    return;
+                                }
                                 matrix[playerRow + 1, playerCol] = 'f';
                             }
                             else if (matrix[playerRow, playerCol] == 'T')
@@ -90,6 +104,13 @@ namespace Re_Volt
                             playerCol = n - 1;
                             if (matrix[playerRow, playerCol] == 'B')
                             {
+                                if (matrix[playerRow, playerCol - 1] == 'F')
+                                {
+                                    Console.WriteLine("Player won!");
+                                    matrix[playerRow, playerCol - 1] = 'f';
+                                    PrintMatrix(matrix, n);
+                                    return;
+                                }
                                 matrix[playerRow, playerCol - 1] = 'f';
                             }
                             else if (matrix[playerRow, playerCol] == 'T')
@@ -113,6 +134,13 @@ namespace Re_Volt
                             playerCol = 0;
                             if (matrix[playerRow, playerCol] == 'B')
                             {
+                                if (matrix[playerRow, playerCol + 1] == 'F')
+                                {
+                                    Console.WriteLine("Player won!");
+                                    matrix[playerRow, playerCol + 1] = 'f';
+                                    PrintMatrix(matrix, n);
+                                    return;
+                                }
                                 matrix[playerRow, playerCol + 1] = 'f';
                             }
                             else if (matrix[playerRow, playerCol] == 'T')
@@ -144,12 +172,26 @@ namespace Re_Volt
                             if (IsCommandValid(command, n, playerRow - 1, playerCol))
                             {
                                 matrix[playerRow, playerCol] = '-';
+                                    if (matrix[playerRow - 2, playerCol] == 'F')
+                                    {
+                                        Console.WriteLine("Player won!");
+                                        matrix[playerRow - 2, playerCol] = 'f';
+                                        PrintMatrix(matrix, n);
+                                        return;
+                                    }
                                 matrix[playerRow - 2, playerCol] = 'f';
                             }
                             else
                             {
                                 matrix[playerRow, playerCol] = '-';
-                                matrix[n - 1, playerCol] = 'f';
+                                    if (matrix[n - 1, playerCol] == 'F')
+                                    {
+                                        Console.WriteLine("Player won!");
+                                        matrix[n - 1, playerCol] = 'f';
+                                        PrintMatrix(matrix, n);
+                                        return;
+                                    }
+                                    matrix[n - 1, playerCol] = 'f';
                             }
                         }
                         else if (matrix[playerRow - 1, playerCol] == 'T')
@@ -177,12 +219,26 @@ namespace Re_Volt
                             if (IsCommandValid(command, n, playerRow + 1, playerCol))
                             {
                                 matrix[playerRow, playerCol] = '-';
-                                matrix[playerRow + 2, playerCol] = 'f';
+                                    if (matrix[playerRow + 2, playerCol] == 'F')
+                                    {
+                                        Console.WriteLine("Player won!");
+                                        matrix[playerRow + 2, playerCol] = 'f';
+                                        PrintMatrix(matrix, n);
+                                        return;
+                                    }
+                                    matrix[playerRow + 2, playerCol] = 'f';
                             }
                             else
                             {
                                 matrix[playerRow, playerCol] = '-';
-                                matrix[0, playerCol] = 'f';
+                                    if (matrix[0, playerCol] == 'F')
+                                    {
+                                        Console.WriteLine("Player won!");
+                                        matrix[0, playerCol] = 'f';
+                                        PrintMatrix(matrix, n);
+                                        return;
+                                    }
+                                    matrix[0, playerCol] = 'f';
                             }
                         }
                         else if (matrix[playerRow + 1, playerCol] == 'T')
@@ -211,12 +267,26 @@ namespace Re_Volt
                             if (IsCommandValid(command, n, playerRow, playerCol - 1))
                             {
                                 matrix[playerRow, playerCol] = '-';
-                                matrix[playerRow, playerCol - 2] = 'f';
+                                    if (matrix[playerRow, playerCol - 2] == 'F')
+                                    {
+                                        Console.WriteLine("Player won!");
+                                        matrix[playerRow, playerCol - 2] = 'f';
+                                        PrintMatrix(matrix, n);
+                                        return;
+                                    }
+                                    matrix[playerRow, playerCol - 2] = 'f';
                             }
                             else
                             {
                                 matrix[playerRow, playerCol] = '-';
-                                matrix[playerRow, n - 1] = 'f';
+                                    if (matrix[playerRow, n - 1] == 'F')
+                                    {
+                                        Console.WriteLine("Player won!");
+                                        matrix[playerRow, n - 1] = 'f';
+                                        PrintMatrix(matrix, n);
+                                        return;
+                                    }
+                                    matrix[playerRow, n - 1] = 'f';
                             }
                         }
                         else if (matrix[playerRow, playerCol - 1] == 'T')
@@ -245,12 +315,26 @@ namespace Re_Volt
                             if (IsCommandValid(command, n, playerRow, playerCol + 1))
                             {
                                 matrix[playerRow, playerCol] = '-';
-                                matrix[playerRow, playerCol + 1] = 'f';
+                                    if (matrix[playerRow, playerCol + 2] == 'F')
+                                    {
+                                        Console.WriteLine("Player won!");
+                                        matrix[playerRow, playerCol + 2] = 'f';
+                                        PrintMatrix(matrix, n);
+                                        return;
+                                    }
+                                    matrix[playerRow, playerCol + 2] = 'f';
                             }
                             else
                             {
                                 matrix[playerRow, playerCol] = '-';
-                                matrix[playerRow, 0] = 'f';
+                                    if (matrix[playerRow, 0] == 'F')
+                                    {
+                                        Console.WriteLine("Player won!");
+                                        matrix[playerRow, 0] = 'f';
+                                        PrintMatrix(matrix, n);
+                                        return;
+                                    }
+                                    matrix[playerRow, 0] = 'f';
                             }
                         }
                         else if (matrix[playerRow, playerCol + 1] == 'T')
