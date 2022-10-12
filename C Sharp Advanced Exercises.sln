@@ -237,6 +237,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GenericScale", "GenericScal
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GenericBoxOfStrings", "GenericBoxOfStrings\GenericBoxOfStrings.csproj", "{DA91957B-FA43-4DAE-97E2-6EDCCE1DC072}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GenericBoxOfInteger", "GenericBoxOfInteger\GenericBoxOfInteger.csproj", "{24D33807-1016-43A2-9CCC-BCAD887B6F65}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -711,6 +713,10 @@ Global
 		{DA91957B-FA43-4DAE-97E2-6EDCCE1DC072}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DA91957B-FA43-4DAE-97E2-6EDCCE1DC072}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DA91957B-FA43-4DAE-97E2-6EDCCE1DC072}.Release|Any CPU.Build.0 = Release|Any CPU
+		{24D33807-1016-43A2-9CCC-BCAD887B6F65}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{24D33807-1016-43A2-9CCC-BCAD887B6F65}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{24D33807-1016-43A2-9CCC-BCAD887B6F65}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{24D33807-1016-43A2-9CCC-BCAD887B6F65}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
