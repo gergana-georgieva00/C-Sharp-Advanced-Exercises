@@ -229,6 +229,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Survivor", "Survivor\Surviv
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SkiRental", "SkiRental\SkiRental.csproj", "{DE9D5FEE-493C-4E6D-AE3B-799A4BEA2F77}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BoxOfT", "BoxOfT\BoxOfT.csproj", "{4662E150-ECC3-454F-9565-9F71EAB01D8C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -687,6 +689,10 @@ Global
 		{DE9D5FEE-493C-4E6D-AE3B-799A4BEA2F77}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DE9D5FEE-493C-4E6D-AE3B-799A4BEA2F77}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DE9D5FEE-493C-4E6D-AE3B-799A4BEA2F77}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4662E150-ECC3-454F-9565-9F71EAB01D8C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4662E150-ECC3-454F-9565-9F71EAB01D8C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4662E150-ECC3-454F-9565-9F71EAB01D8C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4662E150-ECC3-454F-9565-9F71EAB01D8C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
