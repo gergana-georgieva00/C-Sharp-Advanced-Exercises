@@ -223,6 +223,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Re-Volt", "Re-Volt\Re-Volt.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Guild", "Guild\Guild.csproj", "{09EC692A-41F6-4779-8506-F3735DA446BA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Masterchef", "Masterchef\Masterchef.csproj", "{F4387714-1896-4F9C-B4B4-3A44B5C87BE0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -669,6 +671,10 @@ Global
 		{09EC692A-41F6-4779-8506-F3735DA446BA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{09EC692A-41F6-4779-8506-F3735DA446BA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{09EC692A-41F6-4779-8506-F3735DA446BA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F4387714-1896-4F9C-B4B4-3A44B5C87BE0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F4387714-1896-4F9C-B4B4-3A44B5C87BE0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F4387714-1896-4F9C-B4B4-3A44B5C87BE0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F4387714-1896-4F9C-B4B4-3A44B5C87BE0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
