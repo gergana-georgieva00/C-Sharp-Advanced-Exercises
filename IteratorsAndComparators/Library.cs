@@ -34,6 +34,7 @@ namespace IteratorsAndComparators
 
             public LibraryIterator(IEnumerable<Book> books)
             {
+                this.Books.Sort();
                 this.Reset();
                 this.Books = new List<Book>();
             }
