@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 
 namespace IteratorsAndComparators
@@ -8,9 +9,9 @@ namespace IteratorsAndComparators
     public class Library : IEnumerable<Book>
     {
         private List<Book> books;
-        public Library()
+        public Library(params Book[] booksInput)
         {
-            this.Books = new List<Book>();
+            this.Books = new List<Book>(booksInput);
         }
 
         public List<Book> Books { get; set; }
