@@ -125,131 +125,133 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EvenLines", "EvenLines\Even
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CopyBinaryFile", "CopyBinaryFile\CopyBinaryFile.csproj", "{E500E1FB-8B48-4B5D-A219-8ABE12372BD4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DirectoryTraversal", "DirectoryTraversal\DirectoryTraversal.csproj", "{12941C7D-A378-4F39-BF53-94E749521C31}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DirectoryTraversal", "DirectoryTraversal\DirectoryTraversal.csproj", "{12941C7D-A378-4F39-BF53-94E749521C31}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CopyDirectory", "CopyDirectory\CopyDirectory.csproj", "{598B5D0D-9478-4A9C-81AE-98510AC412D9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CopyDirectory", "CopyDirectory\CopyDirectory.csproj", "{598B5D0D-9478-4A9C-81AE-98510AC412D9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZipAndExtract", "ZipAndExtract\ZipAndExtract.csproj", "{836E4F30-D3DD-4899-8176-04C8690EDF39}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ZipAndExtract", "ZipAndExtract\ZipAndExtract.csproj", "{836E4F30-D3DD-4899-8176-04C8690EDF39}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SortEvenNumbers", "SortEvenNumbers\SortEvenNumbers.csproj", "{805B2325-2E02-4690-AF9E-72B6FCDF5F11}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SortEvenNumbers", "SortEvenNumbers\SortEvenNumbers.csproj", "{805B2325-2E02-4690-AF9E-72B6FCDF5F11}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SumNumbers", "SumNumbers\SumNumbers.csproj", "{1D70D93C-A306-4A0E-B9A7-56F0341E5498}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SumNumbers", "SumNumbers\SumNumbers.csproj", "{1D70D93C-A306-4A0E-B9A7-56F0341E5498}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CountUppercaseWords", "CountUppercaseWords\CountUppercaseWords.csproj", "{90F2492E-2326-4D1C-9F97-CDB7DC7D42AA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CountUppercaseWords", "CountUppercaseWords\CountUppercaseWords.csproj", "{90F2492E-2326-4D1C-9F97-CDB7DC7D42AA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AddVAT", "AddVAT\AddVAT.csproj", "{09DADBAE-90B7-4C12-85C1-1DE8F656789B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AddVAT", "AddVAT\AddVAT.csproj", "{09DADBAE-90B7-4C12-85C1-1DE8F656789B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FilterByAge", "FilterByAge\FilterByAge.csproj", "{9AB0B32E-476B-4447-89D1-F8D261EA7979}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FilterByAge", "FilterByAge\FilterByAge.csproj", "{9AB0B32E-476B-4447-89D1-F8D261EA7979}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ActionPoint", "ActionPoint\ActionPoint.csproj", "{CE8631D6-8C79-4918-9C91-2AB916A279F8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ActionPoint", "ActionPoint\ActionPoint.csproj", "{CE8631D6-8C79-4918-9C91-2AB916A279F8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KnightsOfHonor", "KnightsOfHonor\KnightsOfHonor.csproj", "{B7025022-A6F5-4D81-A86C-7EEDD4EF060A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KnightsOfHonor", "KnightsOfHonor\KnightsOfHonor.csproj", "{B7025022-A6F5-4D81-A86C-7EEDD4EF060A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomMinFunction", "CustomMinFunction\CustomMinFunction.csproj", "{B1E9BC29-790A-4565-94A6-A548D65F7296}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CustomMinFunction", "CustomMinFunction\CustomMinFunction.csproj", "{B1E9BC29-790A-4565-94A6-A548D65F7296}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FindEvensOrOdds", "FindEvensOrOdds\FindEvensOrOdds.csproj", "{0262476B-F946-4B19-9340-858B4996E348}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FindEvensOrOdds", "FindEvensOrOdds\FindEvensOrOdds.csproj", "{0262476B-F946-4B19-9340-858B4996E348}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppliedArithmetics", "AppliedArithmetics\AppliedArithmetics.csproj", "{5ECEB504-A0BE-429D-B913-C6D2056C8BBB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AppliedArithmetics", "AppliedArithmetics\AppliedArithmetics.csproj", "{5ECEB504-A0BE-429D-B913-C6D2056C8BBB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReverseAndExclude", "ReverseAndExclude\ReverseAndExclude.csproj", "{A528BC72-4D74-461D-811C-0A191E883139}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ReverseAndExclude", "ReverseAndExclude\ReverseAndExclude.csproj", "{A528BC72-4D74-461D-811C-0A191E883139}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PredicateForNames", "PredicateForNames\PredicateForNames.csproj", "{DE7ABB26-6675-4AE8-8E5E-31D9FD8E58ED}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PredicateForNames", "PredicateForNames\PredicateForNames.csproj", "{DE7ABB26-6675-4AE8-8E5E-31D9FD8E58ED}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ListOfPredicates", "ListOfPredicates\ListOfPredicates.csproj", "{9AF7031B-3592-49FC-A6FC-1412342620EB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ListOfPredicates", "ListOfPredicates\ListOfPredicates.csproj", "{9AF7031B-3592-49FC-A6FC-1412342620EB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PredicateParty!", "PredicateParty!\PredicateParty!.csproj", "{2A2AB3DC-6A02-4335-8503-1A750D32D933}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PredicateParty!", "PredicateParty!\PredicateParty!.csproj", "{2A2AB3DC-6A02-4335-8503-1A750D32D933}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ThePartyReservationFilterModule", "ThePartyReservationFilterModule\ThePartyReservationFilterModule.csproj", "{5FB3125E-1F37-4699-80CB-AE0AFAA70757}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ThePartyReservationFilterModule", "ThePartyReservationFilterModule\ThePartyReservationFilterModule.csproj", "{5FB3125E-1F37-4699-80CB-AE0AFAA70757}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TriFunction", "TriFunction\TriFunction.csproj", "{F088A050-5A9E-4CBB-B0DA-912CCBF61BFB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TriFunction", "TriFunction\TriFunction.csproj", "{F088A050-5A9E-4CBB-B0DA-912CCBF61BFB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarManufacturer", "CarManufacturer\CarManufacturer.csproj", "{6E18D238-390A-4F39-A282-0A1F67D56161}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CarManufacturer", "CarManufacturer\CarManufacturer.csproj", "{6E18D238-390A-4F39-A282-0A1F67D56161}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Snake", "Snake\Snake.csproj", "{48B49702-8D75-4F58-9CA1-2249060B14BE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Snake", "Snake\Snake.csproj", "{48B49702-8D75-4F58-9CA1-2249060B14BE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Parking", "Parking\Parking.csproj", "{00801752-2903-4988-9982-4E2605AAE1CC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Parking", "Parking\Parking.csproj", "{00801752-2903-4988-9982-4E2605AAE1CC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DefiningClasses", "DefiningClasses\DefiningClasses.csproj", "{43FEB3BE-022F-4B09-9856-80A16B45000D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DefiningClasses", "DefiningClasses\DefiningClasses.csproj", "{43FEB3BE-022F-4B09-9856-80A16B45000D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpeedRacing", "SpeedRacing\SpeedRacing.csproj", "{BE6B96D2-8A36-452D-8053-7E9ED09D7DA6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SpeedRacing", "SpeedRacing\SpeedRacing.csproj", "{BE6B96D2-8A36-452D-8053-7E9ED09D7DA6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RawData", "RawData\RawData.csproj", "{C81D53EF-63EA-4CB3-B392-8B1610D295B5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RawData", "RawData\RawData.csproj", "{C81D53EF-63EA-4CB3-B392-8B1610D295B5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarSalesMan", "CarSalesMan\CarSalesMan.csproj", "{13CFD0E2-627E-4324-9B0B-BC1B80E5CE7C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CarSalesMan", "CarSalesMan\CarSalesMan.csproj", "{13CFD0E2-627E-4324-9B0B-BC1B80E5CE7C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PokemonTrainer", "PokemonTrainer\PokemonTrainer.csproj", "{4746F810-C38C-46FE-8414-2CF1C72DC650}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PokemonTrainer", "PokemonTrainer\PokemonTrainer.csproj", "{4746F810-C38C-46FE-8414-2CF1C72DC650}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SoftUniParking", "SoftUniParking\SoftUniParking.csproj", "{F79A3F03-0A16-449E-B40D-BC2262EE653B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SoftUniParking", "SoftUniParking\SoftUniParking.csproj", "{F79A3F03-0A16-449E-B40D-BC2262EE653B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FlowerWreaths", "FlowerWreaths\FlowerWreaths.csproj", "{5141CA4B-CA0C-4F98-A6C8-DDC1C6B24C75}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FlowerWreaths", "FlowerWreaths\FlowerWreaths.csproj", "{5141CA4B-CA0C-4F98-A6C8-DDC1C6B24C75}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bee", "Bee\Bee.csproj", "{97818BDF-0210-4102-8ED7-0E4D1CAD002A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Bee", "Bee\Bee.csproj", "{97818BDF-0210-4102-8ED7-0E4D1CAD002A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VetClinic", "VetClinic\VetClinic.csproj", "{F423CBA0-B4B7-4D44-BB76-6E20975B1EAE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VetClinic", "VetClinic\VetClinic.csproj", "{F423CBA0-B4B7-4D44-BB76-6E20975B1EAE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Scheduling", "Scheduling\Scheduling.csproj", "{365DA6F8-5597-4366-9A2E-25CF8EA28E34}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Scheduling", "Scheduling\Scheduling.csproj", "{365DA6F8-5597-4366-9A2E-25CF8EA28E34}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Garden", "Garden\Garden.csproj", "{E0FA4645-0649-429C-BEF1-85DDD6546716}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Garden", "Garden\Garden.csproj", "{E0FA4645-0649-429C-BEF1-85DDD6546716}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClassroomProject0.0", "Classroom\ClassroomProject0.0.csproj", "{25DB55D8-5BE1-4C27-AB38-D73F9A2010E1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ClassroomProject0.0", "Classroom\ClassroomProject0.0.csproj", "{25DB55D8-5BE1-4C27-AB38-D73F9A2010E1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClassroomProject", "ClassroomProject\ClassroomProject.csproj", "{69DE60F8-3AAE-4A65-8C1E-7B5F9D0071C4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ClassroomProject", "ClassroomProject\ClassroomProject.csproj", "{69DE60F8-3AAE-4A65-8C1E-7B5F9D0071C4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cooking", "Cooking\Cooking.csproj", "{82B1F908-1202-4F33-BBD7-2E83B1AA1810}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Cooking", "Cooking\Cooking.csproj", "{82B1F908-1202-4F33-BBD7-2E83B1AA1810}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Selling", "Selling\Selling.csproj", "{850B769B-4412-450B-9DB5-00E8F3F6E36B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Selling", "Selling\Selling.csproj", "{850B769B-4412-450B-9DB5-00E8F3F6E36B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BakeryOpenning", "BakeryOpenning\BakeryOpenning.csproj", "{D49CC398-9BDE-4428-85D5-69FEF00A202C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BakeryOpenning", "BakeryOpenning\BakeryOpenning.csproj", "{D49CC398-9BDE-4428-85D5-69FEF00A202C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TheFightForGondor", "TheFightForGondor\TheFightForGondor.csproj", "{A22815EC-8FD5-4796-8C14-3EA036218F62}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TheFightForGondor", "TheFightForGondor\TheFightForGondor.csproj", "{A22815EC-8FD5-4796-8C14-3EA036218F62}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Warships", "Warships\Warships.csproj", "{FBF5DE9C-403D-4266-9AF6-EF543466EF6C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Warships", "Warships\Warships.csproj", "{FBF5DE9C-403D-4266-9AF6-EF543466EF6C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Warships2.0", "Warships2.0\Warships2.0.csproj", "{2DECAC2C-D202-44FF-8E47-B64399C0CC47}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Warships2.0", "Warships2.0\Warships2.0.csproj", "{2DECAC2C-D202-44FF-8E47-B64399C0CC47}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TheRace", "TheRace\TheRace.csproj", "{B19F7238-F6D6-43BE-9EEF-1A02CBF08BC3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TheRace", "TheRace\TheRace.csproj", "{B19F7238-F6D6-43BE-9EEF-1A02CBF08BC3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WarmWinter", "WarmWinter\WarmWinter.csproj", "{B76C4D40-390F-402B-9038-540AC65D6356}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WarmWinter", "WarmWinter\WarmWinter.csproj", "{B76C4D40-390F-402B-9038-540AC65D6356}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SuperMario", "SuperMario\SuperMario.csproj", "{C398977A-1FED-4E1F-8A81-3B16CF584A7E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SuperMario", "SuperMario\SuperMario.csproj", "{C398977A-1FED-4E1F-8A81-3B16CF584A7E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SuperMario2,0", "SuperMario2,0\SuperMario2,0.csproj", "{397DBAC9-4C70-438C-973F-960ED14D4A8C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SuperMario2,0", "SuperMario2,0\SuperMario2,0.csproj", "{397DBAC9-4C70-438C-973F-960ED14D4A8C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CocktailParty", "CocktailParty\CocktailParty.csproj", "{103C6CC0-36C7-498E-8364-F8DF3F421D3D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CocktailParty", "CocktailParty\CocktailParty.csproj", "{103C6CC0-36C7-498E-8364-F8DF3F421D3D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LootBox", "LootBox\LootBox.csproj", "{A3896055-B0DA-44FE-9F18-AA19786A24E6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LootBox", "LootBox\LootBox.csproj", "{A3896055-B0DA-44FE-9F18-AA19786A24E6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Re-Volt", "Re-Volt\Re-Volt.csproj", "{76316421-5552-4889-B43A-C4159133B390}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Re-Volt", "Re-Volt\Re-Volt.csproj", "{76316421-5552-4889-B43A-C4159133B390}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Guild", "Guild\Guild.csproj", "{09EC692A-41F6-4779-8506-F3735DA446BA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Guild", "Guild\Guild.csproj", "{09EC692A-41F6-4779-8506-F3735DA446BA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Masterchef", "Masterchef\Masterchef.csproj", "{F4387714-1896-4F9C-B4B4-3A44B5C87BE0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Masterchef", "Masterchef\Masterchef.csproj", "{F4387714-1896-4F9C-B4B4-3A44B5C87BE0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Survivor", "Survivor\Survivor.csproj", "{E0CBC0F5-BD2C-4450-8433-F3F3BE091354}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Survivor", "Survivor\Survivor.csproj", "{E0CBC0F5-BD2C-4450-8433-F3F3BE091354}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SkiRental", "SkiRental\SkiRental.csproj", "{DE9D5FEE-493C-4E6D-AE3B-799A4BEA2F77}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SkiRental", "SkiRental\SkiRental.csproj", "{DE9D5FEE-493C-4E6D-AE3B-799A4BEA2F77}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BoxOfT", "BoxOfT\BoxOfT.csproj", "{4662E150-ECC3-454F-9565-9F71EAB01D8C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BoxOfT", "BoxOfT\BoxOfT.csproj", "{4662E150-ECC3-454F-9565-9F71EAB01D8C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GenericArrayCreator", "GenericArrayCreator\GenericArrayCreator.csproj", "{B2F29141-2189-4C45-973A-B7BEDB17C33C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GenericArrayCreator", "GenericArrayCreator\GenericArrayCreator.csproj", "{B2F29141-2189-4C45-973A-B7BEDB17C33C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GenericScale", "GenericScale\GenericScale.csproj", "{98494A19-7490-4F28-B03D-263EB2405BAB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GenericScale", "GenericScale\GenericScale.csproj", "{98494A19-7490-4F28-B03D-263EB2405BAB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GenericBoxOfStrings", "GenericBoxOfStrings\GenericBoxOfStrings.csproj", "{DA91957B-FA43-4DAE-97E2-6EDCCE1DC072}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GenericBoxOfStrings", "GenericBoxOfStrings\GenericBoxOfStrings.csproj", "{DA91957B-FA43-4DAE-97E2-6EDCCE1DC072}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GenericBoxOfInteger", "GenericBoxOfInteger\GenericBoxOfInteger.csproj", "{24D33807-1016-43A2-9CCC-BCAD887B6F65}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GenericBoxOfInteger", "GenericBoxOfInteger\GenericBoxOfInteger.csproj", "{24D33807-1016-43A2-9CCC-BCAD887B6F65}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GenericSwapMethodStrings", "GenericSwapMethodStrings\GenericSwapMethodStrings.csproj", "{E461BD43-71C9-4178-BAF1-BB3F1AB9B3A1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GenericSwapMethodStrings", "GenericSwapMethodStrings\GenericSwapMethodStrings.csproj", "{E461BD43-71C9-4178-BAF1-BB3F1AB9B3A1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GenericSwapMethodInteger", "GenericSwapMethodInteger\GenericSwapMethodInteger.csproj", "{D9B39FEC-40BE-40AF-BB34-8B08F764CDCA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GenericSwapMethodInteger", "GenericSwapMethodInteger\GenericSwapMethodInteger.csproj", "{D9B39FEC-40BE-40AF-BB34-8B08F764CDCA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GenericCountMethodString", "GenericCountMethodString\GenericCountMethodString.csproj", "{354F9B43-9E51-48E5-9210-15798A95F9B6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GenericCountMethodString", "GenericCountMethodString\GenericCountMethodString.csproj", "{354F9B43-9E51-48E5-9210-15798A95F9B6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GenericCountMethodDouble", "GenericCountMethodDouble\GenericCountMethodDouble.csproj", "{C6BDEBD8-B796-42F2-8040-207CEAC03608}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GenericCountMethodDouble", "GenericCountMethodDouble\GenericCountMethodDouble.csproj", "{C6BDEBD8-B796-42F2-8040-207CEAC03608}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tuple", "Tuple\Tuple.csproj", "{2BFF0490-0136-4D6D-A6F1-0FBB535A8F92}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tuple", "Tuple\Tuple.csproj", "{2BFF0490-0136-4D6D-A6F1-0FBB535A8F92}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Threeuple", "Threeuple\Threeuple.csproj", "{EA785961-C877-4F5F-B78C-737D19BD4149}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Threeuple", "Threeuple\Threeuple.csproj", "{EA785961-C877-4F5F-B78C-737D19BD4149}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IteratorsAndComparators", "IteratorsAndComparators\IteratorsAndComparators.csproj", "{EFE056C8-9E69-4CEF-99BC-658161C12A8F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -753,6 +755,10 @@ Global
 		{EA785961-C877-4F5F-B78C-737D19BD4149}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EA785961-C877-4F5F-B78C-737D19BD4149}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EA785961-C877-4F5F-B78C-737D19BD4149}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EFE056C8-9E69-4CEF-99BC-658161C12A8F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EFE056C8-9E69-4CEF-99BC-658161C12A8F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EFE056C8-9E69-4CEF-99BC-658161C12A8F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EFE056C8-9E69-4CEF-99BC-658161C12A8F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
