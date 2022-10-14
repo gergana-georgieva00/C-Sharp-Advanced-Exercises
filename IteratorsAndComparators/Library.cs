@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Diagnostics.CodeAnalysis;
 using System.Linq;
 using System.Text;
 
@@ -8,6 +9,8 @@ namespace IteratorsAndComparators
 {
     public class Library : IEnumerable<Book>
     {
+        
+
         public class LibraryIterator : IEnumerator<Book>
         {
             public List<Book> Books { get; set; }
@@ -44,6 +47,9 @@ namespace IteratorsAndComparators
             this.Books = new List<Book>(books);
             this.Books.Sort();
         }
+
+
+
 
         public IEnumerator<Book> GetEnumerator()
         {
