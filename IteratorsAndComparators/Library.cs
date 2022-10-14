@@ -8,50 +8,51 @@ namespace IteratorsAndComparators
 {
     public class Library : IEnumerable<Book>
     {
-        private List<Book> books;
-        public Library(params Book[] booksInput)
+        public class LibraryIterator : IEnumerator<Book>
         {
-            this.Books = new List<Book>(booksInput.ToList());
-        }
+            public List<Book> Books { get; set; }
 
-        public List<Book> Books { get; set; }
+            public int currentIndex { get; set; }
 
-        public IEnumerator<Book> GetEnumerator()
-        {
-            return new LibraryIterator(this.books);
-        }
-
-        IEnumerator IEnumerable.GetEnumerator()
-        {
-            return this.GetEnumerator();
-        }
-
-        private class LibraryIterator : IEnumerator<Book>
-        {
-            public Book Current => this.Books[this.CurrentIndex];
+            public Book Current => this.Books[currentIndex];
 
             object IEnumerator.Current => this.Current;
 
             public LibraryIterator(IEnumerable<Book> books)
             {
-                this.Books.Sort();
                 this.Reset();
-                this.Books = new List<Book>();
+                this.Books = new List<Book>(books);
             }
-            public List<Book> Books { get; set; }
-            public int CurrentIndex { get; set; }
 
             public void Dispose() { }
 
             public bool MoveNext()
             {
-                return ++this.CurrentIndex < this.Books.Count;
+                return ++this.currentIndex < this.Books.Count();
             }
 
             public void Reset()
             {
-                this.CurrentIndex = -1;
+                this.currentIndex = -1;
             }
+        }
+
+        public List<Book> Books { get; set; }
+
+        public Library(params Book[] books)
+        {
+            this.Books = new List<Book>(books);
+            this.Books.Sort();
+        }
+
+        public IEnumerator<Book> GetEnumerator()
+        {
+            return new LibraryIterator(this.Books);
+        }
+
+        IEnumerator IEnumerable.GetEnumerator()
+        {
+            return this.GetEnumerator();
         }
     }
 }
