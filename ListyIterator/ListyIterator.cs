@@ -53,5 +53,15 @@ namespace ListyIterator
 
             Console.WriteLine(collection[index]);
         }
+
+        public void PrintAll()
+        {
+            if (collection.Count == 0)
+            {
+                throw new InvalidOperationException("Invalid Pperation!");
+            }
+
+            Console.WriteLine(string.Join(' ', collection));
+        }
     }
 }

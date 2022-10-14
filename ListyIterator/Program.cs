@@ -33,6 +33,16 @@ namespace ListyIterator
                             Console.WriteLine(e.Message);
                         }
                         break;
+                    case "PrintAll":
+                        try
+                        {
+                            listyIterator.PrintAll();
+                        }
+                        catch (Exception e)
+                        {
+                            Console.WriteLine(e.Message);
+                        }
+                        break;
                 }
             }
         }
