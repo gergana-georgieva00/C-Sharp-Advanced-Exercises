@@ -51,6 +51,14 @@ namespace TheBattleofTheFiveArmies
                             // is regular position
                             if (matrix[playerRow - 1][playerCol] == '-')
                             {
+                                if (e <= 0)
+                                {
+                                    matrix[playerRow][playerCol] = '-';
+                                    matrix[playerRow - 1][playerCol] = 'X';
+                                    Console.WriteLine($"The army was defeated at {playerRow - 1};{playerCol}.");
+                                    PrintMatrix(matrix, n);
+                                    return;
+                                }
                                 matrix[playerRow][playerCol] = '-';
                                 matrix[playerRow - 1][playerCol] = 'A';
                             }
@@ -75,6 +83,11 @@ namespace TheBattleofTheFiveArmies
                                     PrintMatrix(matrix, n);
                                     return;
                                 }
+                                else
+                                {
+                                    matrix[playerRow][playerCol] = '-';
+                                    matrix[playerRow - 1][playerCol] = 'A';
+                                }
                             }
                         }
                         break;
@@ -85,6 +98,14 @@ namespace TheBattleofTheFiveArmies
                             // is regular position
                             if (matrix[playerRow + 1][playerCol] == '-')
                             {
+                                if (e <= 0)
+                                {
+                                    matrix[playerRow][playerCol] = '-';
+                                    matrix[playerRow + 1][playerCol] = 'X';
+                                    Console.WriteLine($"The army was defeated at {playerRow + 1};{playerCol}.");
+                                    PrintMatrix(matrix, n);
+                                    return;
+                                }
                                 matrix[playerRow][playerCol] = '-';
                                 matrix[playerRow + 1][playerCol] = 'A';
                             }
@@ -109,6 +130,11 @@ namespace TheBattleofTheFiveArmies
                                     PrintMatrix(matrix, n);
                                     return;
                                 }
+                                else
+                                {
+                                    matrix[playerRow][playerCol] = '-';
+                                    matrix[playerRow + 1][playerCol] = 'A';
+                                }
                             }
                         }
                         break;
@@ -119,6 +145,14 @@ namespace TheBattleofTheFiveArmies
                             // is regular position
                             if (matrix[playerRow][playerCol - 1] == '-')
                             {
+                                if (e <= 0)
+                                {
+                                    matrix[playerRow][playerCol] = '-';
+                                    matrix[playerRow][playerCol - 1] = 'X';
+                                    Console.WriteLine($"The army was defeated at {playerRow};{playerCol - 1}.");
+                                    PrintMatrix(matrix, n);
+                                    return;
+                                }
                                 matrix[playerRow][playerCol] = '-';
                                 matrix[playerRow][playerCol - 1] = 'A';
                             }
@@ -138,10 +172,15 @@ namespace TheBattleofTheFiveArmies
                                 if (e <= 0)
                                 {
                                     matrix[playerRow][playerCol] = '-';
-                                    matrix[playerRow][playerCol - 1] = '-';
+                                    matrix[playerRow][playerCol - 1] = 'X';
                                     Console.WriteLine($"The army was defeated at {playerRow};{playerCol - 1}.");
                                     PrintMatrix(matrix, n);
                                     return;
+                                }
+                                else
+                                {
+                                    matrix[playerRow][playerCol] = '-';
+                                    matrix[playerRow][playerCol - 1] = 'A';
                                 }
                             }
                         }
@@ -153,6 +192,14 @@ namespace TheBattleofTheFiveArmies
                             // is regular position
                             if (matrix[playerRow][playerCol + 1] == '-')
                             {
+                                if (e <= 0)
+                                {
+                                    matrix[playerRow][playerCol] = '-';
+                                    matrix[playerRow][playerCol + 1] = 'X';
+                                    Console.WriteLine($"The army was defeated at {playerRow};{playerCol + 1}.");
+                                    PrintMatrix(matrix, n);
+                                    return;
+                                }
                                 matrix[playerRow][playerCol] = '-';
                                 matrix[playerRow][playerCol + 1] = 'A';
                             }
@@ -176,6 +223,11 @@ namespace TheBattleofTheFiveArmies
                                     Console.WriteLine($"The army was defeated at {playerRow};{playerCol + 1}.");
                                     PrintMatrix(matrix, n);
                                     return;
+                                }
+                                else
+                                {
+                                    matrix[playerRow][playerCol] = '-';
+                                    matrix[playerRow][playerCol + 1] = 'A';
                                 }
                             }
                         }
