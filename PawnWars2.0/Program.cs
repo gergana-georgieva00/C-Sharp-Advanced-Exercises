@@ -27,8 +27,8 @@ namespace PawnWars2._0
             int colBlack = PositionBlack(chessboard)[1];
 
             // diagonal win
-            if ((rowBlack == rowWhite - 1 && colBlack == colWhite - 1) || (rowBlack == rowWhite + 1 && colBlack == colWhite - 1)
-                    || (rowBlack == rowWhite + 1 && colBlack == colWhite + 1) || (rowBlack == rowWhite - 1 && colBlack == colWhite + 1))
+            if ((rowBlack == rowWhite - 1 && colBlack == colWhite - 1)
+                    || (rowBlack == rowWhite - 1 && colBlack == colWhite + 1))
             {
                 chessboard[rowWhite, colWhite] = '-';
                 chessboard[rowBlack, colBlack] = 'w';
@@ -38,71 +38,70 @@ namespace PawnWars2._0
                 return;
             }
 
+            bool whiteTurn = true;
+
             // make moves
             while (true)
             {
                 rowWhite = PositionWhite(chessboard)[0];
                 colWhite = PositionWhite(chessboard)[1];
-
-                if (rowWhite == 0)
-                {
-                    Console.WriteLine($"Game over! White pawn is promoted to a queen at {(char)(97 + colWhite)}8.");
-                    return;
-                }
-
+                
                 rowBlack = PositionBlack(chessboard)[0];
                 colBlack = PositionBlack(chessboard)[1];
 
-                if (rowBlack == 7)
+                if (whiteTurn)
                 {
-                    Console.WriteLine($"Game over! Black pawn is promoted to a queen at {(char)(97 + colBlack)}1.");
-                    return;
+                    if ((rowBlack == rowWhite - 1 && colBlack == colWhite - 1)
+                    || (rowBlack == rowWhite - 1 && colBlack == colWhite + 1))
+                    {
+                        chessboard[rowWhite, colWhite] = '-';
+                        chessboard[rowBlack, colBlack] = 'w';
+
+                        Console.WriteLine($"Game over! White capture on {(char)(97 + colBlack)}{8 - rowBlack}.");
+                        return;
+                    }
+                    else
+                    {
+                        chessboard[rowWhite, colWhite] = '-';
+                        chessboard[rowWhite - 1, colWhite] = 'w';
+
+                        rowWhite--;
+
+                        if (rowWhite == 0)
+                        {
+                            Console.WriteLine($"Game over! White pawn is promoted to a queen at {(char)(97 + colWhite)}8.");
+                            return;
+                        }
+
+                        whiteTurn = false;
+                    }
                 }
-
-                // move white
-                chessboard[rowWhite, colWhite] = '-';
-                chessboard[rowWhite - 1, colWhite] = 'w';
-                
-                if ((rowBlack == rowWhite - 1 && colBlack == colWhite - 1) || (rowBlack == rowWhite + 1 && colBlack == colWhite - 1)
-                    || (rowBlack == rowWhite + 1 && colBlack == colWhite + 1) || (rowBlack == rowWhite - 1 && colBlack == colWhite + 1))
+                else
                 {
-                    chessboard[rowWhite, colWhite] = '-';
-                    chessboard[rowBlack, colBlack] = 'w';
+                    if ((rowBlack == rowWhite - 1 && colBlack == colWhite - 1)
+                        || (rowBlack == rowWhite - 1 && colBlack == colWhite + 1))
+                    {
+                        chessboard[rowBlack, colBlack] = '-';
+                        chessboard[rowWhite, colWhite] = 'b';
 
-                    Console.WriteLine($"Game over! White capture on {(char)(97 + colBlack)}{8 - rowBlack}.");
-                    return;
-                }
+                        Console.WriteLine($"Game over! Black capture on {(char)(97 + colWhite)}{8 - rowWhite}.");
+                        return;
+                    }
+                    else
+                    {
+                        chessboard[rowBlack, colBlack] = '-';
+                        chessboard[rowBlack + 1, colBlack] = 'b';
 
-                rowWhite--;
+                        rowBlack++;
 
-                if (rowWhite == 0)
-                {
-                    Console.WriteLine($"Game over! White pawn is promoted to a queen at {(char)(97 + colWhite)}8.");
-                    return;
-                }
-                // move black
-                chessboard[rowBlack, colBlack] = '-';
-                chessboard[rowBlack + 1, colBlack] = 'b';
-                
-                // check if black wins
+                        if (rowBlack == 7)
+                        {
+                            Console.WriteLine($"Game over! Black pawn is promoted to a queen at {(char)(97 + colBlack)}1.");
+                            return;
+                        }
 
-                // diagonal win
-                if ((rowBlack == rowWhite - 1 && colBlack == colWhite - 1) || (rowBlack == rowWhite + 1 && colBlack == colWhite - 1)
-                    || (rowBlack == rowWhite + 1 && colBlack == colWhite + 1) || (rowBlack == rowWhite - 1 && colBlack == colWhite + 1))
-                {
-                    chessboard[rowWhite, colWhite] = '-';
-                    chessboard[rowBlack, colBlack] = 'b';
-
-                    Console.WriteLine($"Game over! Black capture on {(char)(97 + colBlack)}{8 - rowBlack}.");
-                    return;
-                }
-
-                rowBlack++;
-
-                if (rowBlack == 7)
-                {
-                    Console.WriteLine($"Game over! Black pawn is promoted to a queen at {(char)(97 + colBlack)}1.");
-                    return;
+                        whiteTurn = true;
+                    }
                 }
             }
         }
