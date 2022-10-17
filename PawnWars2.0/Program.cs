@@ -44,21 +44,25 @@ namespace PawnWars2._0
                 rowWhite = PositionWhite(chessboard)[0];
                 colWhite = PositionWhite(chessboard)[1];
 
-                rowBlack = PositionBlack(chessboard)[0];
-                colBlack = PositionBlack(chessboard)[1];
-
-                // move white
-                chessboard[rowWhite, colWhite] = '-';
-                chessboard[rowWhite - 1, colWhite] = 'w';
-
-                rowWhite--;
-
                 if (rowWhite == 0)
                 {
                     Console.WriteLine($"Game over! White pawn is promoted to a queen at {(char)(97 + colWhite)}8.");
                     return;
                 }
 
+                rowBlack = PositionBlack(chessboard)[0];
+                colBlack = PositionBlack(chessboard)[1];
+
+                if (rowBlack == 7)
+                {
+                    Console.WriteLine($"Game over! Black pawn is promoted to a queen at {(char)(97 + colBlack)}1.");
+                    return;
+                }
+
+                // move white
+                chessboard[rowWhite, colWhite] = '-';
+                chessboard[rowWhite - 1, colWhite] = 'w';
+                
                 if ((rowBlack == rowWhite - 1 && colBlack == colWhite - 1) || (rowBlack == rowWhite + 1 && colBlack == colWhite - 1)
                     || (rowBlack == rowWhite + 1 && colBlack == colWhite + 1) || (rowBlack == rowWhite - 1 && colBlack == colWhite + 1))
                 {
@@ -69,19 +73,18 @@ namespace PawnWars2._0
                     return;
                 }
 
+                rowWhite--;
 
+                if (rowWhite == 0)
+                {
+                    Console.WriteLine($"Game over! White pawn is promoted to a queen at {(char)(97 + colWhite)}8.");
+                    return;
+                }
                 // move black
                 chessboard[rowBlack, colBlack] = '-';
                 chessboard[rowBlack + 1, colBlack] = 'b';
-
-                rowBlack++;
-
+                
                 // check if black wins
-                if (rowBlack == 7)
-                {
-                    Console.WriteLine($"Game over! Black pawn is promoted to a queen at {(char)(97 + colBlack)}1.");
-                    return;
-                }
 
                 // diagonal win
                 if ((rowBlack == rowWhite - 1 && colBlack == colWhite - 1) || (rowBlack == rowWhite + 1 && colBlack == colWhite - 1)
@@ -91,6 +94,14 @@ namespace PawnWars2._0
                     chessboard[rowBlack, colBlack] = 'b';
 
                     Console.WriteLine($"Game over! Black capture on {(char)(97 + colBlack)}{8 - rowBlack}.");
+                    return;
+                }
+
+                rowBlack++;
+
+                if (rowBlack == 7)
+                {
+                    Console.WriteLine($"Game over! Black pawn is promoted to a queen at {(char)(97 + colBlack)}1.");
                     return;
                 }
             }
