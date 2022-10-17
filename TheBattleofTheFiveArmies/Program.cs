@@ -32,118 +32,154 @@ namespace TheBattleofTheFiveArmies
                 int rowEnemy = int.Parse(command[1]);
                 int colEnemy = int.Parse(command[2]);
 
+                // enemy spawns
+                matrix[rowEnemy][colEnemy] = 'O';
+                
+                // get player cooridnates
                 int playerRow = GetPlayerCoordinates(matrix, n)[0];
                 int playerCol = GetPlayerCoordinates(matrix, n)[1];
 
-                // enemy spawns
-                matrix[rowEnemy][colEnemy] = 'O';
-
                 // army moves
-                if (IsCommandValid(matrix, n, direction, playerRow, playerCol))
-                {
-                    // fight enemy
-                    if (FightEnemy(matrix, playerRow, playerCol, direction))
-                    {
-                        e--;
+                e--;
 
-                        e -= 2;
-                        if (e <= 0)
+                switch (direction)
+                {
+                    case "up":
+                        // is command valid
+                        if (playerRow - 1 >= 0)
                         {
-                            matrix[playerRow][playerCol] = '-';
-                            matrix[rowEnemy][colEnemy] = 'X';
-                            Console.WriteLine($"The army was defeated at {rowEnemy};{colEnemy}.");
-                            PrintMatrix(matrix, n);
-                            return;
-                        }
-                        else
-                        {
-                            matrix[playerRow][playerCol] = '-';
-                            switch (direction)
+                            // is regular position
+                            if (matrix[playerRow - 1][playerCol] == '-')
                             {
-                                case "up":
-                                    matrix[rowEnemy - 1][colEnemy] = 'A';
-                                    break;
-                                case "down":
-                                    matrix[rowEnemy + 1][colEnemy] = 'A';
-                                    break;
-                                case "left":
-                                    matrix[rowEnemy][colEnemy - 1] = 'A';
-                                    break;
-                                case "right":
-                                    matrix[rowEnemy][colEnemy + 1] = 'A';
-                                    break;
+                                matrix[playerRow][playerCol] = '-';
+                                matrix[playerRow - 1][playerCol] = 'A';
+                            }
+                            // is mordor
+                            else if (matrix[playerRow - 1][playerCol] == 'M')
+                            {
+                                matrix[playerRow][playerCol] = '-';
+                                matrix[playerRow - 1][playerCol] = '-';
+                                Console.WriteLine($"The army managed to free the Middle World! Armor left: {e}");
+                                PrintMatrix(matrix, n);
+                                return;
+                            }
+                            // is enemy
+                            else
+                            {
+                                e -= 2;
+                                if (e <= 0)
+                                {
+                                    matrix[playerRow][playerCol] = '-';
+                                    matrix[playerRow - 1][playerCol] = 'X';
+                                    Console.WriteLine($"The army was defeated at {playerRow - 1};{playerCol}.");
+                                    PrintMatrix(matrix, n);
+                                    return;
+                                }
                             }
                         }
-                    }
-                    
-                    else
-                    {
-                        matrix[playerRow][playerCol] = '-';
-                        e--;
-
-                        switch (direction)
+                        break;
+                    case "down":
+                        // is command valid
+                        if (playerRow + 1 < n)
                         {
-                            case "up":
-                                // regular position
-                                if (matrix[playerRow - 1][playerCol] == '-')
+                            // is regular position
+                            if (matrix[playerRow + 1][playerCol] == '-')
+                            {
+                                matrix[playerRow][playerCol] = '-';
+                                matrix[playerRow + 1][playerCol] = 'A';
+                            }
+                            // is mordor
+                            else if (matrix[playerRow + 1][playerCol] == 'M')
+                            {
+                                matrix[playerRow][playerCol] = '-';
+                                matrix[playerRow + 1][playerCol] = '-';
+                                Console.WriteLine($"The army managed to free the Middle World! Armor left: {e}");
+                                PrintMatrix(matrix, n);
+                                return;
+                            }
+                            // is enemy
+                            else
+                            {
+                                e -= 2;
+                                if (e <= 0)
                                 {
-                                    matrix[playerRow - 1][playerCol] = 'A';
-                                }
-                                // reach mordor
-                                else
-                                {
-                                    matrix[playerRow - 1][playerCol] = '-';
-                                    Console.WriteLine($"The army managed to free the Middle World! Armor left: {e}");
+                                    matrix[playerRow][playerCol] = '-';
+                                    matrix[playerRow + 1][playerCol] = 'X';
+                                    Console.WriteLine($"The army was defeated at {playerRow + 1};{playerCol}.");
                                     PrintMatrix(matrix, n);
                                     return;
                                 }
-                                break;
-                            case "down":
-                                if (matrix[playerRow + 1][playerCol] == '-')
-                                {
-                                    matrix[playerRow + 1][playerCol] = 'A';
-                                }
-                                else
-                                {
-                                    matrix[playerRow + 1][playerCol] = '-';
-                                    Console.WriteLine($"The army managed to free the Middle World! Armor left: {e}");
-                                    PrintMatrix(matrix, n);
-                                    PrintMatrix(matrix, n);
-                                    return;
-                                }
-                                break;
-                            case "left":
-                                if (matrix[playerRow][playerCol - 1] == '-')
-                                {
-                                    matrix[playerRow][playerCol - 1] = 'A';
-                                }
-                                else
-                                {
-                                    matrix[playerRow][playerCol - 1] = '-';
-                                    Console.WriteLine($"The army managed to free the Middle World! Armor left: {e}");
-                                    PrintMatrix(matrix, n);
-                                    return;
-                                }
-                                break;
-                            case "right":
-                                if (matrix[rowEnemy][colEnemy + 1] == '-')
-                                {
-                                    matrix[rowEnemy][colEnemy + 1] = 'A';
-                                }
-                                else
-                                {
-                                    matrix[rowEnemy][colEnemy + 1] = '-';
-                                    Console.WriteLine($"The army managed to free the Middle World! Armor left: {e}");
-                                    PrintMatrix(matrix, n);
-                                    return;
-                                }
-                                break;
+                            }
                         }
-                    }
-                }
-                else
-                {
-                    e--;
+                        break;
+                    case "left":
+                        // is command valid
+                        if (playerCol - 1 >= 0)
+                        {
+                            // is regular position
+                            if (matrix[playerRow][playerCol - 1] == '-')
+                            {
+                                matrix[playerRow][playerCol] = '-';
+                                matrix[playerRow][playerCol - 1] = 'A';
+                            }
+                            // is mordor
+                            else if (matrix[playerRow][playerCol - 1] == 'M')
+                            {
+                                matrix[playerRow][playerCol] = '-';
+                                matrix[playerRow][playerCol - 1] = '-';
+                                Console.WriteLine($"The army managed to free the Middle World! Armor left: {e}");
+                                PrintMatrix(matrix, n);
+                                return;
+                            }
+                            // is enemy
+                            else
+                            {
+                                e -= 2;
+                                if (e <= 0)
+                                {
+                                    matrix[playerRow][playerCol] = '-';
+                                    matrix[playerRow][playerCol - 1] = '-';
+                                    Console.WriteLine($"The army was defeated at {playerRow};{playerCol - 1}.");
+                                    PrintMatrix(matrix, n);
+                                    return;
+                                }
+                            }
+                        }
+                        break;
+                    case "right":
+                        // is command valid
+                        if (playerCol + 1 < matrix[playerRow].Length)
+                        {
+                            // is regular position
+                            if (matrix[playerRow][playerCol + 1] == '-')
+                            {
+                                matrix[playerRow][playerCol] = '-';
+                                matrix[playerRow][playerCol + 1] = 'A';
+                            }
+                            // is mordor
+                            else if (matrix[playerRow][playerCol + 1] == 'M')
+                            {
+                                matrix[playerRow][playerCol] = '-';
+                                matrix[playerRow][playerCol + 1] = '-';
+                                Console.WriteLine($"The army managed to free the Middle World! Armor left: {e}");
+                                PrintMatrix(matrix, n);
+                                return;
+                            }
+                            // is enemy
+                            else
+                            {
+                                e -= 2;
+                                if (e <= 0)
+                                {
+                                    matrix[playerRow][playerCol] = '-';
+                                    matrix[playerRow][playerCol + 1] = 'X';
+                                    Console.WriteLine($"The army was defeated at {playerRow};{playerCol + 1}.");
+                                    PrintMatrix(matrix, n);
+                                    return;
+                                }
+                            }
+                        }
+                        break;
                 }
             }
         }
