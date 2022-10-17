@@ -251,31 +251,33 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tuple", "Tuple\Tuple.csproj
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Threeuple", "Threeuple\Threeuple.csproj", "{EA785961-C877-4F5F-B78C-737D19BD4149}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IteratorsAndComparators", "IteratorsAndComparators\IteratorsAndComparators.csproj", "{EFE056C8-9E69-4CEF-99BC-658161C12A8F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IteratorsAndComparators", "IteratorsAndComparators\IteratorsAndComparators.csproj", "{EFE056C8-9E69-4CEF-99BC-658161C12A8F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ListyIterator", "ListyIterator\ListyIterator.csproj", "{881F585C-0667-4CBB-98BB-87CC9C10C8DE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ListyIterator", "ListyIterator\ListyIterator.csproj", "{881F585C-0667-4CBB-98BB-87CC9C10C8DE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Stack", "Stack\Stack.csproj", "{487E7A15-B9DD-4FC6-B0E3-57173B31DEC6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Stack", "Stack\Stack.csproj", "{487E7A15-B9DD-4FC6-B0E3-57173B31DEC6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Froggy", "Froggy\Froggy.csproj", "{A67C34D0-9E51-4A44-B940-D70CCF050A25}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Froggy", "Froggy\Froggy.csproj", "{A67C34D0-9E51-4A44-B940-D70CCF050A25}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ComparingObjects", "ComparingObjects\ComparingObjects.csproj", "{A8CE071E-C667-4DE6-A4FA-0B81E7652301}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ComparingObjects", "ComparingObjects\ComparingObjects.csproj", "{A8CE071E-C667-4DE6-A4FA-0B81E7652301}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomComparator", "CustomComparator\CustomComparator.csproj", "{432BC1BC-95F4-45A4-9C36-A948C098BB02}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CustomComparator", "CustomComparator\CustomComparator.csproj", "{432BC1BC-95F4-45A4-9C36-A948C098BB02}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BirthdayCelebration", "BirthdayCelebration\BirthdayCelebration.csproj", "{41C96F13-1EEC-4822-9CB2-69E7AE404E59}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BirthdayCelebration", "BirthdayCelebration\BirthdayCelebration.csproj", "{41C96F13-1EEC-4822-9CB2-69E7AE404E59}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StreetRacing", "StreetRacing\StreetRacing.csproj", "{D3E69EFC-356E-44E0-88FF-E0C4427C8F1F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StreetRacing", "StreetRacing\StreetRacing.csproj", "{D3E69EFC-356E-44E0-88FF-E0C4427C8F1F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TheBattleofTheFiveArmies", "TheBattleofTheFiveArmies\TheBattleofTheFiveArmies.csproj", "{2563C674-CA79-4B2F-8CB0-9E0A3E85D2EC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TheBattleofTheFiveArmies", "TheBattleofTheFiveArmies\TheBattleofTheFiveArmies.csproj", "{2563C674-CA79-4B2F-8CB0-9E0A3E85D2EC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FoodFinder", "FoodFinder\FoodFinder.csproj", "{C4FA902D-02A1-4B28-92FC-4E59A82C079A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FoodFinder", "FoodFinder\FoodFinder.csproj", "{C4FA902D-02A1-4B28-92FC-4E59A82C079A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StockMarket", "StockMarket\StockMarket.csproj", "{BA38C5E1-EA26-49A7-99B5-B61241A26DA2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StockMarket", "StockMarket\StockMarket.csproj", "{BA38C5E1-EA26-49A7-99B5-B61241A26DA2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PawnWars", "PawnWars\PawnWars.csproj", "{9D0A054D-1CCF-40D0-A9A6-05254903431E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PawnWars", "PawnWars\PawnWars.csproj", "{9D0A054D-1CCF-40D0-A9A6-05254903431E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PawnWars2.0", "PawnWars2.0\PawnWars2.0.csproj", "{B2FF28CE-7877-4C7D-8655-AC4456C2C378}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PawnWars2.0", "PawnWars2.0\PawnWars2.0.csproj", "{B2FF28CE-7877-4C7D-8655-AC4456C2C378}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Blacksmith", "Blacksmith\Blacksmith.csproj", "{E25D8AA9-36B0-4254-90DA-768656D68353}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -831,6 +833,10 @@ Global
 		{B2FF28CE-7877-4C7D-8655-AC4456C2C378}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B2FF28CE-7877-4C7D-8655-AC4456C2C378}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B2FF28CE-7877-4C7D-8655-AC4456C2C378}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E25D8AA9-36B0-4254-90DA-768656D68353}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E25D8AA9-36B0-4254-90DA-768656D68353}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E25D8AA9-36B0-4254-90DA-768656D68353}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E25D8AA9-36B0-4254-90DA-768656D68353}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
