@@ -26,139 +26,15 @@ namespace PawnWars2._0
             int rowBlack = PositionBlack(chessboard)[0];
             int colBlack = PositionBlack(chessboard)[1];
 
-            if (rowWhite == 0)
-            {
-                char colW = 'a';
-                switch (colWhite)
-                {
-                    case 0:
-                        colW = 'a';
-                        break;
-                    case 1:
-                        colW = 'b';
-                        break;
-                    case 2:
-                        colW = 'c';
-                        break;
-                    case 3:
-                        colW = 'd';
-                        break;
-                    case 4:
-                        colW = 'e';
-                        break;
-                    case 5:
-                        colW = 'f';
-                        break;
-                    case 6:
-                        colW = 'g';
-                        break;
-                    case 7:
-                        colW = 'h';
-                        break;
-                }
-
-                Console.WriteLine($"Game over! White pawn is promoted to a queen at {colW}8.");
-                return;
-            }
-
-            if (rowBlack == 7)
-            {
-                char colB = 'a';
-                switch (colBlack)
-                {
-                    case 0:
-                        colB = 'a';
-                        break;
-                    case 1:
-                        colB = 'b';
-                        break;
-                    case 2:
-                        colB = 'c';
-                        break;
-                    case 3:
-                        colB = 'd';
-                        break;
-                    case 4:
-                        colB = 'e';
-                        break;
-                    case 5:
-                        colB = 'f';
-                        break;
-                    case 6:
-                        colB = 'g';
-                        break;
-                    case 7:
-                        colB = 'h';
-                        break;
-                }
-                Console.WriteLine($"Game over! Black pawn is promoted to a queen at {colB}1.");
-                return;
-            }
-
             // diagonal win
-            if ((rowBlack == rowWhite - 1 && colBlack == colWhite - 1) || (rowBlack == rowWhite + 1 && colBlack == colWhite - 1))
+            if ((rowBlack == rowWhite - 1 && colBlack == colWhite - 1) || (rowBlack == rowWhite + 1 && colBlack == colWhite - 1)
+                    || (rowBlack == rowWhite + 1 && colBlack == colWhite + 1) || (rowBlack == rowWhite - 1 && colBlack == colWhite + 1))
             {
                 chessboard[rowWhite, colWhite] = '-';
                 chessboard[rowBlack, colBlack] = 'w';
 
-                switch (rowBlack)
-                {
-                    case 0:
-                        rowWhite = 8;
-                        break;
-                    case 1:
-                        rowWhite = 7;
-                        break;
-                    case 2:
-                        rowWhite = 6;
-                        break;
-                    case 3:
-                        rowWhite = 5;
-                        break;
-                    case 4:
-                        rowWhite = 4;
-                        break;
-                    case 5:
-                        rowWhite = 3;
-                        break;
-                    case 6:
-                        rowWhite = 2;
-                        break;
-                    case 7:
-                        rowWhite = 1;
-                        break;
-                }
 
-                char colB = 'a';
-                switch (colBlack)
-                {
-                    case 0:
-                        colB = 'a';
-                        break;
-                    case 1:
-                        colB = 'b';
-                        break;
-                    case 2:
-                        colB = 'c';
-                        break;
-                    case 3:
-                        colB = 'd';
-                        break;
-                    case 4:
-                        colB = 'e';
-                        break;
-                    case 5:
-                        colB = 'f';
-                        break;
-                    case 6:
-                        colB = 'g';
-                        break;
-                    case 7:
-                        colB = 'h';
-                        break;
-                }
-
-                Console.WriteLine($"Game over! White capture on {colB}{rowWhite}.");
+                Console.WriteLine($"Game over! White capture on {(char)(97 + colBlack)}{8 - rowBlack}.");
                 return;
             }
 
@@ -175,157 +51,35 @@ namespace PawnWars2._0
                 chessboard[rowWhite, colWhite] = '-';
                 chessboard[rowWhite - 1, colWhite] = 'w';
 
-                // check if white wins
-                rowWhite = PositionWhite(chessboard)[0];
-                colWhite = PositionWhite(chessboard)[1];
-
-                rowBlack = PositionBlack(chessboard)[0];
-                colBlack = PositionBlack(chessboard)[1];
-                // diagonal win
-                if ((rowBlack == rowWhite - 1 && colBlack == colWhite - 1) || (rowBlack == rowWhite + 1 && colBlack == colWhite - 1)
-                    || (rowBlack == rowWhite + 1 && colBlack == colWhite + 1) || (rowBlack == rowWhite - 1 && colBlack == colWhite + 1))
-                {
-                    chessboard[rowBlack, colBlack] = '-';
-                    chessboard[rowBlack, colBlack] = 'w';
-
-                    switch (rowBlack)
-                    {
-                        case 0:
-                            rowWhite = 8;
-                            break;
-                        case 1:
-                            rowWhite = 7;
-                            break;
-                        case 2:
-                            rowWhite = 6;
-                            break;
-                        case 3:
-                            rowWhite = 5;
-                            break;
-                        case 4:
-                            rowWhite = 4;
-                            break;
-                        case 5:
-                            rowWhite = 3;
-                            break;
-                        case 6:
-                            rowWhite = 2;
-                            break;
-                        case 7:
-                            rowWhite = 1;
-                            break;
-                    }
-
-                    char colB = 'a';
-                    switch (colBlack)
-                    {
-                        case 0:
-                            colB = 'a';
-                            break;
-                        case 1:
-                            colB = 'b';
-                            break;
-                        case 2:
-                            colB = 'c';
-                            break;
-                        case 3:
-                            colB = 'd';
-                            break;
-                        case 4:
-                            colB = 'e';
-                            break;
-                        case 5:
-                            colB = 'f';
-                            break;
-                        case 6:
-                            colB = 'g';
-                            break;
-                        case 7:
-                            colB = 'h';
-                            break;
-                    }
-
-                    Console.WriteLine($"Game over! White capture on {colB}{rowWhite}.");
-                    return;
-                }
+                rowWhite--;
 
                 if (rowWhite == 0)
                 {
-                    char colW = 'a';
-                    switch (colWhite)
-                    {
-                        case 0:
-                            colW = 'a';
-                            break;
-                        case 1:
-                            colW = 'b';
-                            break;
-                        case 2:
-                            colW = 'c';
-                            break;
-                        case 3:
-                            colW = 'd';
-                            break;
-                        case 4:
-                            colW = 'e';
-                            break;
-                        case 5:
-                            colW = 'f';
-                            break;
-                        case 6:
-                            colW = 'g';
-                            break;
-                        case 7:
-                            colW = 'h';
-                            break;
-                    }
-
-                    Console.WriteLine($"Game over! White pawn is promoted to a queen at {colW}8.");
+                    Console.WriteLine($"Game over! White pawn is promoted to a queen at {(char)(97 + colWhite)}8.");
                     return;
                 }
+
+                if ((rowBlack == rowWhite - 1 && colBlack == colWhite - 1) || (rowBlack == rowWhite + 1 && colBlack == colWhite - 1)
+                    || (rowBlack == rowWhite + 1 && colBlack == colWhite + 1) || (rowBlack == rowWhite - 1 && colBlack == colWhite + 1))
+                {
+                    chessboard[rowWhite, colWhite] = '-';
+                    chessboard[rowBlack, colBlack] = 'w';
+
+                    Console.WriteLine($"Game over! White capture on {(char)(97 + colBlack)}{8 - rowBlack}.");
+                    return;
+                }
+
 
                 // move black
                 chessboard[rowBlack, colBlack] = '-';
                 chessboard[rowBlack + 1, colBlack] = 'b';
 
+                rowBlack++;
+
                 // check if black wins
-                rowWhite = PositionWhite(chessboard)[0];
-                colWhite = PositionWhite(chessboard)[1];
-
-                rowBlack = PositionBlack(chessboard)[0];
-                colBlack = PositionBlack(chessboard)[1];
-
                 if (rowBlack == 7)
                 {
-                    char colB = 'a';
-                    switch (colBlack)
-                    {
-                        case 0:
-                            colB = 'a';
-                            break;
-                        case 1:
-                            colB = 'b';
-                            break;
-                        case 2:
-                            colB = 'c';
-                            break;
-                        case 3:
-                            colB = 'd';
-                            break;
-                        case 4:
-                            colB = 'e';
-                            break;
-                        case 5:
-                            colB = 'f';
-                            break;
-                        case 6:
-                            colB = 'g';
-                            break;
-                        case 7:
-                            colB = 'h';
-                            break;
-                    }
-                    Console.WriteLine($"Game over! Black pawn is promoted to a queen at {colB}1.");
+                    Console.WriteLine($"Game over! Black pawn is promoted to a queen at {(char)(97 + colBlack)}1.");
                     return;
                 }
 
@@ -334,100 +88,9 @@ namespace PawnWars2._0
                     || (rowBlack == rowWhite + 1 && colBlack == colWhite + 1) || (rowBlack == rowWhite - 1 && colBlack == colWhite + 1))
                 {
                     chessboard[rowWhite, colWhite] = '-';
-                    chessboard[rowBlack, colBlack] = 'w';
+                    chessboard[rowBlack, colBlack] = 'b';
 
-                    switch (rowBlack)
-                    {
-                        case 0:
-                            rowWhite = 8;
-                            break;
-                        case 1:
-                            rowWhite = 7;
-                            break;
-                        case 2:
-                            rowWhite = 6;
-                            break;
-                        case 3:
-                            rowWhite = 5;
-                            break;
-                        case 4:
-                            rowWhite = 4;
-                            break;
-                        case 5:
-                            rowWhite = 3;
-                            break;
-                        case 6:
-                            rowWhite = 2;
-                            break;
-                        case 7:
-                            rowWhite = 1;
-                            break;
-                    }
-
-                    char colB = 'a';
-                    switch (colBlack)
-                    {
-                        case 0:
-                            colB = 'a';
-                            break;
-                        case 1:
-                            colB = 'b';
-                            break;
-                        case 2:
-                            colB = 'c';
-                            break;
-                        case 3:
-                            colB = 'd';
-                            break;
-                        case 4:
-                            colB = 'e';
-                            break;
-                        case 5:
-                            colB = 'f';
-                            break;
-                        case 6:
-                            colB = 'g';
-                            break;
-                        case 7:
-                            colB = 'h';
-                            break;
-                    }
-
-                    Console.WriteLine($"Game over! Black capture on {colB}{rowWhite}.");
-                    return;
-                }
-
-                if (rowBlack == 7)
-                {
-                    char colB = 'a';
-                    switch (colBlack)
-                    {
-                        case 0:
-                            colB = 'a';
-                            break;
-                        case 1:
-                            colB = 'b';
-                            break;
-                        case 2:
-                            colB = 'c';
-                            break;
-                        case 3:
-                            colB = 'd';
-                            break;
-                        case 4:
-                            colB = 'e';
-                            break;
-                        case 5:
-                            colB = 'f';
-                            break;
-                        case 6:
-                            colB = 'g';
-                            break;
-                        case 7:
-                            colB = 'h';
-                            break;
-                    }
-                    Console.WriteLine($"Game over! Black pawn is promoted to a queen at {colB}1.");
+                    Console.WriteLine($"Game over! Black capture on {(char)(97 + colBlack)}{8 - rowBlack}.");
                     return;
                 }
             }
