@@ -271,6 +271,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TheBattleofTheFiveArmies", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FoodFinder", "FoodFinder\FoodFinder.csproj", "{C4FA902D-02A1-4B28-92FC-4E59A82C079A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StockMarket", "StockMarket\StockMarket.csproj", "{BA38C5E1-EA26-49A7-99B5-B61241A26DA2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -813,6 +815,10 @@ Global
 		{C4FA902D-02A1-4B28-92FC-4E59A82C079A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C4FA902D-02A1-4B28-92FC-4E59A82C079A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C4FA902D-02A1-4B28-92FC-4E59A82C079A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BA38C5E1-EA26-49A7-99B5-B61241A26DA2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BA38C5E1-EA26-49A7-99B5-B61241A26DA2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BA38C5E1-EA26-49A7-99B5-B61241A26DA2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BA38C5E1-EA26-49A7-99B5-B61241A26DA2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
