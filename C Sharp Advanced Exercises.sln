@@ -289,6 +289,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FishingNet", "FishingNet\Fi
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BeaverAtWork", "BeaverAtWork\BeaverAtWork.csproj", "{979E4AA5-F910-4A9A-9883-4AC1DFA9F63B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BeaverAtWork2.0", "BeaverAtWork2.0\BeaverAtWork2.0.csproj", "{17924211-5C86-41AA-8480-B3CCB60E041F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -867,6 +869,10 @@ Global
 		{979E4AA5-F910-4A9A-9883-4AC1DFA9F63B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{979E4AA5-F910-4A9A-9883-4AC1DFA9F63B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{979E4AA5-F910-4A9A-9883-4AC1DFA9F63B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{17924211-5C86-41AA-8480-B3CCB60E041F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{17924211-5C86-41AA-8480-B3CCB60E041F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{17924211-5C86-41AA-8480-B3CCB60E041F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{17924211-5C86-41AA-8480-B3CCB60E041F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

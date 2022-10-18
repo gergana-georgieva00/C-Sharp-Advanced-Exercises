@@ -26,7 +26,7 @@ namespace BeaverAtWork
 
             string command;
 
-            while (AnyWood(n, matrix) && (command = Console.ReadLine()) != "end")
+            while ((command = Console.ReadLine()) != "end")
             {
                 if (IsCommandValid(n, command, CurrCoordinates(n, matrix)[0], CurrCoordinates(n, matrix)[1]))
                 {
@@ -47,49 +47,100 @@ namespace BeaverAtWork
                             {
                                 matrix[row, col] = '-';
                                 row--;
-                                matrix[row, col] = 'F';
 
                                 // if fish is on the last index
-                                if (row == 0 || row == n - 1 || col == 0 || col == n - 1)
+                                if ((row == 0 && command == "up") || (row == n - 1 && command == "down") 
+                                    || (col == 0 && command == "left") || (col == n - 1 && command == "right"))
                                 {
                                     matrix[row, col] = '-';
 
                                     switch (command)
                                     {
                                         case "up":
+                                            if (char.IsLetter(matrix[n - 1, col]) && char.IsLower(matrix[n - 1, col]))
+                                            {
+                                                woodBranches.Push(matrix[n - 1, col]);
+                                            }
+
                                             matrix[n - 1, col] = 'B';
                                             break;
                                         case "down":
+                                            if (char.IsLetter(matrix[0, col]) && char.IsLower(matrix[0, col]))
+                                            {
+                                                woodBranches.Push(matrix[0, col]);
+                                            }
+
                                             matrix[0, col] = 'B';
                                             break;
                                         case "left":
+                                            if (char.IsLetter(matrix[row, n - 1]) && char.IsLower(matrix[row, n - 1]))
+                                            {
+                                                woodBranches.Push(matrix[row, n - 1]);
+                                            }
+
                                             matrix[row, n - 1] = 'B';
                                             break;
                                         case "right":
+                                            if (char.IsLetter(matrix[row, 0]) && char.IsLower(matrix[row, 0]))
+                                            {
+                                                woodBranches.Push(matrix[row, 0]);
+                                            }
+
                                             matrix[row, 0] = 'B';
                                             break;
                                     }
                                 }
                                 // if not on the last index
-
                                 else
                                 {
                                     switch (command)
                                     {
                                         case "up":
+                                            if (char.IsLetter(matrix[0, col]) && char.IsLower(matrix[0, col]))
+                                            {
+                                                woodBranches.Push(matrix[0, col]);
+                                            }
+
                                             matrix[0, col] = 'B';
                                             break;
                                         case "down":
+                                            if (char.IsLetter(matrix[n - 1, col]) && char.IsLower(matrix[n - 1, col]))
+                                            {
+                                                woodBranches.Push(matrix[n - 1, col]);
+                                            }
+
                                             matrix[n - 1, col] = 'B';
                                             break;
                                         case "left":
+                                            if (char.IsLetter(matrix[row, 0]) && char.IsLower(matrix[row, 0]))
+                                            {
+                                                woodBranches.Push(matrix[row, 0]);
+                                            }
+
                                             matrix[row, 0] = 'B';
                                             break;
                                         case "right":
+                                            if (char.IsLetter(matrix[row, n - 1]) && char.IsLower(matrix[row, n - 1]))
+                                            {
+                                                woodBranches.Push(matrix[row, n - 1]);
+                                            }
+
                                             matrix[row, n - 1] = 'B';
                                             break;
                                     }
                                 }
+                            }
+                            else
+                            {
+                                matrix[row, col] = '-';
+                                row--;
+
+                                if (char.IsLetter(matrix[row, col]) && char.IsLower(matrix[row, col]))
+                                {
+                                    woodBranches.Push(matrix[row, col]);
+                                }
+
+                                matrix[row, col] = 'F';
                             }
                             break;
                         case "down":
@@ -104,49 +155,100 @@ namespace BeaverAtWork
                             {
                                 matrix[row, col] = '-';
                                 row++;
-                                matrix[row, col] = 'F';
 
                                 // if fish is on the last index
-                                if (row == 0 || row == n - 1 || col == 0 || col == n - 1)
+                                if ((row == 0 && command == "up") || (row == n - 1 && command == "down")
+                                    || (col == 0 && command == "left") || (col == n - 1 && command == "right"))
                                 {
                                     matrix[row, col] = '-';
 
                                     switch (command)
                                     {
                                         case "up":
+                                            if (char.IsLetter(matrix[n - 1, col]) && char.IsLower(matrix[n - 1, col]))
+                                            {
+                                                woodBranches.Push(matrix[n - 1, col]);
+                                            }
+
                                             matrix[n - 1, col] = 'B';
                                             break;
                                         case "down":
+                                            if (char.IsLetter(matrix[0, col]) && char.IsLower(matrix[0, col]))
+                                            {
+                                                woodBranches.Push(matrix[0, col]);
+                                            }
+
                                             matrix[0, col] = 'B';
                                             break;
                                         case "left":
+                                            if (char.IsLetter(matrix[row, n - 1]) && char.IsLower(matrix[row, n - 1]))
+                                            {
+                                                woodBranches.Push(matrix[row, n - 1]);
+                                            }
+
                                             matrix[row, n - 1] = 'B';
                                             break;
                                         case "right":
+                                            if (char.IsLetter(matrix[row, 0]) && char.IsLower(matrix[row, 0]))
+                                            {
+                                                woodBranches.Push(matrix[row, 0]);
+                                            }
+
                                             matrix[row, 0] = 'B';
                                             break;
                                     }
                                 }
                                 // if not on the last index
-
                                 else
                                 {
                                     switch (command)
                                     {
                                         case "up":
+                                            if (char.IsLetter(matrix[0, col]) && char.IsLower(matrix[0, col]))
+                                            {
+                                                woodBranches.Push(matrix[0, col]);
+                                            }
+
                                             matrix[0, col] = 'B';
                                             break;
                                         case "down":
+                                            if (char.IsLetter(matrix[n - 1, col]) && char.IsLower(matrix[n - 1, col]))
+                                            {
+                                                woodBranches.Push(matrix[n - 1, col]);
+                                            }
+
                                             matrix[n - 1, col] = 'B';
                                             break;
                                         case "left":
+                                            if (char.IsLetter(matrix[row, 0]) && char.IsLower(matrix[row, 0]))
+                                            {
+                                                woodBranches.Push(matrix[row, 0]);
+                                            }
+
                                             matrix[row, 0] = 'B';
                                             break;
                                         case "right":
+                                            if (char.IsLetter(matrix[row, n - 1]) && char.IsLower(matrix[row, n - 1]))
+                                            {
+                                                woodBranches.Push(matrix[row, n - 1]);
+                                            }
+
                                             matrix[row, n - 1] = 'B';
                                             break;
                                     }
                                 }
+                            }
+                            else
+                            {
+                                matrix[row, col] = '-';
+                                row++;
+
+                                if (char.IsLetter(matrix[row, col]) && char.IsLower(matrix[row, col]))
+                                {
+                                    woodBranches.Push(matrix[row, col]);
+                                }
+
+                                matrix[row, col] = 'F';
                             }
                             break;
                         case "left":
@@ -160,50 +262,101 @@ namespace BeaverAtWork
                             else if (matrix[row, col - 1] == 'F')
                             {
                                 matrix[row, col] = '-';
-                                col--;
-                                matrix[row, col] = 'F';
+                                row--;
 
                                 // if fish is on the last index
-                                if (row == 0 || row == n - 1 || col == 0 || col == n - 1)
+                                if ((row == 0 && command == "up") || (row == n - 1 && command == "down")
+                                    || (col == 0 && command == "left") || (col == n - 1 && command == "right"))
                                 {
                                     matrix[row, col] = '-';
 
                                     switch (command)
                                     {
                                         case "up":
+                                            if (char.IsLetter(matrix[n - 1, col]) && char.IsLower(matrix[n - 1, col]))
+                                            {
+                                                woodBranches.Push(matrix[n - 1, col]);
+                                            }
+
                                             matrix[n - 1, col] = 'B';
                                             break;
                                         case "down":
+                                            if (char.IsLetter(matrix[0, col]) && char.IsLower(matrix[0, col]))
+                                            {
+                                                woodBranches.Push(matrix[0, col]);
+                                            }
+
                                             matrix[0, col] = 'B';
                                             break;
                                         case "left":
+                                            if (char.IsLetter(matrix[row, n - 1]) && char.IsLower(matrix[row, n - 1]))
+                                            {
+                                                woodBranches.Push(matrix[row, n - 1]);
+                                            }
+
                                             matrix[row, n - 1] = 'B';
                                             break;
                                         case "right":
+                                            if (char.IsLetter(matrix[row, 0]) && char.IsLower(matrix[row, 0]))
+                                            {
+                                                woodBranches.Push(matrix[row, 0]);
+                                            }
+
                                             matrix[row, 0] = 'B';
                                             break;
                                     }
                                 }
                                 // if not on the last index
-
                                 else
                                 {
                                     switch (command)
                                     {
                                         case "up":
+                                            if (char.IsLetter(matrix[0, col]) && char.IsLower(matrix[0, col]))
+                                            {
+                                                woodBranches.Push(matrix[0, col]);
+                                            }
+
                                             matrix[0, col] = 'B';
                                             break;
                                         case "down":
+                                            if (char.IsLetter(matrix[n - 1, col]) && char.IsLower(matrix[n - 1, col]))
+                                            {
+                                                woodBranches.Push(matrix[n - 1, col]);
+                                            }
+
                                             matrix[n - 1, col] = 'B';
                                             break;
                                         case "left":
+                                            if (char.IsLetter(matrix[row, 0]) && char.IsLower(matrix[row, 0]))
+                                            {
+                                                woodBranches.Push(matrix[row, 0]);
+                                            }
+
                                             matrix[row, 0] = 'B';
                                             break;
                                         case "right":
+                                            if (char.IsLetter(matrix[row, n - 1]) && char.IsLower(matrix[row, n - 1]))
+                                            {
+                                                woodBranches.Push(matrix[row, n - 1]);
+                                            }
+
                                             matrix[row, n - 1] = 'B';
                                             break;
                                     }
                                 }
+                            }
+                            else
+                            {
+                                matrix[row, col] = '-';
+                                col--;
+
+                                if (char.IsLetter(matrix[row, col]) && char.IsLower(matrix[row, col]))
+                                {
+                                    woodBranches.Push(matrix[row, col]);
+                                }
+
+                                matrix[row, col] = 'F';
                             }
                             break;
                         case "right":
@@ -217,52 +370,108 @@ namespace BeaverAtWork
                             else if (matrix[row, col + 1] == 'F')
                             {
                                 matrix[row, col] = '-';
-                                col++;
-                                matrix[row, col] = 'F';
+                                row++;
 
                                 // if fish is on the last index
-                                if (row == 0 || row == n - 1 || col == 0 || col == n - 1)
+                                if ((row == 0 && command == "up") || (row == n - 1 && command == "down")
+                                    || (col == 0 && command == "left") || (col == n - 1 && command == "right"))
                                 {
                                     matrix[row, col] = '-';
 
                                     switch (command)
                                     {
                                         case "up":
+                                            if (char.IsLetter(matrix[n - 1, col]) && char.IsLower(matrix[n - 1, col]))
+                                            {
+                                                woodBranches.Push(matrix[n - 1, col]);
+                                            }
+
                                             matrix[n - 1, col] = 'B';
                                             break;
                                         case "down":
+                                            if (char.IsLetter(matrix[0, col]) && char.IsLower(matrix[0, col]))
+                                            {
+                                                woodBranches.Push(matrix[0, col]);
+                                            }
+
                                             matrix[0, col] = 'B';
                                             break;
                                         case "left":
+                                            if (char.IsLetter(matrix[row, n - 1]) && char.IsLower(matrix[row, n - 1]))
+                                            {
+                                                woodBranches.Push(matrix[row, n - 1]);
+                                            }
+
                                             matrix[row, n - 1] = 'B';
                                             break;
                                         case "right":
+                                            if (char.IsLetter(matrix[row, 0]) && char.IsLower(matrix[row, 0]))
+                                            {
+                                                woodBranches.Push(matrix[row, 0]);
+                                            }
+
                                             matrix[row, 0] = 'B';
                                             break;
                                     }
                                 }
                                 // if not on the last index
-
                                 else
                                 {
                                     switch (command)
                                     {
                                         case "up":
+                                            if (char.IsLetter(matrix[0, col]) && char.IsLower(matrix[0, col]))
+                                            {
+                                                woodBranches.Push(matrix[0, col]);
+                                            }
+
                                             matrix[0, col] = 'B';
                                             break;
                                         case "down":
+                                            if (char.IsLetter(matrix[n - 1, col]) && char.IsLower(matrix[n - 1, col]))
+                                            {
+                                                woodBranches.Push(matrix[n - 1, col]);
+                                            }
+
                                             matrix[n - 1, col] = 'B';
                                             break;
                                         case "left":
+                                            if (char.IsLetter(matrix[row, 0]) && char.IsLower(matrix[row, 0]))
+                                            {
+                                                woodBranches.Push(matrix[row, 0]);
+                                            }
+
                                             matrix[row, 0] = 'B';
                                             break;
                                         case "right":
+                                            if (char.IsLetter(matrix[row, n - 1]) && char.IsLower(matrix[row, n - 1]))
+                                            {
+                                                woodBranches.Push(matrix[row, n - 1]);
+                                            }
+
                                             matrix[row, n - 1] = 'B';
                                             break;
                                     }
                                 }
                             }
+                            else
+                            {
+                                matrix[row, col] = '-';
+                                col++;
+
+                                if (char.IsLetter(matrix[row, col]) && char.IsLower(matrix[row, col]))
+                                {
+                                    woodBranches.Push(matrix[row, col]);
+                                }
+
+                                matrix[row, col] = 'F';
+                            }
                             break;
+                    }
+
+                    if (!AnyWood(n, matrix))
+                    {
+                        break;
                     }
                 }
                 else
@@ -271,14 +480,17 @@ namespace BeaverAtWork
                     {
                         woodBranches.Pop();
                     }
+
+                    if (!AnyWood(n, matrix))
+                    {
+                        break;
+                    }
                 }
             }
 
-            Queue<char> wood = new Queue<char>(woodBranches.Reverse());
-
             if (!AnyWood(n, matrix))
             {
-                Console.WriteLine($"The Beaver successfully collect {woodBranches.Count} wood branches: {string.Join(", ", wood)}.");
+                Console.WriteLine($"The Beaver successfully collect {woodBranches.Count} wood branches: {string.Join(", ", woodBranches.Reverse())}.");
             }
             else
             {
