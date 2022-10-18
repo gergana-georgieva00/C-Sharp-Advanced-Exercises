@@ -283,6 +283,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Armory", "Armory\Armory.csp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Drones", "Drones\Drones.csproj", "{C0B48816-FCD2-4CE3-9A42-B44596DF3AE5}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BakeryShop", "BakeryShop\BakeryShop.csproj", "{628BFAB3-B52E-454F-97BC-2C1FEA0BA30E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -849,6 +851,10 @@ Global
 		{C0B48816-FCD2-4CE3-9A42-B44596DF3AE5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C0B48816-FCD2-4CE3-9A42-B44596DF3AE5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C0B48816-FCD2-4CE3-9A42-B44596DF3AE5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{628BFAB3-B52E-454F-97BC-2C1FEA0BA30E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{628BFAB3-B52E-454F-97BC-2C1FEA0BA30E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{628BFAB3-B52E-454F-97BC-2C1FEA0BA30E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{628BFAB3-B52E-454F-97BC-2C1FEA0BA30E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
