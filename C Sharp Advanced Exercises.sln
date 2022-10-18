@@ -279,6 +279,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PawnWars2.0", "PawnWars2.0\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Blacksmith", "Blacksmith\Blacksmith.csproj", "{E25D8AA9-36B0-4254-90DA-768656D68353}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Armory", "Armory\Armory.csproj", "{2F00BD56-507D-4E6C-9054-81B0D757B893}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -837,6 +839,10 @@ Global
 		{E25D8AA9-36B0-4254-90DA-768656D68353}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E25D8AA9-36B0-4254-90DA-768656D68353}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E25D8AA9-36B0-4254-90DA-768656D68353}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2F00BD56-507D-4E6C-9054-81B0D757B893}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2F00BD56-507D-4E6C-9054-81B0D757B893}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2F00BD56-507D-4E6C-9054-81B0D757B893}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2F00BD56-507D-4E6C-9054-81B0D757B893}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
