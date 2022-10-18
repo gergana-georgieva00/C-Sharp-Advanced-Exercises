@@ -107,11 +107,17 @@ namespace Drones
             StringBuilder sb = new StringBuilder();
 
             sb.AppendLine($"Drones available at {this.Name}:");
-            foreach (var drone in this.Drones)
+
+            List<Drone> avDrones = this.Drones.Where(d => d.Available == true).ToList();
+            for (int i = 0; i < avDrones.Count; i++)
             {
-                if (drone.Available == true)
+                if (i == avDrones.Count - 1)
                 {
-                    sb.AppendLine(drone.ToString());
+                    sb.Append(avDrones[i].ToString());
+                }
+                else
+                {
+                    sb.AppendLine(avDrones[i].ToString());
                 }
             }
 
