@@ -7,14 +7,15 @@ namespace FishingNet
 {
     public class Net
     {
+        private List<Fish> fish;
         public Net(string material, int capacity)
         {
             this.Material = material;
             this.Capacity = capacity;
-            this.Fish = new List<Fish>();
+            this.fish = new List<Fish>();
         }
 
-        public List<Fish> Fish { get; set; }
+        public List<Fish> Fish { get { return this.fish; } private set { this.fish = value; } }
         public string Material { get; set; }
         public int Capacity { get; set; }
         public int Count { get { return this.Fish.Count; } }
@@ -31,20 +32,21 @@ namespace FishingNet
                 return "Inlavid fish";
             }
 
-            if (this.Fish.Count >= this.Capacity)
+            if (this.Capacity > this.fish.Count)
             {
-                return "Fishing net is full.";
+                this.fish.Add(fish);
+                return $"Successfully added {fish.FishType} to the fishing net.";
+                
             }
 
-            this.Fish.Add(fish);
-            return $"Successfully added {fish.FishType} to the fishing net.";
+            return "Fishing net is full.";
         }
 
         public bool ReleaseFish(double weight)
         {
             if (this.Fish.Any(f => f.Weight == weight))
             {
-                this.Fish = this.Fish.Where(f => f.Weight != weight).ToList();
+                this.fish = this.fish.Where(f => f.Weight != weight).ToList();
                 return true;
             }
 
@@ -53,32 +55,32 @@ namespace FishingNet
 
         public Fish GetFish(string fishType)
         {
-            Fish fish = this.Fish.Where(f => f.FishType == fishType).ToList()[0];
+            Fish fish = this.fish.Where(f => f.FishType == fishType).ToList()[0];
             return fish;
         }
 
         public Fish GetBiggestFish()
         {
-            Fish fish = this.Fish.OrderByDescending(f => f.Length).ToList()[0];
+            Fish fish = this.fish.OrderByDescending(f => f.Length).ToList()[0];
             return fish;
         }
 
         public string Report()
         {
-            this.Fish = this.Fish.OrderByDescending(f => f.Length).ToList();
+            this.fish = this.fish.OrderByDescending(f => f.Length).ToList();
             StringBuilder sb = new StringBuilder();
-
+            
             sb.AppendLine($"Into the {this.Material}:");
 
-            for (int i = 0; i < this.Fish.Count; i++)
+            for (int i = 0; i < this.fish.Count; i++)
             {
-                if (i == this.Fish.Count - 1)
+                if (i == this.fish.Count - 1)
                 {
-                    sb.Append(Fish[i].ToString());
+                    sb.Append(fish[i].ToString());
                 }
                 else
                 {
-                    sb.AppendLine(Fish[i].ToString());
+                    sb.AppendLine(fish[i].ToString());
                 }
             }
 
