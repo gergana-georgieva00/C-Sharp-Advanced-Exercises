@@ -23,10 +23,11 @@ namespace BeaverAtWork2._0
             }
 
             Stack<char> woodBranches = new Stack<char>();
+            int countWood = BranchesLeft(n, matrix);
 
             string command;
 
-            while ((command = Console.ReadLine()) != "end")
+            while ((command = Console.ReadLine()) != "end" && countWood > 0)
             {
                 if (IsCommandValid(n, command, CurrCoordinates(n, matrix)[0], CurrCoordinates(n, matrix)[1]))
                 {
@@ -46,6 +47,7 @@ namespace BeaverAtWork2._0
                                 matrix[row, col] = '-';
                                 woodBranches.Push(matrix[row - 1, col]);
                                 matrix[row - 1, col] = 'B';
+                                countWood--;
                             }
                             else
                             {
@@ -58,6 +60,7 @@ namespace BeaverAtWork2._0
                                     if (Char.IsLower(matrix[n - 1, col]))
                                     {
                                         woodBranches.Push(matrix[n - 1, col]);
+                                        countWood--;
                                     }
 
                                     matrix[n - 1, col] = 'B';
@@ -65,12 +68,6 @@ namespace BeaverAtWork2._0
                                 else
                                 {
                                     matrix[row - 1, col] = '-';
-
-                                    if (Char.IsLower(matrix[0, col]))
-                                    {
-                                        woodBranches.Push(matrix[0, col]);
-                                    }
-
                                     matrix[0, col] = 'B';
                                 }
                             }
@@ -86,6 +83,7 @@ namespace BeaverAtWork2._0
                                 matrix[row, col] = '-';
                                 woodBranches.Push(matrix[row + 1, col]);
                                 matrix[row + 1, col] = 'B';
+                                countWood--;
                             }
                             else
                             {
@@ -98,6 +96,7 @@ namespace BeaverAtWork2._0
                                     if (Char.IsLower(matrix[0, col]))
                                     {
                                         woodBranches.Push(matrix[0, col]);
+                                        countWood--;
                                     }
 
                                     matrix[0, col] = 'B';
@@ -105,12 +104,6 @@ namespace BeaverAtWork2._0
                                 else
                                 {
                                     matrix[row + 1, col] = '-';
-
-                                    if (Char.IsLower(matrix[n - 1, col]))
-                                    {
-                                        woodBranches.Push(matrix[n - 1, col]);
-                                    }
-
                                     matrix[n - 1, col] = 'B';
                                 }
                             }
@@ -126,6 +119,7 @@ namespace BeaverAtWork2._0
                                 matrix[row, col] = '-';
                                 woodBranches.Push(matrix[row, col - 1]);
                                 matrix[row, col - 1] = 'B';
+                                countWood--;
                             }
                             else
                             {
@@ -138,6 +132,7 @@ namespace BeaverAtWork2._0
                                     if (Char.IsLower(matrix[row, n - 1]))
                                     {
                                         woodBranches.Push(matrix[row, n - 1]);
+                                        countWood--;
                                     }
 
                                     matrix[row, n - 1] = 'B';
@@ -145,12 +140,6 @@ namespace BeaverAtWork2._0
                                 else
                                 {
                                     matrix[row, col - 1] = '-';
-
-                                    if (Char.IsLower(matrix[row, 0]))
-                                    {
-                                        woodBranches.Push(matrix[row, 0]);
-                                    }
-
                                     matrix[row, 0] = 'B';
                                 }
                             }
@@ -166,6 +155,7 @@ namespace BeaverAtWork2._0
                                 matrix[row, col] = '-';
                                 woodBranches.Push(matrix[row, col + 1]);
                                 matrix[row, col + 1] = 'B';
+                                countWood--;
                             }
                             else
                             {
@@ -178,6 +168,7 @@ namespace BeaverAtWork2._0
                                     if (Char.IsLower(matrix[row, 0]))
                                     {
                                         woodBranches.Push(matrix[row, 0]);
+                                        countWood--;
                                     }
 
                                     matrix[row, 0] = 'B';
@@ -185,19 +176,13 @@ namespace BeaverAtWork2._0
                                 else
                                 {
                                     matrix[row, col + 1] = '-';
-
-                                    if (Char.IsLower(matrix[row, n - 1]))
-                                    {
-                                        woodBranches.Push(matrix[row, n - 1]);
-                                    }
-
                                     matrix[row, n - 1] = 'B';
                                 }
                             }
                             break;
                     }
 
-                    if (BranchesLeft(n, matrix) <= 0)
+                    if (countWood == 0)
                     {
                         break;
                     }
@@ -208,22 +193,10 @@ namespace BeaverAtWork2._0
                     {
                         woodBranches.Pop();
                     }
-
-                    if (BranchesLeft(n, matrix) <= 0)
-                    {
-                        break;
-                    }
                 }
-
-
-                if (BranchesLeft(n, matrix) <= 0)
-                {
-                    break;
-                }
-
             }
 
-            if (BranchesLeft(n, matrix) <= 0)
+            if (countWood == 0)
             {
                 Console.WriteLine($"The Beaver successfully collect {woodBranches.Count} wood branches: {string.Join(", ", woodBranches.Reverse())}.");
             }
@@ -256,7 +229,7 @@ namespace BeaverAtWork2._0
             {
                 for (int col = 0; col < n; col++)
                 {
-                    if (char.IsLetter(matrix[row, col]) && char.IsLower(matrix[row, col]))
+                    if (char.IsLower(matrix[row, col]))
                     {
                         count++;
                     }
@@ -315,23 +288,6 @@ namespace BeaverAtWork2._0
                         return true;
                     }
                     break;
-            }
-
-            return false;
-        }
-
-        static bool AnyWood(int n, char[,] matrix)
-        {
-            for (int row = 0; row < n; row++)
-            {
-                for (int col = 0; col < n; col++)
-                {
-                    if (char.IsLower(matrix[row, col]))
-                    {
-                        return true;
-                    }
-
-                }
             }
 
             return false;
