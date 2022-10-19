@@ -7,17 +7,18 @@ namespace Renovators
 {
     public class Catalog
     {
+        private readonly List<Renovator> renovators;
         public Catalog(string name, int neededRenovators, string project)
         {
             this.Name = name;
             this.NeededRenovators = neededRenovators;
             this.Project = project;
-            this.Renovators = new List<Renovator>();
+            this.renovators = new List<Renovator>();
         }
         public string Name { get; set; }
         public int NeededRenovators { get; set; }
         public string Project { get; set; }
-        public List<Renovator> Renovators { get; set; }
+        public List<Renovator> Renovators { get { return this.renovators; } }
         public int Count { get { return this.Renovators.Count; } }
 
         public string AddRenovator(Renovator renovator)
@@ -27,7 +28,7 @@ namespace Renovators
                 return "Invalid renovator's information.";
             }
 
-            if (this.Renovators.Count == this.NeededRenovators)
+            if (this.renovators.Count >= this.NeededRenovators)
             {
                 return "Renovators are no more needed.";
             }
@@ -37,7 +38,7 @@ namespace Renovators
                 return "Invalid renovator's rate.";
             }
 
-            this.Renovators.Add(renovator);
+            this.renovators.Add(renovator);
             return $"Successfully added {renovator.Name} to the catalog.";
         }
 
@@ -45,6 +46,7 @@ namespace Renovators
         {
             if (this.Renovators.Any(r => r.Name == name))
             {
+                this.renovators.Remove(this.renovators.Find(r => r.Name == name));
                 return true;
             }
 
@@ -53,17 +55,23 @@ namespace Renovators
 
         public int RemoveRenovatorBySpecialty(string type)
         {
-            int count = this.Renovators.FindAll(r => r.Type == type).ToList().Count;
-            this.Renovators.Remove(this.Renovators.Find(r => r.Type == type));
+            int count = this.renovators.FindAll(r => r.Type == type).ToList().Count;
+
+            for (int i = 0; i < count; i++)
+            {
+                this.renovators.Remove(this.renovators.Find(r => r.Type == type));
+            }
 
             return count;
         }
 
         public Renovator HireRenovator(string name)
         {
-            if (this.Renovators.Any(r => r.Name == name))
+            if (this.renovators.Any(r => r.Name == name))
             {
-                this.Renovators.Find(r => r.Name == name).Hired = true;
+                Renovator r = this.renovators.Find(r => r.Name == name);
+                r.Hired = true;
+                return r;
             }
 
             return null;
@@ -71,7 +79,7 @@ namespace Renovators
 
         public List<Renovator> PayRenovators(int days)
         {
-            List<Renovator> payed = this.Renovators.FindAll(r => r.Days >= days);
+            List<Renovator> payed = this.renovators.FindAll(r => r.Days >= days);
 
             return payed;
         }
@@ -81,17 +89,18 @@ namespace Renovators
             StringBuilder sb = new StringBuilder();
 
             sb.AppendLine($"Renovators available for Project {this.Project}:");
-            for (int i = 0; i < this.Renovators.Count; i++)
+
+            for (int i = 0; i < this.renovators.Count; i++)
             {
-                if (Renovators[i].Hired == false)
+                if (renovators[i].Hired == false)
                 {
-                    if (i == Renovators.Count - 1)
+                    if (i == renovators.Count - 1)
                     {
-                        sb.Append(Renovators[i].ToString());
+                        sb.Append(renovators[i].ToString());
                     }
                     else
                     {
-                        sb.AppendLine(Renovators[i].ToString());
+                        sb.AppendLine(renovators[i].ToString());
                     }
                 }
             }
