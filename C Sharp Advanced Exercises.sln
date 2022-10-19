@@ -299,6 +299,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TruffleHunter", "TruffleHun
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TilesMaster", "TilesMaster\TilesMaster.csproj", "{0ED7FA4B-A744-4310-8CC3-4FE16C4DBFDE}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Renovators", "Renovators\Renovators.csproj", "{2217ECC6-0582-42B7-B71F-A82B5A9B8D8F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -897,6 +899,10 @@ Global
 		{0ED7FA4B-A744-4310-8CC3-4FE16C4DBFDE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0ED7FA4B-A744-4310-8CC3-4FE16C4DBFDE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0ED7FA4B-A744-4310-8CC3-4FE16C4DBFDE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2217ECC6-0582-42B7-B71F-A82B5A9B8D8F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2217ECC6-0582-42B7-B71F-A82B5A9B8D8F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2217ECC6-0582-42B7-B71F-A82B5A9B8D8F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2217ECC6-0582-42B7-B71F-A82B5A9B8D8F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
