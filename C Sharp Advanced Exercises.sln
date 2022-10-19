@@ -291,6 +291,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BeaverAtWork", "BeaverAtWor
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BeaverAtWork2.0", "BeaverAtWork2.0\BeaverAtWork2.0.csproj", "{17924211-5C86-41AA-8480-B3CCB60E041F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MealPlan", "MealPlan\MealPlan.csproj", "{676D0321-73F2-4154-BD6E-97FC7BFDC771}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -873,6 +875,10 @@ Global
 		{17924211-5C86-41AA-8480-B3CCB60E041F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{17924211-5C86-41AA-8480-B3CCB60E041F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{17924211-5C86-41AA-8480-B3CCB60E041F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{676D0321-73F2-4154-BD6E-97FC7BFDC771}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{676D0321-73F2-4154-BD6E-97FC7BFDC771}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{676D0321-73F2-4154-BD6E-97FC7BFDC771}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{676D0321-73F2-4154-BD6E-97FC7BFDC771}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
