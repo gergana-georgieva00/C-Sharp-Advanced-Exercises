@@ -277,37 +277,39 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PawnWars", "PawnWars\PawnWa
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PawnWars2.0", "PawnWars2.0\PawnWars2.0.csproj", "{B2FF28CE-7877-4C7D-8655-AC4456C2C378}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Blacksmith", "Blacksmith\Blacksmith.csproj", "{E25D8AA9-36B0-4254-90DA-768656D68353}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Blacksmith", "Blacksmith\Blacksmith.csproj", "{E25D8AA9-36B0-4254-90DA-768656D68353}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Armory", "Armory\Armory.csproj", "{2F00BD56-507D-4E6C-9054-81B0D757B893}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Armory", "Armory\Armory.csproj", "{2F00BD56-507D-4E6C-9054-81B0D757B893}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Drones", "Drones\Drones.csproj", "{C0B48816-FCD2-4CE3-9A42-B44596DF3AE5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Drones", "Drones\Drones.csproj", "{C0B48816-FCD2-4CE3-9A42-B44596DF3AE5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BakeryShop", "BakeryShop\BakeryShop.csproj", "{628BFAB3-B52E-454F-97BC-2C1FEA0BA30E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BakeryShop", "BakeryShop\BakeryShop.csproj", "{628BFAB3-B52E-454F-97BC-2C1FEA0BA30E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FishingNet", "FishingNet\FishingNet.csproj", "{8A9966ED-6C1A-45C7-A91D-AC1B38886CB6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FishingNet", "FishingNet\FishingNet.csproj", "{8A9966ED-6C1A-45C7-A91D-AC1B38886CB6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BeaverAtWork", "BeaverAtWork\BeaverAtWork.csproj", "{979E4AA5-F910-4A9A-9883-4AC1DFA9F63B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BeaverAtWork", "BeaverAtWork\BeaverAtWork.csproj", "{979E4AA5-F910-4A9A-9883-4AC1DFA9F63B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BeaverAtWork2.0", "BeaverAtWork2.0\BeaverAtWork2.0.csproj", "{17924211-5C86-41AA-8480-B3CCB60E041F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BeaverAtWork2.0", "BeaverAtWork2.0\BeaverAtWork2.0.csproj", "{17924211-5C86-41AA-8480-B3CCB60E041F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MealPlan", "MealPlan\MealPlan.csproj", "{676D0321-73F2-4154-BD6E-97FC7BFDC771}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MealPlan", "MealPlan\MealPlan.csproj", "{676D0321-73F2-4154-BD6E-97FC7BFDC771}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Zoo", "Zoo\Zoo.csproj", "{FE455744-1483-41F9-A837-F74219A935E8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Zoo", "Zoo\Zoo.csproj", "{FE455744-1483-41F9-A837-F74219A935E8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TruffleHunter", "TruffleHunter\TruffleHunter.csproj", "{970D8DD3-B7EE-456D-B94D-65683113C578}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TruffleHunter", "TruffleHunter\TruffleHunter.csproj", "{970D8DD3-B7EE-456D-B94D-65683113C578}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TilesMaster", "TilesMaster\TilesMaster.csproj", "{0ED7FA4B-A744-4310-8CC3-4FE16C4DBFDE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TilesMaster", "TilesMaster\TilesMaster.csproj", "{0ED7FA4B-A744-4310-8CC3-4FE16C4DBFDE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Renovators", "Renovators\Renovators.csproj", "{2217ECC6-0582-42B7-B71F-A82B5A9B8D8F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Renovators", "Renovators\Renovators.csproj", "{2217ECC6-0582-42B7-B71F-A82B5A9B8D8F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WallDestroyer", "WallDestroyer\WallDestroyer.csproj", "{277A1495-AA7C-45F0-85E3-047F8DEC79CA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WallDestroyer", "WallDestroyer\WallDestroyer.csproj", "{277A1495-AA7C-45F0-85E3-047F8DEC79CA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EnergyDrinks", "EnergyDrinks\EnergyDrinks.csproj", "{36E3D8B7-56C4-4CA5-9FA6-246759881265}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EnergyDrinks", "EnergyDrinks\EnergyDrinks.csproj", "{36E3D8B7-56C4-4CA5-9FA6-246759881265}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ComputerArchitecture", "ComputerArchitecture\ComputerArchitecture.csproj", "{0C34E910-B64F-4087-9178-E7312E287EC8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ComputerArchitecture", "ComputerArchitecture\ComputerArchitecture.csproj", "{0C34E910-B64F-4087-9178-E7312E287EC8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RallyRacing", "RallyRacing\RallyRacing.csproj", "{F9BF8FDE-B9B8-4158-955E-4FB5E1EE845E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RallyRacing", "RallyRacing\RallyRacing.csproj", "{F9BF8FDE-B9B8-4158-955E-4FB5E1EE845E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RecursiveArraySum", "RecursiveArraySum\RecursiveArraySum.csproj", "{03FECB3E-AE6D-499A-B8B7-973E8A45CDF5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -927,6 +929,10 @@ Global
 		{F9BF8FDE-B9B8-4158-955E-4FB5E1EE845E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F9BF8FDE-B9B8-4158-955E-4FB5E1EE845E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F9BF8FDE-B9B8-4158-955E-4FB5E1EE845E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{03FECB3E-AE6D-499A-B8B7-973E8A45CDF5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{03FECB3E-AE6D-499A-B8B7-973E8A45CDF5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{03FECB3E-AE6D-499A-B8B7-973E8A45CDF5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{03FECB3E-AE6D-499A-B8B7-973E8A45CDF5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
